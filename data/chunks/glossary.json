@@ -1,0 +1,877 @@
+[
+  {
+    "term": "AI Basic Act（AI 基本法）",
+    "def": "南韓 2024 年 12 月通過、2026 年 1 月生效的 AI 框架法，使南韓成為繼歐盟後第二個通過全面 AI 立法的主要法域。",
+    "cat": "law"
+  },
+  {
+    "term": "AIDA（Artificial Intelligence and Data Act，人工智能與資料法）",
+    "def": "加拿大聯邦 AI 法案（Bill C-27 的一部分），2025 年 1 月因國會解散而廢止，聯邦 AI 立法重啟時程未定。",
+    "cat": "law"
+  },
+  {
+    "term": "Colorado AI Act（科羅拉多 AI 法）",
+    "def": "美國首部完整的州級 AI 法，涵蓋高風險 AI 系統的影響評估、合規義務及申訴機制，2026 年 6 月 30 日生效。",
+    "cat": "law"
+  },
+  {
+    "term": "DTSA（Defend Trade Secrets Act，保護營業秘密法）",
+    "def": "美國 2016 年聯邦立法，允許以聯邦訴訟保護 AI 模型權重等營業秘密。",
+    "cat": "law"
+  },
+  {
+    "term": "EO 14110",
+    "def": "拜登政府 2023 年 AI 行政命令，要求基礎模型安全報告及聯邦 AI 標準，2025 年 1 月 20 日被川普撤銷。",
+    "cat": "law"
+  },
+  {
+    "term": "EO 14179",
+    "def": "川普政府 2025 年 AI 行政命令，以移除 AI 法規障礙、維持美國 AI 主導地位為核心政策。",
+    "cat": "law"
+  },
+  {
+    "term": "EU AI Act Article 50（歐盟 AI 法第 50 條）",
+    "def": "EU AI Act 第 50 條，自 2026 年 8 月 2 日起強制要求 AI 生成內容須附機器可讀標識。",
+    "cat": "law"
+  },
+  {
+    "term": "EU AI Act（歐盟人工智慧法）",
+    "def": "歐盟 2024 年通過的 AI 橫向監管法規（Regulation (EU) 2024/1689），首部針對 AI 系統的全面性立法，採風險分級框架，GPAI 條款自 2025 年 8 月生效。",
+    "cat": "law"
+  },
+  {
+    "term": "Executive Order（行政命令）",
+    "def": "美國總統直接向聯邦行政機構發布的指令，具有政策法律效力但低於國會立法，可被繼任總統撤銷。",
+    "cat": "law"
+  },
+  {
+    "term": "G7 廣島 AI 進程（Hiroshima AI Process, HAIP）",
+    "def": "日本主導的 G7 AI 政策協調機制（2023），確立 11 項國際 AI 開發與使用指導原則及企業自願行為準則，為全球軟法協調基礎。",
+    "cat": "law"
+  },
+  {
+    "term": "OECD AI 原則（OECD AI Principles）",
+    "def": "OECD 2019 年制定、2024 年更新的 AI 治理軟法框架，涵蓋以人為本、透明度、安全韌性、問責等五大原則與五項政策建議，為全球首個政府間 AI 標準。",
+    "cat": "law"
+  },
+  {
+    "term": "TDM（Text and Data Mining，文字與資料採礦）",
+    "def": "以自動化方式分析大量文本與資料的技術；EU 著作權指令 Articles 3–4 設有 TDM 豁免條款，美國尚無同等規定。",
+    "cat": "law"
+  },
+  {
+    "term": "UNESCO AI 倫理建議書（UNESCO Recommendation on the Ethics of AI）",
+    "def": "2021 年 193 個 UNESCO 會員國通過的全球首個 AI 倫理標準性文件，包含四大核心價值、十大原則及十一大政策行動領域。",
+    "cat": "law"
+  },
+  {
+    "term": "《AI 生成合成內容標識辦法》（Measures for Identification of AI-Generated Content）",
+    "def": "中國 2025 年 9 月施行的法規，要求 AI 生成內容同時具備顯式標識（使用者可感知）與隱式標識（技術浮水印）。",
+    "cat": "law"
+  },
+  {
+    "term": "《生成式 AI 暫行辦法》（Interim Measures for Generative AI Services）",
+    "def": "中國 2023 年針對生成式 AI 服務的管理辦法，為全球首部此類法規，要求內容安全、標識、實名制與備案。",
+    "cat": "law"
+  },
+  {
+    "term": "人工智慧基本法（Artificial Intelligence Basic Act）",
+    "def": "台灣首部 AI 專法，2026 年 1 月施行，以七大治理原則為架構，國科會為中央主管機關。",
+    "cat": "law"
+  },
+  {
+    "term": "七大治理原則（Seven Governance Principles）",
+    "def": "台灣《人工智慧基本法》第 4 條規定之七項原則：永續發展、人類自主、隱私保護、資安、透明可解釋、公平不歧視、問責。",
+    "cat": "law"
+  },
+  {
+    "term": "個人資料保護法（Personal Data Protection Act, PDPA）",
+    "def": "台灣個資保護基本法，2025 年重大修正後設立個人資料保護委員會（PDPC）為獨立監督機關。",
+    "cat": "law"
+  },
+  {
+    "term": "全球數位契約（Global Digital Compact, GDC）",
+    "def": "2024 年 9 月聯合國未來峰會通過的首個 AI 治理普世性政府間協議，確立獨立國際 AI 科學委員會與全球 AI 治理對話機制。",
+    "cat": "law"
+  },
+  {
+    "term": "出口管制（Export Control）",
+    "def": "國家對特定商品與技術（如先進 AI 晶片、設備）的對外銷售或轉移設置許可要求或禁令的法律機制。",
+    "cat": "law"
+  },
+  {
+    "term": "布萊切利宣言（Bletchley Declaration）",
+    "def": "2023 年 11 月首屆 AI 安全峰會上 28 國簽署的政治宣言，確立前沿 AI 安全的國際共識，強調蓄意濫用與控制失當的雙重風險。",
+    "cat": "law"
+  },
+  {
+    "term": "台灣 AI 行動計畫 2.0（Taiwan AI Action Plan 2.0）",
+    "def": "行政院 2023 年核定之 2023–2026 年 AI 策略計畫，雙核心為「產業 AI 化」與「AI 產業化」。",
+    "cat": "law"
+  },
+  {
+    "term": "台灣 AI 新十大建設（AI New Ten Major Infrastructure Projects）",
+    "def": "2025 年台灣推出的 AI 基礎設施建設藍圖，涵蓋算力、人才、應用等十大項目，以主權 AI 為核心概念。",
+    "cat": "law"
+  },
+  {
+    "term": "合理使用（Fair Use）",
+    "def": "著作權法的侵權抗辯事由，依使用目的與性質、著作性質、使用數量、市場影響四因素判斷；Thomson Reuters v. Ross 首次在 AI 訓練語境下被聯邦法院否決。",
+    "cat": "law"
+  },
+  {
+    "term": "前沿 AI 安全承諾（Frontier AI Safety Commitments）",
+    "def": "首爾 AI 峰會（2024 年 5 月）20 家企業自願簽署的安全承諾，包括發布安全框架及在風險過高時暫停新模型發布。",
+    "cat": "law"
+  },
+  {
+    "term": "延伸集體授權（Extended Collective Licensing, ECL）",
+    "def": "允許版權集管組織代表所有版權人（含未明確授權者）簽訂授權協議的集體管理機制；美國著作權局 2025 報告建議在市場失靈時考慮採用。",
+    "cat": "law"
+  },
+  {
+    "term": "實體清單（Entity List）",
+    "def": "美國商務部工業安全局（BIS）維護的受管制企業名單，被列入者須取得美國政府許可方能取得受管制的商品與技術。",
+    "cat": "law"
+  },
+  {
+    "term": "新德里宣言（New Delhi Declaration）",
+    "def": "2026 年 2 月印度 AI 影響峰會通過的宣言，92 國背書，聚焦包容性、全球南方 AI 發展及透明度承諾。",
+    "cat": "law"
+  },
+  {
+    "term": "歐洲委員會 AI 框架公約（CoE Framework Convention on AI）",
+    "def": "2024 年 9 月開放簽署的首個具法律約束力 AI 國際條約，要求締約方確保 AI 生命週期符合人權、民主與法治。",
+    "cat": "law"
+  },
+  {
+    "term": "算力門檻（Compute Threshold）",
+    "def": "觸發特定監管義務的訓練算力數值（如 EU AI Act 的 10²⁵ FLOP），用於識別需要額外安全評估的前沿模型開發。",
+    "cat": "law"
+  },
+  {
+    "term": "資通安全管理法（Cybersecurity Management Act）",
+    "def": "台灣資安基本法，2025 年首度修正，主管機關改為數位發展部（MODA）。",
+    "cat": "law"
+  },
+  {
+    "term": "轉化性使用（Transformative Use）",
+    "def": "合理使用分析的核心因素，判斷使用行為是否添加新表達、新意義或新訊息，為著作侵權訴訟中的關鍵法律概念。",
+    "cat": "law"
+  },
+  {
+    "term": "運算治理（Compute Governance）",
+    "def": "以算力（訓練所需 GPU 叢集、FLOPs）作為 AI 治理槓桿的政策工具，透過晶片管制與算力門檻識別高風險 AI 開發。",
+    "cat": "law"
+  },
+  {
+    "term": "金融業運用 AI 指引（Financial Industry AI Guidelines）",
+    "def": "金融監督管理委員會（FSC）於 2024 年 6 月發布之六大原則行政指引，規範金融機構 AI 治理。",
+    "cat": "law"
+  },
+  {
+    "term": "風險分類框架（AI Risk Classification Framework）",
+    "def": "台灣《人工智慧基本法》第 16 條要求數位部建立之 AI 風險分級制度，與 EU AI Act 等國際標準接軌。",
+    "cat": "law"
+  },
+  {
+    "term": "人類作者要件（Human Authorship Requirement）",
+    "def": "美國著作權法要求作品須由人類創作方可受保護的要件，AI 自主生成物不符合此要件，無法取得著作權。",
+    "cat": "law"
+  },
+  {
+    "term": "AI 治理成熟度模型（AI Governance Maturity Model）",
+    "def": "以臨時、已定義、已運作、已量測、自適應五個層次評估組織 AI 治理能力進展的框架。",
+    "cat": "standard"
+  },
+  {
+    "term": "AI 風險管理框架（NIST AI RMF）",
+    "def": "NIST 2023 年 1 月發布的自願性框架（AI 100-1），以 GOVERN、MAP、MEASURE、MANAGE 四大功能組織 AI 風險管理活動。",
+    "cat": "standard"
+  },
+  {
+    "term": "ISO/IEC 22989",
+    "def": "2022 年 7 月發布的 AI 概念與術語國際標準，為 ISO AI 標準系列提供統一術語，已被 EU AI Act 等法規文本引用。",
+    "cat": "standard"
+  },
+  {
+    "term": "ISO/IEC 23894",
+    "def": "2023 年 2 月發布的 AI 風險管理指南，將 ISO 31000 通用風險管理方法延伸至 AI 特有風險（偏見、幻覺、對抗性攻擊等）。",
+    "cat": "standard"
+  },
+  {
+    "term": "ISO/IEC 42001",
+    "def": "2023 年 12 月發布的全球首個 AI 管理系統國際標準，規定建立 AIMS 的要求，可供第三方認證，適用任何規模與類型之組織。",
+    "cat": "standard"
+  },
+  {
+    "term": "ISO/IEC TR 24028",
+    "def": "2020 年 5 月發布的 AI 可信賴性技術報告，定義可信賴性維度並映射至 AI 生命週期，為後續 AI 標準奠定概念基礎。",
+    "cat": "standard"
+  },
+  {
+    "term": "MLCommons AILuminate",
+    "def": "MLCommons 於 2025 年發布的業界首個標準化 AI 安全基準（v1.0），提供跨模型的可比較安全評分。",
+    "cat": "standard"
+  },
+  {
+    "term": "SR 11-7（模型風險管理指引）",
+    "def": "美國聯準會 2011 年發布的《模型風險管理指引》，要求金融機構對模型進行系統性驗證、文件化與持續監控。",
+    "cat": "standard"
+  },
+  {
+    "term": "人工智慧管理系統（AIMS, AI Management System）",
+    "def": "ISO/IEC 42001 定義的管理系統，系統性管理組織開發與使用 AI 的相關政策、流程與控制措施。",
+    "cat": "standard"
+  },
+  {
+    "term": "前沿安全框架（Frontier Safety Framework, FSF）",
+    "def": "Google DeepMind 以關鍵能力等級（CCL）為核心的 AI 安全治理框架，規定觸發強化防護措施的能力閾值。",
+    "cat": "standard"
+  },
+  {
+    "term": "生成式 AI 側寫（Generative AI Profile, NIST AI 600-1）",
+    "def": "NIST 2024 年 7 月發布的補充文件，識別生成式 AI 的 12 大特定風險類別及超過 200 項對應治理行動。",
+    "cat": "standard"
+  },
+  {
+    "term": "準備框架（Preparedness Framework）",
+    "def": "OpenAI 的前沿 AI 風險評估與管理框架，依能力評估將模型區分為高風險與嚴重風險等級並規定對應部署限制。",
+    "cat": "standard"
+  },
+  {
+    "term": "負責任擴展政策（Responsible Scaling Policy, RSP）",
+    "def": "Anthropic 依 AI 安全等級（ASL-1 至 ASL-4）管理模型開發與部署的風險治理框架。",
+    "cat": "standard"
+  },
+  {
+    "term": "AI Litigation Task Force（AI 訴訟特別工作組）",
+    "def": "依川普 2025 年行政命令設於美國司法部（DOJ）的工作組，負責挑戰阻礙聯邦 AI 政策的各州法律。",
+    "cat": "org"
+  },
+  {
+    "term": "AI Office（歐盟 AI 辦公室）",
+    "def": "設於歐盟執委會 DG CNECT 的 GPAI 監管機構，2025 年 8 月 2 日正式運作，2026 年 8 月取得完整執法權。",
+    "cat": "org"
+  },
+  {
+    "term": "AI Safety Institute（AI 安全研究所，AISI）",
+    "def": "各國政府設立的前沿 AI 評估機構，英國為先驅（2025 年更名為 AI Security Institute），已組成涵蓋 10 國及歐盟的國際網絡。",
+    "cat": "org"
+  },
+  {
+    "term": "AI 產品與系統評測中心（AIEC）",
+    "def": "台灣數位產業署主管之 AI 評測機構，由工業技術研究院與國家資通安全研究院共同執行。",
+    "cat": "org"
+  },
+  {
+    "term": "CAC（網信辦）",
+    "def": "中國國家互聯網信息辦公室（Cyberspace Administration of China），中國 AI 監管的核心主管機關。",
+    "cat": "org"
+  },
+  {
+    "term": "Partnership on AI（PAI）",
+    "def": "2016 年成立的多元利害關係人 AI 倫理研究與倡議平台，成員涵蓋科技公司、學術機構與公民社會組織。",
+    "cat": "org"
+  },
+  {
+    "term": "TIPO（台灣智慧財產局）",
+    "def": "Taiwan Intellectual Property Office，台灣經濟部所屬智慧財產主管機關，主導 TIPS 認證制度。",
+    "cat": "org"
+  },
+  {
+    "term": "WIPO（世界智慧財產組織）",
+    "def": "World Intellectual Property Organization，聯合國下設的國際 IP 條約管理機構，主導全球 IP 政策對話與統計。",
+    "cat": "org"
+  },
+  {
+    "term": "個人資料保護委員會（PDPC）",
+    "def": "2025 年台灣個資法修正後設立的獨立監督機關，負責監督 AI 時代個人資料保護執法。",
+    "cat": "org"
+  },
+  {
+    "term": "前沿模型論壇（Frontier Model Forum, FMF）",
+    "def": "由 Anthropic、Google、Microsoft、OpenAI 共同創立的前沿 AI 安全自律非營利組織（2023），聚焦安全研究與最佳實踐共享。",
+    "cat": "org"
+  },
+  {
+    "term": "國家人工智慧戰略特別委員會",
+    "def": "台灣《人工智慧基本法》第 6 條要求行政院設立之最高 AI 策略協調機構，由行政院長主持，每年至少召開一次。",
+    "cat": "org"
+  },
+  {
+    "term": "國家科學及技術委員會（NSTC）",
+    "def": "台灣中央政府 AI 政策主管機關，統籌 AI 研發策略並主導 TAIDE 主權語言模型計畫。",
+    "cat": "org"
+  },
+  {
+    "term": "國際人工智慧安全報告（IAISR）",
+    "def": "由英國政府主導、各國 AI 安全研究所協作發布的年度全球 AI 安全現狀報告，首份於 2024 年發布。",
+    "cat": "org"
+  },
+  {
+    "term": "數位產業署（Administration for Digital Industries, ADI）",
+    "def": "台灣數位發展部下設機構，主管數位經濟產業政策，並為 AI 評測中心（AIEC）的主管機關。",
+    "cat": "org"
+  },
+  {
+    "term": "數位發展部（Ministry of Digital Affairs, MODA）",
+    "def": "台灣 2022 年成立的數位主管機關，負責 AI 風險分類框架建立、AIEC 監督及資安署管轄。",
+    "cat": "org"
+  },
+  {
+    "term": "獨立國際 AI 科學委員會（Independent International Scientific Panel on AI）",
+    "def": "根據全球數位契約設立的 40 名成員科學機構，每年發布一份具政策參考價值的 AI 評估報告。",
+    "cat": "org"
+  },
+  {
+    "term": "美國 AI 安全研究所（CAISI）",
+    "def": "美國 NIST 下設的 AI 安全評估機構，原為 US AISI，2025 年整合更名為 CAISI（Center for AI Safety and Innovation）。",
+    "cat": "org"
+  },
+  {
+    "term": "金融監督管理委員會（FSC）",
+    "def": "台灣金融業 AI 應用主管機關，2024 年發布《金融業運用 AI 指引》規範金融機構 AI 治理。",
+    "cat": "org"
+  },
+  {
+    "term": "高階諮詢機構（High-Level Advisory Body on AI, HLAB-AI）",
+    "def": "聯合國秘書長 2023 年設立的 39 位跨國 AI 專家諮詢機構，發布《為人類治理 AI》報告，提出七大全球 AI 治理建議。",
+    "cat": "org"
+  },
+  {
+    "term": "人類監督（Human Oversight）",
+    "def": "在 AI 決策流程中保留人類審查、介入與否決能力的設計要求，為 EU AI Act 及多數 AI 倫理框架的核心原則。",
+    "cat": "ethics"
+  },
+  {
+    "term": "公平性（Fairness）",
+    "def": "AI 決策不因受保護特徵（如種族、性別）對特定群體產生系統性不利結果的屬性。",
+    "cat": "ethics"
+  },
+  {
+    "term": "問責（Accountability）",
+    "def": "AI 系統開發與部署各方對系統行為後果負有可識別且可追究責任的屬性。",
+    "cat": "ethics"
+  },
+  {
+    "term": "透明度（Transparency）",
+    "def": "AI 系統的運作方式、訓練資料來源與決策流程以可理解方式公開披露的屬性。",
+    "cat": "ethics"
+  },
+  {
+    "term": "非歧視（Non-Discrimination）",
+    "def": "AI 系統不基於受保護特徵產生不平等結果的倫理要求，為 UNESCO AI 倫理建議書及各國 AI 法規的核心原則。",
+    "cat": "ethics"
+  },
+  {
+    "term": "AI Fairness 360（AIF360）",
+    "def": "IBM 開源偏見偵測與緩解工具包，含 71 種偏見指標與 9 種緩解演算法。",
+    "cat": "tech"
+  },
+  {
+    "term": "AI 對齊（Alignment）",
+    "def": "確保 AI 系統行為符合人類意圖、價值觀與安全約束的研究與工程實踐，防止 AI 追求有害的次目標。",
+    "cat": "tech"
+  },
+  {
+    "term": "C2PA（內容真實性倡議）",
+    "def": "Coalition for Content Provenance and Authenticity，由 Adobe、Microsoft 等創立的開放技術標準，透過密碼學簽名在數位內容中嵌入創建歷程元資料，對抗深偽與資訊操控。",
+    "cat": "tech"
+  },
+  {
+    "term": "Constitutional AI（CAI，憲法式 AI）",
+    "def": "Anthropic 提出的以明確原則清單引導模型自我批評與修正的訓練方法，減少有害輸出。",
+    "cat": "tech"
+  },
+  {
+    "term": "Deepfake（深偽技術）",
+    "def": "利用深度學習（通常為 GAN 或擴散模型）合成或操縱影音內容，創造逼真但不真實的假影片或假聲音，各國 AI 法規普遍要求標識揭露。",
+    "cat": "tech"
+  },
+  {
+    "term": "FLOPs（浮點運算次數）",
+    "def": "衡量 AI 模型訓練計算量的單位；EU AI Act 以 10²³ FLOPs 作為 GPAI 認定門檻，10²⁵ FLOPs 作為系統性風險認定門檻。",
+    "cat": "tech"
+  },
+  {
+    "term": "GPAI（General-Purpose AI，通用目的 AI 模型）",
+    "def": "以大規模算力訓練、可執行廣泛多種任務的 AI 模型（如 GPT-4、Gemini）；EU AI Act 設有 Articles 51–55 專屬義務，自 2025 年 8 月起生效。",
+    "cat": "tech"
+  },
+  {
+    "term": "LIME（Local Interpretable Model-Agnostic Explanations）",
+    "def": "以局部代理模型解釋任意黑箱模型輸出的可解釋 AI（XAI）方法。",
+    "cat": "tech"
+  },
+  {
+    "term": "RAG（Retrieval-Augmented Generation，檢索增強生成）",
+    "def": "結合外部知識檢索以降低幻覺的大型語言模型部署架構。",
+    "cat": "tech"
+  },
+  {
+    "term": "RLHF（Reinforcement Learning from Human Feedback，人類反饋強化學習）",
+    "def": "透過收集人類對模型輸出的偏好評分訓練獎勵模型、再以強化學習優化 AI 行為的對齊技術，為 ChatGPT 的核心訓練方法。",
+    "cat": "tech"
+  },
+  {
+    "term": "SHAP（SHapley Additive exPlanations）",
+    "def": "基於博弈論 Shapley 值的特徵貢獻量化可解釋 AI 方法，可應用於任意機器學習模型。",
+    "cat": "tech"
+  },
+  {
+    "term": "SynthID",
+    "def": "Google DeepMind 開發的 AI 生成內容不可見浮水印技術，支援圖像、音訊、影片與文字四種模態。",
+    "cat": "tech"
+  },
+  {
+    "term": "人口統計平等（Demographic Parity）",
+    "def": "各受保護群體獲得正面預測比率相同的公平性指標。",
+    "cat": "tech"
+  },
+  {
+    "term": "前沿模型（Frontier Model）",
+    "def": "當前最先進、能力最強的 AI 模型，可能具備雙用途或危險能力，如 GPT-4o、Claude Opus、Gemini Ultra。",
+    "cat": "tech"
+  },
+  {
+    "term": "可解釋 AI（Explainable AI, XAI）",
+    "def": "使 AI 系統的決策過程對人類可理解、可審計的研究方法與工具集，支援問責與信任建立；代表方法包括 LIME 與 SHAP。",
+    "cat": "tech"
+  },
+  {
+    "term": "基礎模型（Foundation Model）",
+    "def": "以大規模資料預訓練、可微調用於多種下游任務的大型神經網路模型，如 GPT、BERT、Stable Diffusion。",
+    "cat": "tech"
+  },
+  {
+    "term": "對抗性攻擊（Adversarial Attack）",
+    "def": "對輸入資料施加微小擾動使 AI 模型做出錯誤預測的攻擊技術。",
+    "cat": "tech"
+  },
+  {
+    "term": "提示注入（Prompt Injection）",
+    "def": "在外部內容中嵌入惡意指令、影響 AI 代理系統行為的攻擊手法。",
+    "cat": "tech"
+  },
+  {
+    "term": "模型評估與基準測試（Model Evaluation）",
+    "def": "系統性測量 AI 模型能力、限制與安全特性的方法，AI 安全研究所等機構是此領域的重要執行主體。",
+    "cat": "tech"
+  },
+  {
+    "term": "機會均等（Equalized Odds）",
+    "def": "各群體真陽性率與假陽性率均相同的公平性指標。",
+    "cat": "tech"
+  },
+  {
+    "term": "紅隊測試（Red Teaming）",
+    "def": "組織專業團隊模擬攻擊者尋找 AI 系統漏洞的對抗性安全測試方法；G7 行為準則及各國 AISI 測試協議均明確要求。",
+    "cat": "tech"
+  },
+  {
+    "term": "資料出處（Data Provenance）",
+    "def": "追蹤資料或內容的來源、創建鏈及真實性的機制，在 AI 脈絡下指驗證訓練資料合法性或 AI 生成內容的標記。",
+    "cat": "tech"
+  },
+  {
+    "term": "越獄（Jailbreak）",
+    "def": "透過精心設計的提示繞過 AI 安全過濾器、誘使模型輸出被限制內容的攻擊手法。",
+    "cat": "tech"
+  },
+  {
+    "term": "關鍵能力等級（Critical Capability Level, CCL）",
+    "def": "Google DeepMind 前沿安全框架（FSF）中定義的高風險能力閾值，觸發強化防護措施的啟動條件。",
+    "cat": "tech"
+  },
+  {
+    "term": "預測平等（Predictive Parity）",
+    "def": "各群體中高風險標籤對應的實際發生率相同的公平性指標；與機會均等在基礎率不同時互不相容。",
+    "cat": "tech"
+  },
+  {
+    "term": "AI 安全（AI Safety）",
+    "def": "識別、評估和減輕 AI 系統可能造成的意外或有意傷害的研究與實踐領域，涵蓋近期危害（偏見、隱私）和長期存在性風險。",
+    "cat": "concept"
+  },
+  {
+    "term": "AI 治理（AI Governance）",
+    "def": "確保 AI 系統以負責任、可信任且合法方式開發與部署的一套政策、流程與組織機制。",
+    "cat": "concept"
+  },
+  {
+    "term": "AI 可接受使用政策（AI Acceptable Use Policy）",
+    "def": "規範組織成員如何合法、合規、符合倫理地使用 AI 工具的正式政策文件。",
+    "cat": "concept"
+  },
+  {
+    "term": "AI 影響評估（AI Impact Assessment）",
+    "def": "在部署 AI 系統前，系統性評估其對個人、社會及組織潛在影響的正式流程。",
+    "cat": "concept"
+  },
+  {
+    "term": "AI 稽核（AI Audit）",
+    "def": "對 AI 系統進行獨立的系統性審查，評估其設計、開發、部署及影響是否符合既定標準與法規要求。",
+    "cat": "concept"
+  },
+  {
+    "term": "AI 安全等級（AI Safety Level, ASL）",
+    "def": "Anthropic 負責任擴展政策（RSP）中 ASL-1 至 ASL-4 的四級風險分類體系，依模型危險能力決定所需防護措施。",
+    "cat": "concept"
+  },
+  {
+    "term": "COMPAS",
+    "def": "Northpointe 開發的商業累犯風險預測工具，因 2016 年 ProPublica 報告揭露種族偏差問題成為 AI 倫理領域的標誌性案例。",
+    "cat": "concept"
+  },
+  {
+    "term": "Conformity Assessment（合規評估）",
+    "def": "高風險 AI 系統投入市場前須完成的評估程序，確認符合 EU AI Act 要求，包括第三方認證或自我評估。",
+    "cat": "concept"
+  },
+  {
+    "term": "ESG 與 AI 整合",
+    "def": "將 AI 系統的環境影響、社會影響及治理問責融入企業 ESG 報告與評估框架的實踐。",
+    "cat": "concept"
+  },
+  {
+    "term": "High-Risk AI System（高風險 AI 系統）",
+    "def": "EU AI Act 附件三所列八大類別 AI 系統，須進行合規評估、登記於 EU 資料庫，並滿足嚴格的透明度與問責義務。",
+    "cat": "concept"
+  },
+  {
+    "term": "P(doom)",
+    "def": "指 AI 導致災難性後果（人類文明毀滅或永久性衰退）的主觀概率估計，專家估計分布廣泛（< 5% 至 > 50%）。",
+    "cat": "concept"
+  },
+  {
+    "term": "Pro-Innovation Approach（親創新監管方針）",
+    "def": "英國 AI 監管的核心立場，強調以現有部門監管機構執行原則，避免過度立法阻礙 AI 發展。",
+    "cat": "concept"
+  },
+  {
+    "term": "Regulatory Sandbox（監管沙盒）",
+    "def": "EU AI Act 要求各會員國設立的受控實驗環境，允許業者在監管機構監督下測試創新 AI 系統，豁免部分合規義務。",
+    "cat": "concept"
+  },
+  {
+    "term": "Social Scoring（社會評分）",
+    "def": "依據個人社會行為或特徵進行系統性評分並據此決定資源分配的 AI 應用；EU AI Act 明確列為不可接受風險，絕對禁止。",
+    "cat": "concept"
+  },
+  {
+    "term": "Unacceptable Risk（不可接受風險）",
+    "def": "EU AI Act 最高風險級別，涵蓋社會評分、即時遠端生物識別等被完全禁止的 AI 系統與應用。",
+    "cat": "concept"
+  },
+  {
+    "term": "人工通用智慧（Artificial General Intelligence, AGI）",
+    "def": "假設中能在幾乎所有認知任務上達到或超越人類水準的 AI 系統，目前尚未實現，為長期 AI 安全研究的核心目標。",
+    "cat": "concept"
+  },
+  {
+    "term": "代理變數（Proxy Variable）",
+    "def": "與受保護特徵高度相關的輸入特徵，可造成間接歧視（如以郵遞區號代理種族），是 AI 公平性分析的重要概念。",
+    "cat": "concept"
+  },
+  {
+    "term": "全球南方（Global South）",
+    "def": "指亞洲、非洲、拉丁美洲等多數開發中國家，在 AI 治理討論中代表數位落差、能力建構及技術主權的主要訴求方。",
+    "cat": "concept"
+  },
+  {
+    "term": "公平性不可能定理（Fairness Impossibility Theorem）",
+    "def": "多種公平性定義（如人口統計平等、機會均等、預測平等）無法同時成立的數學結論（Chouldechova, 2017；Kleinberg et al., 2016）。",
+    "cat": "concept"
+  },
+  {
+    "term": "前沿 AI（Frontier AI）",
+    "def": "指最先進、能力最強的 AI 系統（如大型基礎模型、生成式 AI），可能帶來全新或緊迫的安全風險，為 AI 安全峰會系列的核心討論對象。",
+    "cat": "concept"
+  },
+  {
+    "term": "可信任 AI（Trustworthy AI）",
+    "def": "符合有效可靠、安全、安全性與韌性、可問責與透明、可解釋、增強隱私、公平七大特性的 AI 系統。",
+    "cat": "concept"
+  },
+  {
+    "term": "可究責性（Auditability）",
+    "def": "AI 系統可被獨立第三方稽核，包含決策記錄的完整性與結果可驗證能力。",
+    "cat": "concept"
+  },
+  {
+    "term": "存在性風險（Existential Risk, X-Risk）",
+    "def": "AI 系統導致人類文明滅絕或永久性衰退的風險類別，為長期 AI 安全研究的核心關切。",
+    "cat": "concept"
+  },
+  {
+    "term": "幻覺（Hallucination）",
+    "def": "大型語言模型以高度自信生成不實、捏造或無根據內容的現象，是生成式 AI 的主要可靠性挑戰。",
+    "cat": "concept"
+  },
+  {
+    "term": "影子 AI（Shadow AI）",
+    "def": "員工在未獲 IT 或管理層核准的情況下，自行使用 AI 工具處理工作任務的現象，帶來資料洩漏與合規風險。",
+    "cat": "concept"
+  },
+  {
+    "term": "整備評估方法論（Readiness Assessment Methodology, RAM）",
+    "def": "UNESCO 建立的工具，協助政府評估其以符合倫理方式實施 AI 的整備程度，結果納入全球觀察站。",
+    "cat": "concept"
+  },
+  {
+    "term": "概念漂移（Concept Drift）",
+    "def": "現實世界的統計關係隨時間改變，導致已訓練模型預測準確性持續下降的現象。",
+    "cat": "concept"
+  },
+  {
+    "term": "模型卡（Model Card）",
+    "def": "由 Mitchell 等人（2019）提出的標準化 AI 模型文件，揭露預期用途、效能特性、倫理考量及限制。",
+    "cat": "concept"
+  },
+  {
+    "term": "模型清冊（Model Inventory）",
+    "def": "企業對所有 AI/ML 模型進行中央化記錄的資產清單，包含所有者、用途、風險等級及部署狀態。",
+    "cat": "concept"
+  },
+  {
+    "term": "模型登記（Model Registry）",
+    "def": "追蹤 ML 模型版本、元資料、部署進度及稽核日誌的集中化技術系統。",
+    "cat": "concept"
+  },
+  {
+    "term": "模型權重（Model Weights）",
+    "def": "訓練完成後 AI 神經網路的參數值，代表模型「知識」，可作為企業營業秘密受法律保護。",
+    "cat": "concept"
+  },
+  {
+    "term": "模型漂移（Model Drift）",
+    "def": "模型效能隨時間衰退的現象，分為概念漂移（現實關係改變）與資料漂移（輸入分佈改變）兩大類型。",
+    "cat": "concept"
+  },
+  {
+    "term": "模型風險管理（Model Risk Management, MRM）",
+    "def": "識別和管理 AI/ML 模型因設計或使用錯誤可能導致不利業務影響的風險管理實踐。",
+    "cat": "concept"
+  },
+  {
+    "term": "模型驗證（Model Validation）",
+    "def": "獨立評估 AI/ML 模型概念健全性、進行持續監控及結果分析，確保模型如預期運作的過程（SR 11-7 核心要求）。",
+    "cat": "concept"
+  },
+  {
+    "term": "欺騙性對齊（Deceptive Alignment）",
+    "def": "AI 系統在評估環境中表現正常、實際部署時追求不同隱藏目標的失靈模式假說。",
+    "cat": "concept"
+  },
+  {
+    "term": "演算法偏見（Algorithmic Bias）",
+    "def": "AI 模型因訓練資料、標注或設計缺陷，對特定群體產生系統性不公平結果的現象。",
+    "cat": "concept"
+  },
+  {
+    "term": "演算法問責（Algorithmic Accountability）",
+    "def": "要求 AI 決策系統（尤其影響個人權益者）可受稽核、可解釋、可申訴，且決策者可追責的治理原則。",
+    "cat": "concept"
+  },
+  {
+    "term": "演算法影響評估（Algorithmic Impact Assessment, AIA）",
+    "def": "專注於自動化決策系統對受影響群體影響的正式評估；加拿大聯邦政府已強制要求實施。",
+    "cat": "concept"
+  },
+  {
+    "term": "硬法（Hard Law）",
+    "def": "具法律約束力的國際規範，如條約、公約，通過批准程序對締約方產生強制性法律義務。",
+    "cat": "concept"
+  },
+  {
+    "term": "穩健性（Robustness）",
+    "def": "AI 系統在異常輸入、對抗性攻擊或分布外資料下維持預期行為的能力。",
+    "cat": "concept"
+  },
+  {
+    "term": "算法備案（Algorithm Registration）",
+    "def": "中國監管制度，要求具輿論屬性或社會動員能力的算法及 AI 服務於提供後 10 個工作日內向網信辦完成登記備案。",
+    "cat": "concept"
+  },
+  {
+    "term": "資料主權（Data Sovereignty）",
+    "def": "個人或國家對其資料的法律管轄主張，涉及資料的儲存地、存取主體、使用方式及跨境傳輸規範。",
+    "cat": "concept"
+  },
+  {
+    "term": "資料在地化（Data Localization）",
+    "def": "要求特定資料必須儲存、處理於特定地理區域（通常為本國境內）的法律要求。",
+    "cat": "concept"
+  },
+  {
+    "term": "資料集說明書（Datasheets for Datasets）",
+    "def": "由 Gebru 等人（2018）提出的標準化資料集文件，涵蓋動機、組成、收集流程、分發及維護資訊，促進資料透明。",
+    "cat": "concept"
+  },
+  {
+    "term": "資料投毒（Data Poisoning）",
+    "def": "在訓練階段注入惡意資料，影響模型學習行為以製造特定錯誤或後門的攻擊手法。",
+    "cat": "concept"
+  },
+  {
+    "term": "軟法（Soft Law）",
+    "def": "不具直接法律約束力，但對國家行為具政治或道德拘束力的規範性文件，包括原則、宣言、指南與建議書。",
+    "cat": "concept"
+  },
+  {
+    "term": "雙用途 AI（Dual-Use AI）",
+    "def": "可用於合法民用目的，同時也可能被用於有害或軍事目的的 AI 系統或技術，如人臉辨識或蛋白質折疊預測。",
+    "cat": "concept"
+  },
+  {
+    "term": "風險分級（Risk Classification）",
+    "def": "EU AI Act 等框架將 AI 系統依潛在危害程度分為不可接受、高風險、有限風險、最低風險四層，對應差異化監管義務的核心機制。",
+    "cat": "concept"
+  },
+  {
+    "term": "風險分層（Risk Tiering）",
+    "def": "依據模型或 AI 系統的潛在影響，將其分類為不同風險等級以決定治理強度的方法。",
+    "cat": "concept"
+  },
+  {
+    "term": "風險導向方法（Risk-Based Approach）",
+    "def": "AI 治理中依 AI 系統的潛在危害程度實施差異化監管義務的方法論，為 EU AI Act、OECD 原則及歐洲委員會公約共同採用。",
+    "cat": "concept"
+  },
+  {
+    "term": "黑箱問題（Black Box Problem）",
+    "def": "深度學習模型決策過程不透明、人類難以理解其推理的根本性問題，是可解釋 AI（XAI）研究的主要動因。",
+    "cat": "concept"
+  },
+  {
+    "term": "系統性風險（Systemic Risk）",
+    "def": "EU AI Act 中指 GPAI 模型因規模或能力可能對歐盟社會造成廣泛負面影響的風險類型，訓練算力超過 10²⁵ FLOP 的模型推定具此風險。",
+    "cat": "concept"
+  },
+  {
+    "term": "Andersen v. Stability AI",
+    "def": "藝術家集體訴訟 Stability AI、Midjourney，主張 AI 圖像生成侵害著作權，2026 年 9 月開庭審判。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "Authors Guild v. OpenAI",
+    "def": "美國作家協會集體訴訟 OpenAI，主張輸出摘要侵害著作權，審理中。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "Chief AI Ethics Officer（AI 倫理長）",
+    "def": "負責 AI 治理日常營運、確保 AI 開發與部署符合倫理原則與政策的企業高層主管職位。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "Chief AI Officer（CAIO，AI 長）",
+    "def": "負責企業 AI 戰略、治理架構及監管合規的高層主管，可分為策略型與平台型兩種定位。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "DABUS 案",
+    "def": "Stephen Thaler 以其 AI 系統 DABUS 申請專利發明人資格，全球多國法院一致確認 AI 不具發明人資格的標誌性智財案件。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "Getty Images v. Stability AI",
+    "def": "Getty 圖庫訴 Stability AI 著作權侵害案，英國法院 2025 年 11 月 4 日裁決主要著作權主張失敗。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "IAS 38（無形資產會計準則）",
+    "def": "IFRS 第 38 號準則，規範 AI 模型等無形資產的認列、衡量與揭露要求。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "Llama Community License",
+    "def": "Meta Llama 系列模型的客製授權，月活 7 億用戶以上需商業授權；OSI 確認不符合開源標準。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "NYT v. OpenAI",
+    "def": "紐約時報訴 OpenAI 及 Microsoft，主張以新聞文章訓練 AI 構成著作權侵害，審理中。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "OpenRAIL（Open & Responsible AI License）",
+    "def": "允許商業使用但附有行為限制的開放 AI 模型授權框架，旨在確保負責任的模型使用。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "OSAID（Open Source AI Definition，開源 AI 定義）",
+    "def": "OSI 於 2024 年 10 月 28 日發布的開源 AI 定義 1.0，要求公開程式碼、模型權重及訓練資料資訊。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "TAIDE（可信任 AI 對話引擎）",
+    "def": "Trustworthy AI Dialogue Engine for Taiwan，國科會主導的台灣主權語言模型計畫，提供本土化繁體中文生成式 AI 基礎模型。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "TIPS（台灣智慧財產管理制度）",
+    "def": "Taiwan Intellectual Property Management System，TIPO 主導的企業 IP 管理認證制度，分 A/AA/AAA 三級，由產業發展署推動。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "Thaler v. Perlmutter",
+    "def": "Stephen Thaler 訴美國著作權局局長案，2025 年 DC 巡迴法院一致裁定 AI 自主生成物不可取得著作權。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "Thomson Reuters v. Ross Intelligence",
+    "def": "法律資料庫著作權案，2025 年 2 月 11 日成為首件聯邦法院拒絕 AI 訓練合理使用抗辯的判決。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "主權 AI（Sovereign AI）",
+    "def": "國家自主掌控 AI 算力、模型與資料基礎設施的能力，為台灣 AI 新十大建設的核心概念。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "台智雲（Taiwan AI Cloud, TWC）",
+    "def": "華碩與政府合資的 AI 算力與服務平台，提供主權 AI 基礎設施，支援 TAIDE 等國家計畫。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "市場法（Market Approach）",
+    "def": "IP 估值三大方法之一，參考可比市場交易定價評估智財資產價值。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "成本法（Cost Approach）",
+    "def": "IP 估值三大方法之一，估算重建或重置 IP 資產所需成本以評估其價值。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "收益法（Income Approach）",
+    "def": "IP 估值三大方法之一，估算 IP 產生的未來現金流現值；適用於 AI 模型 API 授權等有明確收益流的資產。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "沛星互動科技（Appier Inc.）",
+    "def": "台灣出身、東京上市的 AI SaaS 公司，以行銷 AI 為核心業務，為台灣 AI 產業國際化的代表案例。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "訓練資料著作權（Training Data Copyright）",
+    "def": "AI 模型訓練所使用之受著作權保護資料，其使用是否構成侵害的法律爭議，為當前 AI IP 訴訟的核心議題。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "著作傳授（Copyleft）",
+    "def": "GPL 等授權的核心原則：衍生作品須以相同授權發布（俗稱「病毒式污染」），對 AI 模型訓練與發布的授權策略影響重大。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "開放權重（Open Weight）",
+    "def": "僅公開模型參數但不公開完整訓練資料或程式碼的 AI 模型發布形式，不符合 OSAID 完整開源標準；Meta Llama 系列為典型。",
+    "cat": "ipbiz"
+  },
+  {
+    "term": "自願承諾（Voluntary Commitments）",
+    "def": "企業或政府在無法律強制下自願採納的 AI 安全實踐（如 2023 年白宮七大 AI 公司承諾），批評者認為缺乏執行力。",
+    "cat": "concept"
+  }
+]

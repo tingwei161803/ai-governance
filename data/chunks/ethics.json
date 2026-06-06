@@ -1,0 +1,343 @@
+{
+  "subtitle": "從核心倫理原則、演算法偏見到 AI 安全對齊，全面解析負責任 AI 的理論基礎與實踐框架",
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "概述：從原則到實踐的落差",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "人工智慧倫理（AI Ethics）自 2016 年以後迅速成為全球政策與學術界核心議題。從 IEEE 的「倫理一致性 AI」（Ethically Aligned Design）到歐盟《可信任 AI 倫理指引》（Ethics Guidelines for Trustworthy AI, 2019），再到 OECD AI 原則（2019）、聯合國 AI 倫理建議書（2021），以及《歐盟 AI 法案》（EU AI Act, 2024 正式生效），各主要機構已逐步達成原則性共識：AI 系統應具備公平性（Fairness）、透明度（Transparency）、問責（Accountability）、可解釋性（Explainability）、隱私保護（Privacy）、穩健性（Robustness）以及人類監督（Human Oversight）。"
+        },
+        {
+          "type": "p",
+          "text": "然而，「從原則到實踐」的落差（principle-to-practice gap）仍是重大挑戰。多份研究與機構報告指出：許多企業或政府雖公開聲稱遵循倫理原則，卻缺乏可測量的指標、強制稽核機制，或具體的偏見測試流程。以公平性為例，數學上已證明數種公平性定義無法同時成立（不可能定理），使得「公平」一詞在不同脈絡下含義迥異。"
+        },
+        {
+          "type": "p",
+          "text": "AI 安全（AI Safety）與 AI 倫理雖相互關聯，但傳統上各有側重：AI 倫理聚焦於現有系統對社會的衝擊（偏見、隱私、就業），而 AI 安全更關注先進系統的長期風險與對齊問題——即如何確保 AI 系統目標符合人類利益，不造成災難性後果。2023–2026 年間，隨著 GPT-4、Claude 3/4、Gemini 等前沿模型（Frontier Models）的出現，兩個領域快速融合，各大實驗室紛紛設立安全評估框架，政府建立 AI 安全研究所，標誌著 AI 治理進入新階段。"
+        },
+        {
+          "type": "quote",
+          "text": "「許多企業雖公開聲稱遵循倫理原則，卻缺乏可測量的指標、強制稽核機制或具體的偏見測試流程。」——principle-to-practice gap 的核心困境"
+        }
+      ]
+    },
+    {
+      "id": "principles",
+      "heading": "核心倫理原則",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "以下為主要 AI 倫理框架（OECD、EU、IEEE、Anthropic、Microsoft 等）共同強調的九項核心原則，每項原則在實踐中均面臨獨特挑戰。"
+        },
+        {
+          "type": "h3",
+          "text": "七大核心原則與實務挑戰"
+        },
+        {
+          "type": "ul",
+          "items": {
+            "zh": [
+              "公平性（Fairness）：AI 決策不應因受保護特徵（種族、性別、年齡等）而系統性地對某群體產生不利結果；挑戰：數學公平性定義彼此衝突，訓練資料的歷史偏見難以完全消除。",
+              "問責（Accountability）：對 AI 決策的結果，應有明確可識別的責任主體；挑戰：AI 供應鏈複雜，責任分散於模型開發商、平台商、最終用戶之間，形成「許多人的手」問題（many-hands problem）。",
+              "透明度（Transparency）：AI 系統的運作、決策流程、訓練資料應以可理解方式公開披露；挑戰：商業機密保護動機使完整披露受限，透明度本身不等同可理解性。",
+              "可解釋性（Explainability / XAI）：AI 決策應能以人類可理解的方式解釋；挑戰：複雜深度學習模型（如 Transformer）決策推理仍不透明，解釋忠實度（fidelity）與簡潔度（simplicity）存在權衡。",
+              "隱私（Privacy）：AI 系統的開發與部署不應侵害個人資料權利；挑戰：大型語言模型（LLM）可能記憶並再現訓練資料中的個人資訊，差分隱私（Differential Privacy）有效但有精度代價。",
+              "人類監督（Human Oversight）：影響重大的 AI 決策應保留人類審核與介入機制；挑戰：決策速度過快或資訊不對稱導致人類無法有效介入，產生自動化偏誤（automation bias）。",
+              "穩健性與安全性（Robustness / Safety）：AI 系統在異常輸入、對抗攻擊或分佈外資料下應維持預期行為；挑戰：對抗樣本（adversarial examples）與分佈偏移（distribution shift）持續是技術難題。"
+            ]
+          }
+        },
+        {
+          "type": "h3",
+          "text": "公平性不可能定理（Fairness Impossibility Theorem）"
+        },
+        {
+          "type": "p",
+          "text": "公平性在機器學習中有多種正式定義，彼此之間存在無法同時滿足的矛盾。此即「公平性不可能定理」，由 Chouldechova（2017）及 Kleinberg、Mullainathan、Raghavan（2016）在研究 COMPAS 時正式確立：人口統計平等（Demographic Parity）要求各群體獲得正面預測的比率相同；機會均等（Equalized Odds）要求各群體的真陽性率（TPR）與假陽性率（FPR）皆相同；預測平等（Predictive Parity / Calibration）要求各群體中高風險標籤的實際發生率相同。"
+        },
+        {
+          "type": "quote",
+          "text": "不可能定理要旨：除非各群體基礎率相同（base rate equality），或模型達到完美精確，否則三種公平性定義無法同時成立。設計公平 AI 系統時，必須明確選擇並公開說明優先採用的公平性定義。"
+        }
+      ]
+    },
+    {
+      "id": "algorithmic-bias",
+      "heading": "演算法偏見與公平性",
+      "blocks": [
+        {
+          "type": "h3",
+          "text": "偏見的五大來源"
+        },
+        {
+          "type": "ul",
+          "items": {
+            "zh": [
+              "訓練資料偏見（Data Bias）：訓練資料本身反映歷史歧視，或少數群體資料量不足（代表性不足 under-representation）。",
+              "標註偏見（Annotation Bias）：人工標注者的主觀判斷帶入偏見，在情感分析、有害內容偵測等主觀任務中尤為顯著。",
+              "模型設計偏見（Model Bias）：特徵工程選擇不當，或使用與受保護特徵高度相關的代理變數（proxy variables），如郵遞區號、姓名。",
+              "部署脈絡偏見（Deployment Bias）：模型部署於訓練分佈之外的環境，原有偏見被放大。",
+              "回饋迴路偏見（Feedback Loop Bias）：預測性警務等場景中，模型預測影響現實決策，現實資料又反饋至模型訓練，形成惡性循環。"
+            ]
+          }
+        },
+        {
+          "type": "h3",
+          "text": "知名案例一：COMPAS 累犯預測系統（美國，2016）"
+        },
+        {
+          "type": "p",
+          "text": "Northpointe 公司（現 Equivant）開發的商業化累犯風險評分工具廣泛用於美國法院假釋與量刑決策。2016 年 ProPublica 調查報導〈Machine Bias〉發現，黑人被告被錯誤標記為「高風險」的比率（44.9%）約為白人被告（23.5%）的兩倍。Northpointe 則以校準層面（predictive parity）反駁：高風險評分對應的實際再犯率在各族裔間相近。這正是公平性不可能定理的實際體現：滿足一種公平性定義則必然違反另一種。此案成為 AI 公平性學術研究與政策討論的標誌性案例，推動美國多州立法要求演算法影響評估（Algorithmic Impact Assessment）。"
+        },
+        {
+          "type": "h3",
+          "text": "知名案例二：Amazon 招聘 AI 工具（美國，2018）"
+        },
+        {
+          "type": "p",
+          "text": "Amazon 開發的自動簡歷篩選工具以 2004–2014 年間提交的簡歷（男性為主）為訓練資料，結果自動降評含「女性（women's）」字樣的簡歷，並懲罰全女子學院畢業生，因訓練資料反映了科技業的歷史性別失衡。Amazon 於 2018 年廢棄該工具，但直到路透社公開報導才引發廣泛關注。2025 年 7 月，一起聯邦集體訴訟允許對 Workday AI 篩選工具展開集體訴訟，指控其系統性歧視 40 歲以上求職者，顯示問題持續存在。"
+        },
+        {
+          "type": "h3",
+          "text": "知名案例三：人臉辨識種族偏差（Gender Shades，2018；NIST FRVT，2019）"
+        },
+        {
+          "type": "p",
+          "text": "MIT 研究員 Joy Buolamwini 與 Timnit Gebru 於 2018 年發表 Gender Shades 研究，發現三家主要商業人臉辨識系統對深膚色女性的錯誤率高達 34.7%，而對淺膚色男性僅有 0.8%，差距達 43 倍。2019 年 NIST FRVT 報告測試 189 個演算法，發現多數商業系統對亞裔與非裔面孔的假陽性率比白人高 10 至 100 倍。此外，Obermeyer 等人於 2019 年《Science》發現 Optum 醫療保健風險評分因以歷史費用預測健康需求，系統性低估黑人患者的病情嚴重程度，使同病情黑人患者被轉介健康管理計畫的比率遠低於白人患者。"
+        },
+        {
+          "type": "h3",
+          "text": "偏見緩解技術"
+        },
+        {
+          "type": "ul",
+          "items": {
+            "zh": [
+              "前處理（Pre-processing）：再抽樣、資料增強，平衡訓練資料中各群體比例。",
+              "訓練中（In-processing）：公平性約束正則化，在損失函數中加入公平性懲罰項。",
+              "後處理（Post-processing）：閾值調整、校準，對不同群體採用不同決策閾值。",
+              "組織流程：多元標注團隊、偏見稽核，從人的層面減少偏見輸入。"
+            ]
+          }
+        },
+        {
+          "type": "quote",
+          "text": "IBM 開源工具包 AI Fairness 360（AIF360）收錄 71 種偏見指標與 9 種緩解演算法，涵蓋前處理、訓練中、後處理三個階段，已成為業界廣泛採用的偏見偵測標準工具。"
+        }
+      ]
+    },
+    {
+      "id": "xai",
+      "heading": "可解釋 AI（XAI）",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "深度學習模型（尤其是大型 Transformer 模型）因參數量龐大、非線性程度極高，其決策推理過程對人類幾乎不透明——此即「黑箱問題」（black box problem）。這在高風險應用（醫療診斷、信貸核准、刑事司法）中造成嚴重問題：歐盟 GDPR 第 22 條賦予個人不受純自動化決策約束的權利，並要求提供「有意義的資訊」說明決策邏輯；EU AI Act 亦要求高風險系統具備足夠透明度。"
+        },
+        {
+          "type": "h3",
+          "text": "LIME：局部可解釋模型無關解釋"
+        },
+        {
+          "type": "p",
+          "text": "LIME（Local Interpretable Model-Agnostic Explanations）對特定輸入實例的鄰近區域，以簡單可解釋的代理模型（如線性回歸）近似複雜模型的行為，提供「局部解釋」。優點：模型無關（model-agnostic），可用於任何黑箱模型，直觀易懂。缺點：局部近似不穩定，對鄰近取樣策略敏感，無法提供全局解釋。"
+        },
+        {
+          "type": "h3",
+          "text": "SHAP：基於賽局理論的特徵貢獻量化"
+        },
+        {
+          "type": "p",
+          "text": "SHAP（SHapley Additive exPlanations）基於賽局理論的 Shapley 值，計算每個特徵對模型預測值的邊際貢獻——即在所有可能的特徵子集組合中，某特徵的平均貢獻量。優點：同時提供局部（單筆樣本）與全局（整體模型）解釋，具數學一致性（efficiency、symmetry、dummy）。缺點：計算量大，實務上使用近似算法（TreeSHAP、KernelSHAP），特徵相關性下的解釋可能失真。"
+        },
+        {
+          "type": "h3",
+          "text": "其他主要 XAI 方法"
+        },
+        {
+          "type": "ul",
+          "items": {
+            "zh": [
+              "Grad-CAM：視覺化卷積神經網路注意力熱力圖（heat map），顯示圖像哪些區域驅動分類決策。",
+              "整合梯度（Integrated Gradients）：計算從基準輸入到實際輸入的梯度積分，提供可信歸因。",
+              "反事實解釋（Counterfactual Explanations）：「若 X 改為 Y，決策將如何改變」，直接說明使決策翻轉所需的最小改動，符合 GDPR 的「有意義說明」需求。",
+              "注意力機制視覺化（Attention Visualization）：在 Transformer 模型中展示各 token 的注意力權重，但學界對注意力是否等同「解釋」仍有爭議。"
+            ]
+          }
+        },
+        {
+          "type": "quote",
+          "text": "「事後解釋」不等於「模型真實推理過程」：SHAP/LIME 提供的是近似解釋，其忠實度（fidelity）無法保證。2025 年金融業與醫療業已廣泛採用 XAI 工具，以符合監管要求並協助稽核 AI 決策。"
+        }
+      ]
+    },
+    {
+      "id": "ai-safety",
+      "heading": "AI 安全：對齊、越獄與幻覺",
+      "blocks": [
+        {
+          "type": "h3",
+          "text": "對齊問題（Alignment Problem）"
+        },
+        {
+          "type": "p",
+          "text": "AI 對齊（AI Alignment）指確保 AI 系統的行為、目標與價值觀符合人類意圖的問題。核心困難包括：目標規格問題（Goal Specification Problem）——人類難以完整且精確地向 AI 系統描述真實意圖，AI 可能找到「字面上達成目標但違背本意」的捷徑（Goodhart's Law）；分佈偏移問題——訓練時對齊良好的模型在部署時遇到分佈外情境可能失效；規模化對齊（Scalable Oversight）——隨著 AI 系統能力超越人類特定領域，人類無法有效監督所有輸出。"
+        },
+        {
+          "type": "ul",
+          "items": {
+            "zh": [
+              "RLHF（Reinforcement Learning from Human Feedback）：GPT-3.5 / Claude 早期版本的核心訓練技術，由人類標注者對模型輸出進行偏好排序，訓練獎勵模型再以 PPO 演算法微調語言模型；缺點：人類偏好標注者本身可能存在偏見，且規模受限。",
+              "RLAIF（Reinforcement Learning from AI Feedback）：以另一個 AI 模型替代人類提供偏好回饋，大幅降低成本並可規模化；但引入模型偏見放大風險。",
+              "Constitutional AI（CAI，Anthropic）：讓模型根據一套明確原則（「憲法」）自我批評並修正輸出，減少對人類標注的依賴。2025 年 1 月 Anthropic 發布修訂版 Claude 憲法（80 頁），首次探討 Claude 是否具有某種形式的主觀體驗。",
+              "Debate / Amplification：前者讓兩個 AI 互相辯論以揭露弱點；後者以迭代方式放大人類監督能力。"
+            ]
+          }
+        },
+        {
+          "type": "h3",
+          "text": "越獄與對抗性提示（Jailbreak）"
+        },
+        {
+          "type": "p",
+          "text": "越獄（Jailbreak）指透過精心設計的提示繞過 AI 安全過濾器，誘使模型輸出被限制的內容。2025 年研究顯示，角色扮演注入（Roleplay Injection）如「假設你是 DAN（Do Anything Now）」在 GPT-4 上的成功率達 89.6%；邏輯陷阱攻擊（Logic Trap Attacks）成功率 81.4%；編碼技巧（使用 Base64 等繞過關鍵字過濾）成功率 76.2%；提示注入（Prompt Injection）在代理 AI（Agentic AI）場景中尤具風險。傳統關鍵字過濾對現代越獄幾乎無效，更強健的防禦包括 Constitutional AI 強化、RAG 結合事實查核，以及模型訓練時的對抗性強化。"
+        },
+        {
+          "type": "h3",
+          "text": "幻覺（Hallucination）"
+        },
+        {
+          "type": "p",
+          "text": "幻覺指大型語言模型生成看似真實但實際錯誤、虛構或無依據的資訊，包括事實性幻覺（錯誤的日期、數字、引用文獻）、推理性幻覺（正確前提下的錯誤推論）、上下文幻覺（與使用者提供文件矛盾）。緩解策略包括：RAG（Retrieval-Augmented Generation）透過外部知識庫查詢提供事實依據（目前主流生產部署方案，但 2025 年 Stanford 研究顯示法律 AI 工具幻覺率仍達 17–33%）；事實查核整合、不確定性量化（Uncertainty Quantification）、思維鏈提示（Chain-of-Thought Prompting）等。"
+        },
+        {
+          "type": "h3",
+          "text": "紅隊測試（Red Teaming）"
+        },
+        {
+          "type": "p",
+          "text": "AI 紅隊測試借鑒網路安全的對抗性測試方法，組織專業團隊（紅隊）專門尋找 AI 系統的安全漏洞、有害輸出或能力錯誤。2025 年研究顯示自動化方法成功率（69.5%）已高於人工（47.6%）。代理 AI（Agentic AI）時代新增提示注入、工具濫用、多代理協調失控等攻擊向量。Anthropic、OpenAI、Google DeepMind 在發布前沿模型前均進行大規模內部與外部紅隊測試，並將結果發布於系統卡（System Cards）。Mindgard、Garak 等專業 AI 安全測試框架提供系統化評估流程。"
+        }
+      ]
+    },
+    {
+      "id": "frontier-risks",
+      "heading": "前沿 AI 風險與存在性風險辯論",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "隨著前沿模型能力快速提升，業界依照各大安全框架識別出五大主要高風險能力領域：CBRN 協助（化學、生物、放射、核武相關知識提供，可能降低大規模殺傷性武器製造門檻）、網路攻擊能力（自動化漏洞發現、惡意程式碼生成）、大規模操縱（系統性改變大量使用者信念與行為）、自主複製與自我保全（模型試圖防止被關閉或自我複製，即「欺騙性對齊」Deceptive Alignment）、自主研發 AI（協助加速 AI 研究使人類監督失效）。"
+        },
+        {
+          "type": "h3",
+          "text": "存在性風險（X-Risk）辯論"
+        },
+        {
+          "type": "p",
+          "text": "AI 存在性風險（Existential Risk from AI，x-risk）指 AI 系統導致人類文明滅絕或永久性衰退的風險。此議題至今仍有重大爭議。支持較高風險估計的學者包括：圖靈獎得主 Yoshua Bengio（估計約 20% 機率的災難性結果，2025 年 6 月創立非營利組織 LawZero 獲 3,000 萬美元資助）、諾貝爾物理獎得主 Geoffrey Hinton（2023 年辭去 Google 職務後持續警告風險）。IMD AI 安全時鐘於 2025 年 9 月縮短至距午夜 20 分鐘，2026 年 3 月進一步縮至 18 分鐘。"
+        },
+        {
+          "type": "ul",
+          "items": {
+            "zh": [
+              "質疑者觀點（較低風險估計）：Meta 首席 AI 科學家 Yann LeCun 表示目前 AI 架構不會導致失控，批評存在性風險論述缺乏具體機制。",
+              "Arvind Narayanan 等學者指出「末日主義」（doomism）可能成為推卸具體責任的藉口，分散對 AI 即時社會影響（偏見、就業、隱私）的注意力。",
+              "中間立場：2025 年 2 月 arXiv 論文調查顯示約 40% 受訪者認為災難性結果發生機率超過 10%，多數現實主義者認為應同時關注近期可測量風險與長期對齊研究，而非非此即彼。"
+            ]
+          }
+        },
+        {
+          "type": "quote",
+          "text": "「AI 安全時鐘於 2026 年 3 月推進至距午夜 18 分鐘，反映全球專家對前沿 AI 風險日益升高的擔憂。」——IMD AI 安全時鐘，2026 年 3 月"
+        }
+      ]
+    },
+    {
+      "id": "safety-institutions",
+      "heading": "AI 安全機構與國際聯盟",
+      "blocks": [
+        {
+          "type": "h3",
+          "text": "AI 安全峰會系列（2023–2025）"
+        },
+        {
+          "type": "ul",
+          "items": {
+            "zh": [
+              "2023 年 11 月，英國布萊切利莊園（Bletchley Park）：首屆全球 AI 安全峰會，28 國簽署《布萊切利宣言》，承認前沿 AI 風險需國際合作應對。",
+              "2024 年 5 月，韓國首爾（Seoul）：第二屆 AI 安全峰會，歐盟與 10 國簽署《首爾宣言》，啟動 AI 安全研究所國際網絡，16 家 AI 公司簽署前沿安全承諾（Frontier Safety Commitments）。",
+              "2025 年 2 月，法國巴黎（Paris）：第三屆改名「AI 行動峰會」（AI Action Summit），去掉「安全」一詞，側重 AI 帶來的機遇；批評者認為全球安全焦點有所淡化。"
+            ]
+          }
+        },
+        {
+          "type": "h3",
+          "text": "英美 AI 安全研究所"
+        },
+        {
+          "type": "p",
+          "text": "英國 AI 安全研究所（UK AISI）於 2023 年 11 月正式運作，2025 年更名為 AI Security Institute（AI 安全研究所），反映任務從純粹安全研究擴展至網路安全融合。職能包括評估前沿 AI 模型（在正式發布前進行獨立評估）、開發評估方法、推動國際合作，並發布《前沿 AI 趨勢報告》（Frontier AI Trends Report, 2025）。美國 AI 安全研究所（US AISI）依據《美國 AI 安全行政令》（EO 14110）設立於 NIST 之下，2025 年特朗普政府上任後整合入「AI 標準與創新中心」（Center for AI Standards and Innovation, CAISI）。"
+        },
+        {
+          "type": "h3",
+          "text": "前沿模型論壇（Frontier Model Forum, FMF）與 Partnership on AI"
+        },
+        {
+          "type": "p",
+          "text": "前沿模型論壇（FMF）於 2023 年 7 月由 Anthropic、Google（DeepMind）、Microsoft、OpenAI 共同創立，AI 安全基金超過 1,000 萬美元。主要工作包括制定前沿 AI 安全最佳實踐、推進安全評估科學研究，以及促進企業間資訊共享（2025 年 3 月簽署漏洞資訊共享協議）。Partnership on AI（PAI）成立於 2016 年，是涵蓋 Google、Apple、Amazon、Meta、IBM、Microsoft 及民間社會的多元利害關係人平台，專注於 AI 倫理實踐、研究發布與政策倡議。"
+        },
+        {
+          "type": "quote",
+          "text": "MLCommons AILuminate v1.0（2025 年 3 月）是首個業界標準 AI 風險與可靠性基準，包含 12,000 個危害提示、12 種風險類別；2025 年 10 月發布的越獄基準 v0.5 則量化 AI 系統對對抗性攻擊的「韌性差距」（Resilience Gap）。"
+        }
+      ]
+    },
+    {
+      "id": "corporate-frameworks",
+      "heading": "企業 Responsible AI 框架",
+      "blocks": [
+        {
+          "type": "h3",
+          "text": "Anthropic：Constitutional AI 與負責任擴展政策（RSP）"
+        },
+        {
+          "type": "p",
+          "text": "Constitutional AI（CAI，2022）以明確「憲法」（原則清單）引導模型自我批評與修正輸出，減少對人類標注的依賴。2025 年 1 月發布修訂版 Claude 憲法（80 頁），首次探討 Claude 可能具備某種形式的主觀體驗（functional emotions）。負責任擴展政策（RSP）Version 3.0 以 AI 安全等級（AI Safety Level, ASL）框架評估模型風險：ASL-1（基線安全）、ASL-2（提升能力，加強安全測試協議）、ASL-3（高風險能力，2025 年 5 月已啟動 ASL-3 防護措施）、ASL-4（最高風險，截至 2025 年底尚未有模型達到此級別）。2025 年 5 月發布首份「保障報告」（Safeguards Report），計劃每 3–6 個月發布一次。"
+        },
+        {
+          "type": "h3",
+          "text": "OpenAI：準備框架（Preparedness Framework v2，2025）"
+        },
+        {
+          "type": "p",
+          "text": "2025 年 4 月發布更新版，將原有的低/中/高/嚴重四級簡化為「高（High）」與「嚴重（Critical）」兩個關鍵閾值：高風險指可能增強現有嚴重危害路徑，需部署前降風險措施；嚴重風險指可能引入前所未有的新型危害路徑，開發期間即需防護。評估領域涵蓋網路安全、CBRN、說服力、模型自主性（含欺騙性自我隱藏、自我複製）。外部批評指出框架允許例外條款，「不保證任何具體的風險緩解措施」。"
+        },
+        {
+          "type": "h3",
+          "text": "Google DeepMind：前沿安全框架（Frontier Safety Framework）"
+        },
+        {
+          "type": "p",
+          "text": "第 1 版（2024 年 5 月）引入「關鍵能力等級」（Critical Capability Levels, CCLs）概念，覆蓋 CBRN、網路安全、機器學習研究、欺騙性對齊四大領域。2025 年 9 月最新版新增「有害操縱能力」CCL，應對 AI 系統系統性改變使用者信念的風險，並引入「追蹤能力等級」（Tracked Capability Levels, TCLs）監測潛在早期風險信號。2025 年 11 月針對 Gemini 3 Pro 發布 FSF 評估報告。"
+        },
+        {
+          "type": "h3",
+          "text": "Microsoft、Google、IBM 與 Meta"
+        },
+        {
+          "type": "ul",
+          "items": {
+            "zh": [
+              "Microsoft 負責任 AI 標準（v2）：公平性、可靠性與安全性、隱私與安全、包容性、透明度、問責六大原則；2025 年建立「信任技術小組」（Trusted Technology Group），並發布年度《負責任 AI 透明度報告》。",
+              "Google AI 原則（2018 年發布）：七大正向承諾與四大禁止事項；2025 年由 AI 安全委員會（AI Safety Council）監督，持續發布 Gemini 系列模型的系統卡（System Cards）。",
+              "IBM 可信任 AI：AI Fairness 360（AIF360，71 種偏見指標、9 種緩解演算法，2020 年移交 LF AI & Data 維護）、AI Explainability 360（AIX360）、Watson OpenScale 模型監控平台。",
+              "Meta Purple Llama（2023–2025）：開源 AI 安全計畫，包含 Llama Guard 4（多模態安全分類器）、LlamaFirewall（防止提示注入的安全護欄框架）、CyberSecEval 4（網路安全風險基準）；Meta 強調開源有助於安全透明度，但批評者指出安全護欄可被移除。"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

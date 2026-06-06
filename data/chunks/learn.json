@@ -1,0 +1,260 @@
+{
+  "quiz": [
+    {
+      "q": "EU AI Act（歐盟人工智慧法）將 AI 系統分為幾個風險層級？哪一層屬於「完全禁止」？",
+      "options": [
+        "三層；高風險",
+        "四層；不可接受風險（Unacceptable Risk）",
+        "四層；有限風險",
+        "五層；最高風險"
+      ],
+      "answer": 1,
+      "explain": "EU AI Act 採四層風險分級：不可接受、高風險、有限風險、最低風險。不可接受風險（Unacceptable Risk）為完全禁止層，涵蓋社會評分系統（Social Scoring）及即時公共場所生物識別等應用。"
+    },
+    {
+      "q": "根據 EU AI Act，GPAI（通用目的 AI）模型被認定具「系統性風險（Systemic Risk）」的訓練算力門檻為何？",
+      "options": [
+        "超過 10²³ FLOPs",
+        "超過 10²⁴ FLOPs",
+        "超過 10²⁵ FLOPs",
+        "超過 10²⁶ FLOPs"
+      ],
+      "answer": 2,
+      "explain": "EU AI Act 以 10²⁵ FLOPs 作為 GPAI 系統性風險推定門檻，而 10²³ FLOPs 則是認定模型屬於 GPAI 類別的基本門檻。"
+    },
+    {
+      "q": "NIST AI RMF（AI 風險管理框架）包含哪四大核心功能（Functions）？",
+      "options": [
+        "PLAN、DO、CHECK、ACT",
+        "GOVERN、MAP、MEASURE、MANAGE",
+        "IDENTIFY、PROTECT、DETECT、RESPOND",
+        "ASSESS、MITIGATE、MONITOR、REPORT"
+      ],
+      "answer": 1,
+      "explain": "NIST AI RMF 1.0（2023 年 1 月發布）的四大核心功能為 GOVERN（治理）、MAP（映射）、MEASURE（量測）、MANAGE（管理）。"
+    },
+    {
+      "q": "中國「三大 AI 規章」中，哪一部是全球首部針對生成式 AI 服務的專屬法規？",
+      "options": [
+        "《深度合成管理規定》（2023-01-10 生效）",
+        "《算法推薦管理規定》（2022-03-01 生效）",
+        "《生成式 AI 服務管理暫行辦法》（2023-08-15 生效）",
+        "《AI 生成合成內容標識辦法》（2025-09-01 生效）"
+      ],
+      "answer": 2,
+      "explain": "中國《生成式 AI 服務管理暫行辦法》於 2023 年 8 月 15 日生效，是全球第一部專門針對生成式 AI 服務的法規，要求內容安全、備案與標識義務。"
+    },
+    {
+      "q": "台灣《人工智慧基本法》的中央主管機關為何？",
+      "options": [
+        "數位發展部（MODA）",
+        "經濟部",
+        "國家科學及技術委員會（NSTC）",
+        "金融監督管理委員會（FSC）"
+      ],
+      "answer": 2,
+      "explain": "台灣《人工智慧基本法》由立法院於 2025 年 12 月 23 日三讀通過，2026 年 1 月 14 日施行，明定國家科學及技術委員會（國科會）為中央主管機關。"
+    },
+    {
+      "q": "UNESCO AI 倫理建議書於何年由多少個會員國通過？",
+      "options": [
+        "2019 年，42 個成員國",
+        "2021 年，193 個會員國",
+        "2023 年，28 個國家",
+        "2024 年，92 個國家"
+      ],
+      "answer": 1,
+      "explain": "UNESCO AI 倫理建議書於 2021 年 11 月 23 日由 193 個會員國一致鼓掌通過，是全球首個 AI 倫理全球標準性文件。"
+    },
+    {
+      "q": "ISO/IEC 42001 是什麼標準？何時發布？",
+      "options": [
+        "AI 概念與術語標準，2022 年 7 月",
+        "AI 風險管理指南，2023 年 2 月",
+        "全球首個可認證的 AI 管理系統（AIMS）標準，2023 年 12 月",
+        "AI 可信賴性概述技術報告，2020 年 5 月"
+      ],
+      "answer": 2,
+      "explain": "ISO/IEC 42001 於 2023 年 12 月發布，是全球首個可供第三方認證的 AI 管理系統（AIMS）國際標準，適用任何規模與類型的組織。"
+    },
+    {
+      "q": "Thomson Reuters v. Ross Intelligence（2025-02-11）案的重要性為何？",
+      "options": [
+        "首次確認 AI 生成物擁有著作權",
+        "首件聯邦法院拒絕以合理使用（Fair Use）抗辯 AI 訓練資料侵權的判決",
+        "裁定 AI 系統可作為合法發明人",
+        "確立深偽（Deepfake）內容的強制標識義務"
+      ],
+      "answer": 1,
+      "explain": "Thomson Reuters v. Ross Intelligence 是 2025 年 2 月 11 日美國聯邦法院的標誌性判決，首次在 AI 訓練語境下拒絕合理使用（Fair Use）抗辯，法律資料庫著作權受到保護。"
+    },
+    {
+      "q": "DABUS 案確立了什麼法律原則？",
+      "options": [
+        "AI 可作為著作權人",
+        "AI 可以自然人身份申請專利",
+        "AI 系統不具備發明人資格，發明人須為自然人",
+        "AI 輔助發明可豁免專利申請費"
+      ],
+      "answer": 2,
+      "explain": "DABUS（Device for the Autonomous Bootstrapping of Unified Sentience）是 Stephen Thaler 的 AI 系統，全球英國、美國、歐盟等多個主要法域均裁定 AI 不具發明人資格，只有自然人方可被列為發明人。"
+    },
+    {
+      "q": "Meta Llama 系列模型採用的 Llama Community License 符合開源標準嗎？",
+      "options": [
+        "完全符合 OSI 開源定義（OSAID）",
+        "月活超過 7 億用戶須商業授權，OSI 確認不符合開源標準",
+        "屬於 OpenRAIL 授權，完全開放",
+        "符合 GPL 著作傳授原則"
+      ],
+      "answer": 1,
+      "explain": "Meta Llama 系列採用 Llama Community License，月活用戶超過 7 億的情境需取得商業授權，OSI（開放原始碼促進會）確認其不符合 OSAID 開源 AI 定義的完整標準。"
+    },
+    {
+      "q": "C2PA（Coalition for Content Provenance and Authenticity）的主要功能是什麼？",
+      "options": [
+        "建立 AI 模型評估基準",
+        "透過密碼學簽名在數位內容中嵌入創建歷程元資料，對抗深偽與資訊操控",
+        "管理 AI 系統的訓練資料授權",
+        "提供 AI 偏見偵測工具"
+      ],
+      "answer": 1,
+      "explain": "C2PA 是由 Adobe、ARM、Intel、Microsoft 等創立的開放技術標準，透過密碼學簽名在數位內容中嵌入內容來源（Provenance）元資料，可用於追蹤 AI 生成內容並對抗深偽（Deepfake）。"
+    },
+    {
+      "q": "2022 年 10 月美國 BIS 對中國實施的晶片出口管制，最初禁止哪些產品出口？",
+      "options": [
+        "僅禁止消費性電子晶片",
+        "NVIDIA A100、H100 等高端 GPU 及先進晶片製造設備",
+        "僅限制鎵、鍺等原材料",
+        "禁止所有半導體相關技術出口"
+      ],
+      "answer": 1,
+      "explain": "2022 年 10 月 7 日，美國 BIS 實施史上最嚴半導體出口管制，禁止向中國出口 NVIDIA A100、H100 等高端 GPU 及先進晶片製造設備，目的是限制中國 AI 算力發展。"
+    },
+    {
+      "q": "下列哪項最能描述「紅隊測試（Red Teaming）」在 AI 安全中的作用？",
+      "options": [
+        "協助 AI 模型進行訓練資料清洗",
+        "組織專業團隊模擬攻擊者，尋找 AI 系統安全漏洞的對抗性測試方法",
+        "評估 AI 系統的商業應用可行性",
+        "審核 AI 模型的版權合規問題"
+      ],
+      "answer": 1,
+      "explain": "紅隊測試（Red Teaming）是 AI 安全領域的核心測試方法，藉由模擬惡意攻擊者的視角主動發現系統漏洞，G7 廣島行為準則及各國 AISI 測試協議均要求執行。"
+    },
+    {
+      "q": "台灣《人工智慧基本法》第 4 條規定的「七大治理原則」包含哪些？",
+      "options": [
+        "安全、隱私、透明、公平、問責、永續、創新",
+        "永續發展、人類自主、隱私保護、資安、透明可解釋、公平不歧視、問責",
+        "法治、民主、人權、公平、透明、安全、效能",
+        "包容性、技術中立、開放、可信、安全、問責、協作"
+      ],
+      "answer": 1,
+      "explain": "台灣《人工智慧基本法》第 4 條明定七大治理原則：永續發展、人類自主、隱私保護、資安、透明可解釋、公平不歧視、問責，與國際主流治理框架高度接軌。"
+    }
+  ],
+  "cards": [
+    {
+      "front": "EU AI Act 的四個風險層級是什麼？",
+      "back": "不可接受風險（Unacceptable Risk，完全禁止）、高風險（High Risk，嚴格義務）、有限風險（Limited Risk，透明度要求）、最低風險（Minimal Risk，無特定義務）。"
+    },
+    {
+      "front": "NIST AI RMF（AI Risk Management Framework）四大核心功能",
+      "back": "GOVERN（治理）、MAP（映射脈絡與風險）、MEASURE（量測與評估）、MANAGE（回應與監控）。2023 年 1 月 NIST 正式發布，為自願性框架。"
+    },
+    {
+      "front": "ISO/IEC 42001",
+      "back": "2023 年 12 月發布的全球首個可第三方認證的 AI 管理系統（AIMS）國際標準，規定組織建立、維護並持續改善 AI 治理的要求，適用任何規模組織。"
+    },
+    {
+      "front": "GPAI（General-Purpose AI，通用目的 AI 模型）",
+      "back": "可執行多種任務的大型 AI 模型（如 GPT-4、Gemini）。EU AI Act 以 10²³ FLOPs 為認定門檻；超過 10²⁵ FLOPs 訓練者推定具系統性風險（Systemic Risk），負擔最高等級義務。"
+    },
+    {
+      "front": "C2PA（Coalition for Content Provenance and Authenticity，內容真實性倡議）",
+      "back": "由 Adobe、Microsoft 等創立的開放技術標準，透過密碼學簽名在數位內容中嵌入創建歷程元資料（Provenance），用於驗證 AI 生成內容的來源，對抗深偽（Deepfake）。"
+    },
+    {
+      "front": "EU AI Act 的 Social Scoring（社會評分）屬於哪個風險層？為何被禁止？",
+      "back": "屬於不可接受風險（Unacceptable Risk），完全禁止。因為依個人社會行為或特徵對其系統性評分並決定資源分配，嚴重侵害人類尊嚴與基本權利。"
+    },
+    {
+      "front": "Thomson Reuters v. Ross Intelligence（2025）",
+      "back": "2025 年 2 月 11 日美國聯邦法院判決，首件拒絕以合理使用（Fair Use）抗辯 AI 訓練資料侵權的案件，法律資料庫著作權受到保護，對 AI 訓練資料版權爭議具指標意義。"
+    },
+    {
+      "front": "DABUS 案的核心原則",
+      "back": "全球英國、美國、歐盟等多個法域均裁定：AI 系統不具備發明人（Inventor）資格，發明人只能是自然人。Stephen Thaler 以其 AI 系統 DABUS 申請專利均遭拒。"
+    },
+    {
+      "front": "紅隊測試（Red Teaming）",
+      "back": "組織專業團隊模擬惡意攻擊者尋找 AI 系統漏洞的對抗性安全測試方法。G7 廣島行為準則、各國 AI 安全研究所（AISI）測試協議及布萊切利宣言均明確要求前沿模型須定期執行。"
+    },
+    {
+      "front": "布萊切利宣言（Bletchley Declaration）",
+      "back": "2023 年 11 月英國首屆 AI 安全峰會，由 28 個國家（含美國、中國）聯合簽署，確立前沿 AI（Frontier AI）安全的國際共識，強調蓄意濫用與控制失當的雙重風險需國際合作應對。"
+    },
+    {
+      "front": "中國 AI「三規章」是哪三部？",
+      "back": "①《算法推薦管理規定》（2022-03-01 生效，規範算法備案與用戶選擇退出）；②《深度合成管理規定》（2023-01-10 生效，規範深偽標識）；③《生成式 AI 服務管理暫行辦法》（2023-08-15 生效，全球首部生成式 AI 法規）。"
+    },
+    {
+      "front": "台灣《人工智慧基本法》七大治理原則（第 4 條）",
+      "back": "永續發展、人類自主、隱私保護、資安（資訊安全）、透明可解釋、公平不歧視、問責。2026 年 1 月 14 日施行，國科會（NSTC）為中央主管機關。"
+    },
+    {
+      "front": "OSAID（Open Source AI Definition）",
+      "back": "OSI（開放原始碼促進會）於 2024 年 10 月 28 日發布的開源 AI 定義 1.0，要求公開程式碼、模型權重及訓練資料資訊。Meta Llama、Mistral 等主流「開放模型」因使用限制而不符合此標準。"
+    },
+    {
+      "front": "合理使用四因素（Four Fair Use Factors）",
+      "back": "依美國著作權法第 107 條：①使用目的與性質（是否具轉化性）②著作性質③使用量占比④對市場影響。Thomson Reuters v. Ross 案中，AI 訓練資料使用被裁定不符合合理使用。"
+    },
+    {
+      "front": "拜登 EO 14110 vs 川普 EO 14179",
+      "back": "EO 14110（2023-10-30 簽署）要求基礎模型安全報告（10²⁶ FLOP 門檻）及 NIST 標準；川普就職首日（2025-01-20）撤銷 EO 14110，隨後簽署 EO 14179，以移除法規障礙、維持美國 AI 主導地位為核心。"
+    },
+    {
+      "front": "Deepfake（深偽技術）的法律義務",
+      "back": "中國《深度合成管理規定》（2023）及《AI 生成合成內容標識辦法》（2025）要求顯式+隱式雙重標識；EU AI Act Article 50（2026-08-02 起）要求 AI 生成內容機器可讀標示；各國 AI 法規普遍要求深偽內容揭露。"
+    },
+    {
+      "front": "美國晶片出口管制（三波）",
+      "back": "第一波（2022-10-07）：禁 A100/H100 出口中國；第二波（2023-10-07）：封堵 A800/H800 漏洞，新增算力密度限制；第三波（2024-12-02）：140 家中國 AI 企業列入實體清單，擴大設備管制。"
+    },
+    {
+      "front": "RLHF（Reinforcement Learning from Human Feedback，人類反饋強化學習）",
+      "back": "收集人類對模型輸出的偏好排序，訓練獎勵模型，再以強化學習優化 AI 行為的對齊（Alignment）技術，是 ChatGPT 等大型語言模型的核心訓練方法。"
+    },
+    {
+      "front": "EU AI Act 高風險 AI 系統的義務",
+      "back": "須進行合規評估（Conformity Assessment）、登記於歐盟資料庫、建立風險管理系統、資料治理、技術文件、透明度及可解釋性、人類監督措施，並符合網路安全要求。高風險系統義務於 2026 年 8 月全面生效。"
+    },
+    {
+      "front": "首爾 AI 安全峰會（2024-05）前沿安全承諾",
+      "back": "2024 年 5 月首爾峰會，20 家 AI 公司（含 OpenAI、Anthropic、Google 等）自願簽署前沿 AI 安全承諾（Frontier AI Safety Commitments），包括發布安全框架及在風險過高時不發布新模型。"
+    },
+    {
+      "front": "UNESCO AI 倫理建議書（2021）",
+      "back": "2021 年 193 個 UNESCO 會員國通過的全球首個 AI 倫理標準性文件，包含四大核心價值、十大原則及十一大政策行動領域，涵蓋隱私、透明度、公平性、環境影響等面向。"
+    },
+    {
+      "front": "模型卡（Model Card）",
+      "back": "由 Margaret Mitchell 等人於 2019 年提出的標準化機器學習模型文件，揭露模型的預期用途、效能特性、倫理考量及限制；是 AI 透明度（Transparency）與問責（Accountability）的重要工具。"
+    },
+    {
+      "front": "歐洲委員會 AI 框架公約（CoE Framework Convention on AI）",
+      "back": "2024 年 9 月開放簽署，是全球首個具法律約束力的 AI 國際條約，要求締約方確保 AI 生命週期符合人權、民主與法治；17 個初始簽署方含英國、美國及歐盟成員國。"
+    },
+    {
+      "front": "算法備案（Algorithm Registration）— 中國",
+      "back": "中國監管制度要求具輿論屬性或社會動員能力的算法服務，在提供後 10 個工作日內向網信辦（CAC）完成登記備案。《算法推薦管理規定》（2022）為主要依據。"
+    },
+    {
+      "front": "SynthID — Google DeepMind",
+      "back": "Google DeepMind 開發的 AI 生成內容不可見浮水印（Invisible Watermark）技術，在不影響內容品質的情況下嵌入可機器讀取的標記，支援圖像、音訊、影片、文字四種模態，用於識別 AI 生成內容。"
+    }
+  ]
+}
