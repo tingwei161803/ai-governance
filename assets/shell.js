@@ -91,6 +91,12 @@
           '<span class="brand__name" id="brandName"></span>' +
         '</a>' +
         '<div class="appbar__actions">' +
+          '<a class="gh-star" id="ghStar" href="https://github.com/tingwei161803/ai-governance" ' +
+            'target="_blank" rel="noopener" data-repo="tingwei161803/ai-governance" ' +
+            'title="在 GitHub 上給星" aria-label="在 GitHub 上給此專案 Star">' +
+            '<span class="material-symbols-rounded">star</span>' +
+            '<span class="gh-star__count" id="ghStarCount">—</span>' +
+          '</a>' +
           '<button class="icon-btn" id="themeToggle" type="button" title="切換深淺色主題" aria-label="切換深淺色主題 / Toggle theme">' +
             '<span class="material-symbols-rounded" id="themeIcon">dark_mode</span>' +
           '</button>' +
@@ -217,12 +223,30 @@
   /* =======================================================================
      INIT
      ===================================================================== */
+  /* ---------- live GitHub star count (public API, no auth) ---------- */
+  function fetchStars() {
+    var el = document.getElementById("ghStar");
+    var countEl = document.getElementById("ghStarCount");
+    if (!el || !countEl) return;
+    var repo = el.getAttribute("data-repo");
+    if (!repo) return;
+    fetch("https://api.github.com/repos/" + repo)
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        if (!j || typeof j.stargazers_count !== "number") return;
+        var n = j.stargazers_count;
+        countEl.textContent = n >= 1000 ? (n / 1000).toFixed(1) + "k" : String(n);
+      })
+      .catch(function () { /* offline / rate-limited: leave the placeholder */ });
+  }
+
   function init() {
     injectChrome();
     applyTheme();
     applyLangChrome();
     refreshChrome();
     wire();
+    fetchStars();
     window.LDW.ready = true;
     document.dispatchEvent(new CustomEvent("ldw:shell-ready"));
   }

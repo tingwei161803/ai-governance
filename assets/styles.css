@@ -414,6 +414,19 @@ body { font-family:var(--font-body); letter-spacing:.003em; }
 .dialog__src a { font-size:.82rem; color:var(--primary); }
 .dialog__body p { line-height:1.7; }
 
+/* ---- GitHub star button (appbar) ---- */
+.gh-star { display:inline-flex; align-items:center; gap:6px; padding:6px 11px;
+  border:1px solid var(--outline-variant); border-radius:var(--radius-lg);
+  color:var(--on-surface-variant); font-size:.82rem; font-weight:500;
+  transition:background .15s,border-color .15s,color .15s; }
+.gh-star:hover { background:var(--surface-container-high); border-color:var(--outline); color:var(--on-surface); }
+.gh-star .material-symbols-rounded { font-size:18px; color:#E3B341; }
+.gh-star__count { font-family:var(--font-mono); font-variant-numeric:tabular-nums; min-width:1ch; }
+
 /* ---- responsive : sticky offsets for the quiz score on small screens ---- */
 @media (max-width:860px){ .quiz-score{ top:60px; } }
-@media (max-width:600px){ .glossary-list{ grid-template-columns:1fr; } .flashgrid{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); } }
+@media (max-width:600px){
+  .glossary-list{ grid-template-columns:1fr; }
+  .flashgrid{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); }
+}
+@media (max-width:375px){ .gh-star__count{ display:none; } }
