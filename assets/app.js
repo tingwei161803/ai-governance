@@ -139,6 +139,13 @@
               var arr = (b.items && (b.items[L.state.lang] || b.items.en || b.items.zh)) || [];
               return "<ul>" + arr.map(function (li) { return "<li>" + esc(li) + "</li>"; }).join("") + "</ul>";
             }
+            if (b.type === "links") {
+              var ls = b.items || [];
+              return '<ul class="ref-list">' + ls.map(function (l) {
+                return '<li><a class="ref-link" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
+                  esc(l.title || l.url) + " ↗</a></li>";
+              }).join("") + "</ul>";
+            }
             return "<p>" + esc(t(b.text)) + "</p>";
           }).join("");
           return '<section class="article-section" id="' + esc(s.id) + '" data-item ' +
@@ -390,10 +397,15 @@
           var ov = t(item.overview) || t(item.summary) || "";
           var paras = String(ov).split(/\n+/).filter(Boolean)
             .map(function (para) { return "<p>" + esc(para) + "</p>"; }).join("");
-          var link = item.url ? '<p class="dialog__src"><a class="row-link" href="' + esc(item.url) +
-            '" target="_blank" rel="noopener">來源連結 ↗</a></p>' : "";
+          var srcArr = (item.sources && item.sources.length) ? item.sources
+            : (item.url ? [{ url: item.url }] : []);
+          var refs = srcArr.length ? '<div class="dialog__src"><h4 class="ref-head">參考來源</h4>' +
+            '<ul class="ref-list">' + srcArr.map(function (s) {
+              return '<li><a class="ref-link" href="' + esc(s.url) + '" target="_blank" rel="noopener">' +
+                esc(s.title || s.url) + " ↗</a></li>";
+            }).join("") + "</ul></div>" : "";
           body.innerHTML = '<h2 id="dialogTitle">' + esc(t(item.title)) + "</h2>" +
-            (tags ? '<div class="card__tags">' + tags + "</div>" : "") + paras + link;
+            (tags ? '<div class="card__tags">' + tags + "</div>" : "") + paras + refs;
           if (!dlg.open) dlg.showModal();
           if (location.hash.slice(1) !== slug) history.replaceState(null, "", "#" + slug);
         }

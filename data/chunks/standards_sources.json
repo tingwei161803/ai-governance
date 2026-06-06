@@ -1,0 +1,69 @@
+{
+  "oecd-ai-principles": [
+    {"title": "OECD AI 原則官方頁面", "url": "https://oecd.ai/en/ai-principles"},
+    {"title": "2024 年 OECD AI 原則更新說明", "url": "https://oecd.ai/en/wonk/evolving-with-innovation-the-2024-oecd-ai-principles-update"},
+    {"title": "OECD 更新 AI 原則新聞稿", "url": "https://www.oecd.org/en/about/news/press-releases/2024/05/oecd-updates-ai-principles-to-stay-abreast-of-rapid-technological-developments.html"}
+  ],
+  "unesco-ai-ethics": [
+    {"title": "UNESCO AI 倫理建議書官方頁面", "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics"},
+    {"title": "UNESCO AI 倫理建議書重點說明", "url": "https://www.unesco.org/en/articles/unescos-recommendation-ethics-artificial-intelligence-key-facts"},
+    {"title": "UNESCO 全球 AI 倫理與治理觀察站", "url": "https://www.unesco.org/ethics-ai/en"}
+  ],
+  "g7-hiroshima-ai-process": [
+    {"title": "廣島 AI 進程國際指導原則", "url": "https://g7.utoronto.ca/summit/2023hiroshima/231030-ai-principles.html"},
+    {"title": "廣島 AI 進程企業行為準則", "url": "https://g7.utoronto.ca/summit/2023hiroshima/231030-ai-code-of-conduct.html"},
+    {"title": "OECD 啟動 G7 行為準則監測試點", "url": "https://www.oecd.org/en/about/news/press-releases/2024/07/oecd-launches-pilot-to-monitor-application-of-g7-code-of-conduct-on-advanced-ai-development.html"}
+  ],
+  "unga-ai-resolution": [
+    {"title": "聯合國大會首個 AI 決議報導", "url": "https://news.un.org/en/story/2024/03/1147831"},
+    {"title": "A/RES/78/311 AI 能力建構決議", "url": "https://docs.un.org/en/A/RES/78/311"}
+  ],
+  "un-governing-ai-humanity": [
+    {"title": "聯合國 AI 高階諮詢機構官方頁面", "url": "https://www.un.org/en/ai-advisory-body"},
+    {"title": "《為人類治理 AI》最終報告全文", "url": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf"}
+  ],
+  "global-digital-compact": [
+    {"title": "全球數位契約官方頁面", "url": "https://www.un.org/digital-emerging-technologies/global-digital-compact"},
+    {"title": "UNGA 通過 AI 科學委員會職權範圍", "url": "https://dig.watch/updates/un-general-assembly-adopts-terms-of-reference-for-ai-scientific-panel-and-global-dialogue-on-ai-governance"}
+  ],
+  "coe-ai-framework-convention": [
+    {"title": "歐洲委員會通過首個國際 AI 條約新聞稿", "url": "https://www.coe.int/en/web/portal/-/council-of-europe-adopts-first-international-treaty-on-artificial-intelligence"},
+    {"title": "歐盟委員會簽署歐洲委員會 AI 框架公約", "url": "https://www.eeas.europa.eu/delegations/council-europe/european-commission-signs-historic-council-europe-framework-convention-artificial-intelligence-and_en"},
+    {"title": "AI 框架公約（維基百科）", "url": "https://en.wikipedia.org/wiki/Framework_Convention_on_Artificial_Intelligence"}
+  ],
+  "iso-iec-42001": [
+    {"title": "ISO/IEC 42001:2023 標準頁面", "url": "https://www.iso.org/standard/42001"},
+    {"title": "ISO/IEC 42001 合規指引（Microsoft Learn）", "url": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-iso-42001"}
+  ],
+  "iso-iec-23894": [
+    {"title": "ISO/IEC 23894:2023 標準頁面", "url": "https://www.iso.org/standard/77304.html"},
+    {"title": "ISO/IEC 23894 AI 風險管理標準介紹（AI Standards Hub）", "url": "https://aistandardshub.org/a-new-standard-for-ai-risk-management"}
+  ],
+  "iso-iec-tr-24028": [
+    {"title": "ISO/IEC TR 24028:2020 標準頁面", "url": "https://www.iso.org/standard/77608.html"}
+  ],
+  "iso-iec-22989": [
+    {"title": "ISO/IEC 22989:2022 標準頁面", "url": "https://www.iso.org/standard/74296.html"}
+  ],
+  "bletchley-declaration": [
+    {"title": "布萊切利宣言官方全文", "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023"},
+    {"title": "AI 安全峰會歷史沿革（維基百科）", "url": "https://en.wikipedia.org/wiki/AI_Safety_Summit"}
+  ],
+  "seoul-ai-summit-2024": [
+    {"title": "首爾峰會前沿 AI 安全承諾（英國政府）", "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024"},
+    {"title": "首爾 AI 峰會主要成果", "url": "https://www.techuk.org/resource/key-outcomes-of-the-ai-seoul-summit.html"}
+  ],
+  "international-aisi-network": [
+    {"title": "國際 AI 安全研究所網絡成立（NIST）", "url": "https://www.nist.gov/news-events/news/2024/11/fact-sheet-us-department-commerce-us-department-state-launch-international"},
+    {"title": "首爾峰會前沿 AI 安全承諾（英國政府）", "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024"}
+  ],
+  "paris-ai-action-summit-2025": [
+    {"title": "巴黎 AI 行動峰會 2025（維基百科）", "url": "https://en.wikipedia.org/wiki/AI_Action_Summit_2025"},
+    {"title": "巴黎 AI 行動峰會重點摘要", "url": "https://www.sourcingspeak.com/ai-action-summit-2025-key-takeaways-global-ai-governance/"}
+  ],
+  "new-delhi-ai-impact-summit-2026": [
+    {"title": "印度 AI 影響峰會 2026 成果分析（ORF）", "url": "https://www.orfonline.org/expert-speak/from-dialogue-to-deployment-strategic-outcomes-of-the-india-ai-impact-summit-2026"},
+    {"title": "印度 AI 影響峰會宣言（PIB）", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2234343"},
+    {"title": "新德里前沿 AI 影響承諾", "url": "https://ddnews.gov.in/en/india-unveils-new-delhi-frontier-ai-commitments-at-ai-impact-summit/"}
+  ]
+}

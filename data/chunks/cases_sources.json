@@ -1,0 +1,55 @@
+{
+  "nyt-v-openai": [
+    {"title": "AI 訴訟追蹤（AI Lawsuit Tracker）", "url": "https://ailawsuittracker.com/"},
+    {"title": "NYT v. OpenAI 哈佛法律評論分析", "url": "https://harvardlawreview.org/blog/2024/04/nyt-v-openai-the-timess-about-face/"},
+    {"title": "Axios：NYT 案件可繼續進行", "url": "https://www.axios.com/2025/04/01/nyt-openai-microsoft-lawsuit-advances"}
+  ],
+  "thomson-reuters-v-ross": [
+    {"title": "Davis Wright Tremaine：Thomson Reuters v. Ross 判決分析", "url": "https://www.dwt.com/blogs/artificial-intelligence-law-advisor/2025/02/reuters-ross-court-ruling-ai-copyright-fair-use"},
+    {"title": "Reed Smith：法院否決 AI 合理使用抗辯", "url": "https://www.reedsmith.com/en/perspectives/2025/03/court-ai-fair-use-thomson-reuters-enterprise-gmbh-ross-intelligence"},
+    {"title": "AI 訴訟追蹤（AI Lawsuit Tracker）", "url": "https://ailawsuittracker.com/"}
+  ],
+  "getty-v-stability-ai": [
+    {"title": "Latham & Watkins：Getty v. Stability AI 英國高等法院分析", "url": "https://www.lw.com/en/insights/getty-images-v-stability-ai-english-high-court-rejects-secondary-copyright-claim"},
+    {"title": "Mayer Brown：Getty v. Stability AI 英國高等法院解析", "url": "https://www.mayerbrown.com/en/insights/publications/2025/11/getty-images-v-stability-ai-what-the-high-courts-decision-means-for-rights-holders-and-ai-developers"},
+    {"title": "The Fashion Law：AI 訴訟追蹤清單（含 Getty 案）", "url": "https://www.thefashionlaw.com/from-chatgpt-to-deepfake-creating-apps-a-running-list-of-key-ai-lawsuits/"}
+  ],
+  "thaler-dabus": [
+    {"title": "Jones Day：AI 輸出可著作權性（Thaler v. Perlmutter 分析）", "url": "https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement"},
+    {"title": "DABUS Wikipedia", "url": "https://en.wikipedia.org/wiki/DABUS"},
+    {"title": "JUVE Patent：UK 最高法院 DABUS 最終裁決", "url": "https://www.juve-patent.com/cases/uk-supreme-court-dabus-named-inventor-patent-stephen-thaler/"}
+  ],
+  "nvidia-arm": [
+    {"title": "NVIDIA/ARM 收購終止公告（NVIDIA Newsroom）", "url": "https://nvidianews.nvidia.com/news/nvidia-and-softbank-group-announce-termination-of-nvidias-acquisition-of-arm-limited"},
+    {"title": "美國 BIS 出口管制規則", "url": "https://www.bis.doc.gov"},
+    {"title": "CSIS：拜登政府更新出口管制解析", "url": "https://www.csis.org/analysis/understanding-biden-administrations-updated-export-controls"}
+  ],
+  "clearview-ai-fines": [
+    {"title": "EDPB：法國 CNIL 對 Clearview AI 罰款 2,000 萬歐元", "url": "https://www.edpb.europa.eu/news/national-news/2022/french-sa-fines-clearview-ai-eur-20-million_en"},
+    {"title": "EDPB：義大利 Garante 對 Clearview AI 罰款 2,000 萬歐元", "url": "https://www.edpb.europa.eu/news/national-news/2022/facial-recognition-italian-sa-fines-clearview-ai-eur-20-million_en"},
+    {"title": "TechCrunch：Clearview AI 再遭法國 CNIL 罰款", "url": "https://techcrunch.com/2023/05/10/clearview-ai-another-cnil-gspr-fine/"}
+  ],
+  "amazon-hiring-bias": [
+    {"title": "Euronews：Amazon 因性別歧視廢除 AI 招聘工具", "url": "https://www.euronews.com/business/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women"},
+    {"title": "AI 訴訟追蹤（AI Lawsuit Tracker）", "url": "https://ailawsuittracker.com/"}
+  ],
+  "netherlands-syri-childcare": [
+    {"title": "Privacy International：SyRI 案標誌性裁決", "url": "https://privacyinternational.org/news-analysis/3363/syri-case-landmark-ruling-benefits-claimants-around-world"},
+    {"title": "OHCHR：荷蘭法院停止政府監控窮人演算法系統", "url": "https://www.ohchr.org/en/press-releases/2020/02/landmark-ruling-dutch-court-stops-government-attempts-spy-poor-un-expert"},
+    {"title": "荷蘭托兒津貼醜聞（Wikipedia）", "url": "https://en.wikipedia.org/wiki/Dutch_childcare_benefits_scandal"}
+  ],
+  "italy-chatgpt-block": [
+    {"title": "TechCrunch：義大利封鎖 ChatGPT", "url": "https://techcrunch.com/2023/03/31/chatgpt-blocked-italy/"},
+    {"title": "The Hacker News：義大利對 OpenAI 罰款 1,500 萬歐元", "url": "https://thehackernews.com/2024/12/italy-fines-openai-15-million-for.html"},
+    {"title": "Garante：ChatGPT 暫停令原文（義大利語）", "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9870847"}
+  ],
+  "air-canada-chatbot": [
+    {"title": "McCarthy LLP：Moffatt v. Air Canada 聊天機器人錯誤陳述案", "url": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"},
+    {"title": "AI Business：Air Canada 須為聊天機器人幻覺負責", "url": "https://aibusiness.com/nlp/air-canada-held-responsible-for-chatbot-s-hallucinations-"}
+  ],
+  "deepseek-shock": [
+    {"title": "Bruegel：DeepSeek 後的 AI 地緣政治", "url": "https://www.bruegel.org/first-glance/geopolitics-artificial-intelligence-after-deepseek"},
+    {"title": "CSIS：DeepSeek、華為、出口管制與美中 AI 競賽", "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race"},
+    {"title": "美國 BIS 出口管制規則", "url": "https://www.bis.doc.gov"}
+  ]
+}

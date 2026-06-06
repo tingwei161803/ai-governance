@@ -1,0 +1,79 @@
+{
+  "eu-ai-act-risk-tiers": [
+    {"title": "EU AI Act 官方文本（European Commission）", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"},
+    {"title": "EU AI Act 實施時間表", "url": "https://artificialintelligenceact.eu/implementation-timeline/"},
+    {"title": "EU AI Act Annex III 高風險 AI 系統清單", "url": "https://artificialintelligenceact.eu/annex/3/"}
+  ],
+  "eu-ai-act-gpai": [
+    {"title": "EU AI Act GPAI 義務詳解（Baker McKenzie）", "url": "https://www.bakermckenzie.com/en/insight/publications/2025/08/general-purpose-ai-obligations"},
+    {"title": "EU AI Act GPAI 提供者指引（European Commission）", "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers"},
+    {"title": "EU AI Office 官方頁面", "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office"}
+  ],
+  "us-eo-14110": [
+    {"title": "EO 14110 Wikipedia 條目", "url": "https://en.wikipedia.org/wiki/Executive_Order_14110"},
+    {"title": "川普 EO 14179：移除 AI 障礙（White House）", "url": "https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/"}
+  ],
+  "us-eo-14179": [
+    {"title": "川普 EO 14179 全文（White House）", "url": "https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/"},
+    {"title": "OECD.AI：EO 14179 摘要", "url": "https://oecd.ai/en/dashboards/policy-initiatives/executive-order-14179-removing-barriers-to-american-leadership-in-ai"},
+    {"title": "AI Action Plan「Winning the Race」全文（White House）", "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf"}
+  ],
+  "us-federal-preemption-eo": [
+    {"title": "川普聯邦 AI 框架 EO 全文（White House）", "url": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/"},
+    {"title": "Gibson Dunn：川普 EO 預占各州 AI 法分析", "url": "https://www.gibsondunn.com/president-trump-latest-executive-order-on-ai-seeks-to-preempt-state-laws/"}
+  ],
+  "nist-ai-rmf": [
+    {"title": "NIST AI 風險管理框架 1.0 官方頁面", "url": "https://www.nist.gov/itl/ai-risk-management-framework"}
+  ],
+  "us-colorado-ai-act": [
+    {"title": "Colorado AI Act 分析（Norton Rose Fulbright）", "url": "https://www.nortonrosefulbright.com/en-us/knowledge/publications/18733d31/colorado-enacts-revised-ai-law"},
+    {"title": "各州 AI 法規完整指南 2026", "url": "https://www.ailawsbystate.com/blog/ai-laws-by-state-complete-guide-2026"}
+  ],
+  "us-california-ai-laws": [
+    {"title": "加州 AI 法規分析（Pillsbury）", "url": "https://www.pillsburylaw.com/en/news-and-insights/sb-1047-california-ai-laws.html"},
+    {"title": "各州 AI 法規完整指南 2026", "url": "https://www.ailawsbystate.com/blog/ai-laws-by-state-complete-guide-2026"}
+  ],
+  "cn-algo-recommendation": [
+    {"title": "中國《互聯網信息服務算法推薦管理規定》（網信辦官網）", "url": "https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm"}
+  ],
+  "cn-deep-synthesis": [
+    {"title": "中國《互聯網信息服務深度合成管理規定》（網信辦官網）", "url": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm"},
+    {"title": "深偽立法追蹤（StackCyber）", "url": "https://stackcyber.com/posts/ai-deepfake-laws"}
+  ],
+  "cn-generative-ai": [
+    {"title": "中國《生成式人工智能服務管理暫行辦法》（網信辦官網）", "url": "https://www.cac.gov.cn/2023-07/13/c_1690898326795531.htm"},
+    {"title": "中國 AI 法規近期動態（Geopolitechs）", "url": "https://www.geopolitechsorg/p/chinas-ai-law-recent-developments"}
+  ],
+  "cn-ai-content-labeling": [
+    {"title": "中國《人工智能生成合成內容標識辦法》（網信辦官網）", "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm"},
+    {"title": "聖島智財：中國 AI 生成合成內容標識新制及影響", "url": "https://www.saint-island.com.tw/TW/News/News_Info.aspx?IT=News_1&CID=266&ID=143289"}
+  ],
+  "uk-pro-innovation": [
+    {"title": "英國 AI 監管：親創新方針（GOV.UK）", "url": "https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach"},
+    {"title": "KPMG：英國親創新 AI 監管演進", "url": "https://kpmg.com/xx/en/our-insights/ai-and-technology/the-uk-s-evolving-pro-innovation-approach-to-ai-regulation.html"},
+    {"title": "英國 AI Opportunities Action Plan 周年回顧", "url": "https://www.gov.uk/government/publications/ai-opportunities-action-plan-one-year-on"}
+  ],
+  "kr-ai-basic-act": [
+    {"title": "南韓 AI 基本法（美國 ITA）", "url": "https://www.trade.gov/market-intelligence/south-korea-artificial-intelligence-ai-basic-act"},
+    {"title": "OneTrust：南韓 AI 法合規指引", "url": "https://www.onetrust.com/blog/south-koreas-new-ai-law-what-it-means-for-organizations-and-how-to-prepare/"}
+  ],
+  "jp-ai-promotion-act": [
+    {"title": "日本 AI 推進法解析（FPF）", "url": "https://fpf.org/blog/understanding-japans-ai-promotion-act-an-innovation-first-blueprint-for-ai-regulation/"},
+    {"title": "日本 AI 法規 2025（Nemko Digital）", "url": "https://digital.nemko.com/regulations/ai-regulation-japan"}
+  ],
+  "ca-aida": [
+    {"title": "加拿大 AIDA 概覽（ISED）", "url": "https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act"}
+  ],
+  "br-ai-bill": [
+    {"title": "巴西 AI 法案 Bill 2338（美國國會圖書館）", "url": "https://www.loc.gov/item/global-legal-monitor/2025-05-23/brazil-senate-advances-discussions-on-bill-to-regulate-ai-use/"}
+  ],
+  "sg-ai-governance": [
+    {"title": "EU AI Act 高層次摘要（artificialintelligenceact.eu）", "url": "https://artificialintelligenceact.eu/high-level-summary/"},
+    {"title": "White & Case：全球 AI 監管追蹤——英國篇", "url": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-kingdom"}
+  ],
+  "intl-soft-law": [
+    {"title": "OECD.AI：EO 14179 與國際 AI 政策儀表板", "url": "https://oecd.ai/en/dashboards/policy-initiatives/executive-order-14179-removing-barriers-to-american-leadership-in-ai"},
+    {"title": "日本 AI 推進法與 G7 廣島進程（FPF）", "url": "https://fpf.org/blog/understanding-japans-ai-promotion-act-an-innovation-first-blueprint-for-ai-regulation/"},
+    {"title": "EU AI Act 高層次摘要（artificialintelligenceact.eu）", "url": "https://artificialintelligenceact.eu/high-level-summary/"}
+  ]
+}

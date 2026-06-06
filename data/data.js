@@ -89,7 +89,21 @@ window.SITE_PAGES = [
           "2025 生效",
           "橫向立法"
         ],
-        "overview": "《歐盟 AI 法》（Regulation (EU) 2024/1689）於 2024 年 7 月 12 日刊登官方公報、同年 8 月 1 日生效，是全球第一部針對 AI 系統的完整橫向立法。核心邏輯為四層風險分類：第一層「不可接受風險」（含社會評分、公共場所即時生物識別等）自 2025 年 2 月 2 日起全面禁止；第二層「高風險」涵蓋就業、教育、信用、執法等八大類別，須進行合規評估並登記於歐盟資料庫；第三層「有限風險」負有透明度義務（如揭露 AI 身分）；第四層「最小風險」採自願守則。主管機關為歐盟 AI 辦公室（EU AI Office）及各會員國國家主管機關（NCA）。違反禁止規定最高可罰全球年營收 7%（逾 3,500 萬歐元），是 GDPR 上限的近兩倍。"
+        "overview": "《歐盟 AI 法》（Regulation (EU) 2024/1689）於 2024 年 7 月 12 日刊登官方公報、同年 8 月 1 日生效，是全球第一部針對 AI 系統的完整橫向立法。核心邏輯為四層風險分類：第一層「不可接受風險」（含社會評分、公共場所即時生物識別等）自 2025 年 2 月 2 日起全面禁止；第二層「高風險」涵蓋就業、教育、信用、執法等八大類別，須進行合規評估並登記於歐盟資料庫；第三層「有限風險」負有透明度義務（如揭露 AI 身分）；第四層「最小風險」採自願守則。主管機關為歐盟 AI 辦公室（EU AI Office）及各會員國國家主管機關（NCA）。違反禁止規定最高可罰全球年營收 7%（逾 3,500 萬歐元），是 GDPR 上限的近兩倍。",
+        "sources": [
+          {
+            "title": "EU AI Act 官方文本（European Commission）",
+            "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+          },
+          {
+            "title": "EU AI Act 實施時間表",
+            "url": "https://artificialintelligenceact.eu/implementation-timeline/"
+          },
+          {
+            "title": "EU AI Act Annex III 高風險 AI 系統清單",
+            "url": "https://artificialintelligenceact.eu/annex/3/"
+          }
+        ]
       },
       {
         "slug": "eu-ai-act-gpai",
@@ -102,7 +116,21 @@ window.SITE_PAGES = [
           "2025 生效",
           "基礎模型"
         ],
-        "overview": "EU AI Act Chapter V（Article 51–56）針對通用型 AI 模型（GPAI）設立專屬義務，自 2025 年 8 月 2 日起生效。所有 GPAI 提供者須維護詳細技術文件、公開訓練資料摘要（含著作權合規說明）、遵守歐盟著作權法，並與下游用戶及主管機關分享必要資訊。訓練算力超過 10²⁵ FLOPs 或經 AI Office 評定具高衝擊能力的「系統性風險」模型，另須向 AI Office 通報、進行對抗性測試（紅隊演練）、建立事件報告機制並採取網路安全措施。2025 年 8 月前已上市的 GPAI 模型延至 2027 年 8 月 2 日完成合規。EU AI Office 正式執法權於 2026 年 8 月 2 日啟動。"
+        "overview": "EU AI Act Chapter V（Article 51–56）針對通用型 AI 模型（GPAI）設立專屬義務，自 2025 年 8 月 2 日起生效。所有 GPAI 提供者須維護詳細技術文件、公開訓練資料摘要（含著作權合規說明）、遵守歐盟著作權法，並與下游用戶及主管機關分享必要資訊。訓練算力超過 10²⁵ FLOPs 或經 AI Office 評定具高衝擊能力的「系統性風險」模型，另須向 AI Office 通報、進行對抗性測試（紅隊演練）、建立事件報告機制並採取網路安全措施。2025 年 8 月前已上市的 GPAI 模型延至 2027 年 8 月 2 日完成合規。EU AI Office 正式執法權於 2026 年 8 月 2 日啟動。",
+        "sources": [
+          {
+            "title": "EU AI Act GPAI 義務詳解（Baker McKenzie）",
+            "url": "https://www.bakermckenzie.com/en/insight/publications/2025/08/general-purpose-ai-obligations"
+          },
+          {
+            "title": "EU AI Act GPAI 提供者指引（European Commission）",
+            "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers"
+          },
+          {
+            "title": "EU AI Office 官方頁面",
+            "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office"
+          }
+        ]
       },
       {
         "slug": "us-eo-14110",
@@ -115,7 +143,17 @@ window.SITE_PAGES = [
           "已廢止",
           "基礎模型安全"
         ],
-        "overview": "《關於安全、可靠與可信賴地開發和使用人工智能的行政命令》（EO 14110）由拜登於 2023 年 10 月 30 日簽署。核心措施包括：依《國防生產法》要求訓練超過特定計算門檻的基礎模型開發商向聯邦提交安全測試報告；指示 NIST 制訂 AI 安全標準；要求商務部研擬 AI 生成內容的浮水印／認證機制；並涵蓋勞工保護、移民加速、隱私研究等跨領域政策。川普於 2025 年 1 月 20 日就職首日簽署命令廢止 EO 14110，美國聯邦 AI 政策隨之全面轉向鬆綁路線。"
+        "overview": "《關於安全、可靠與可信賴地開發和使用人工智能的行政命令》（EO 14110）由拜登於 2023 年 10 月 30 日簽署。核心措施包括：依《國防生產法》要求訓練超過特定計算門檻的基礎模型開發商向聯邦提交安全測試報告；指示 NIST 制訂 AI 安全標準；要求商務部研擬 AI 生成內容的浮水印／認證機制；並涵蓋勞工保護、移民加速、隱私研究等跨領域政策。川普於 2025 年 1 月 20 日就職首日簽署命令廢止 EO 14110，美國聯邦 AI 政策隨之全面轉向鬆綁路線。",
+        "sources": [
+          {
+            "title": "EO 14110 Wikipedia 條目",
+            "url": "https://en.wikipedia.org/wiki/Executive_Order_14110"
+          },
+          {
+            "title": "川普 EO 14179：移除 AI 障礙（White House）",
+            "url": "https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/"
+          }
+        ]
       },
       {
         "slug": "us-eo-14179",
@@ -128,7 +166,21 @@ window.SITE_PAGES = [
           "鬆綁監管",
           "美國優先"
         ],
-        "overview": "《移除美國 AI 領導地位障礙行政命令》（EO 14179）由川普於 2025 年 1 月 23 日簽署，確立「美國 AI 霸主地位」為國家安全優先目標。核心方向包括：廢除被認為阻礙創新的聯邦 AI 規範；指示 OMB 取消或修訂不符新政策的現行指引；促進開源 AI 模型流通；要求聯邦 AI 系統去除「意識形態偏見」。同年 7 月 23 日，白宮進一步發布 90 點《AI Action Plan「Winning the Race」》，三大支柱為加速創新、建設 AI 基礎設施（電力、資料中心、AI 特區），以及強化國際外交領導地位，同時指示 NIST 修訂 AI RMF，刪除「錯誤資訊」「DEI」「氣候變遷」等用語。"
+        "overview": "《移除美國 AI 領導地位障礙行政命令》（EO 14179）由川普於 2025 年 1 月 23 日簽署，確立「美國 AI 霸主地位」為國家安全優先目標。核心方向包括：廢除被認為阻礙創新的聯邦 AI 規範；指示 OMB 取消或修訂不符新政策的現行指引；促進開源 AI 模型流通；要求聯邦 AI 系統去除「意識形態偏見」。同年 7 月 23 日，白宮進一步發布 90 點《AI Action Plan「Winning the Race」》，三大支柱為加速創新、建設 AI 基礎設施（電力、資料中心、AI 特區），以及強化國際外交領導地位，同時指示 NIST 修訂 AI RMF，刪除「錯誤資訊」「DEI」「氣候變遷」等用語。",
+        "sources": [
+          {
+            "title": "川普 EO 14179 全文（White House）",
+            "url": "https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/"
+          },
+          {
+            "title": "OECD.AI：EO 14179 摘要",
+            "url": "https://oecd.ai/en/dashboards/policy-initiatives/executive-order-14179-removing-barriers-to-american-leadership-in-ai"
+          },
+          {
+            "title": "AI Action Plan「Winning the Race」全文（White House）",
+            "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf"
+          }
+        ]
       },
       {
         "slug": "us-federal-preemption-eo",
@@ -141,7 +193,17 @@ window.SITE_PAGES = [
           "聯邦預占",
           "州法爭議"
         ],
-        "overview": "川普於 2025 年 12 月 11 日簽署「確保國家 AI 政策框架」行政命令，設立 AI 訴訟特別工作組（AI Litigation Task Force），自 2026 年 1 月 10 日起對被認定阻礙聯邦 AI 政策的州法提起聯邦訴訟。命令同時指示商務部於 90 天內清查「繁苛」州法，並以聯邦補助金資格作為誘因促使各州退縮。保留豁免範圍包括：兒童保護、州政府採購、資料中心基礎設施相關州法。法律學者指出行政命令不具聯邦立法效力，各州可能援引憲法商業條款抗辯，訴訟結果高度不確定。"
+        "overview": "川普於 2025 年 12 月 11 日簽署「確保國家 AI 政策框架」行政命令，設立 AI 訴訟特別工作組（AI Litigation Task Force），自 2026 年 1 月 10 日起對被認定阻礙聯邦 AI 政策的州法提起聯邦訴訟。命令同時指示商務部於 90 天內清查「繁苛」州法，並以聯邦補助金資格作為誘因促使各州退縮。保留豁免範圍包括：兒童保護、州政府採購、資料中心基礎設施相關州法。法律學者指出行政命令不具聯邦立法效力，各州可能援引憲法商業條款抗辯，訴訟結果高度不確定。",
+        "sources": [
+          {
+            "title": "川普聯邦 AI 框架 EO 全文（White House）",
+            "url": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/"
+          },
+          {
+            "title": "Gibson Dunn：川普 EO 預占各州 AI 法分析",
+            "url": "https://www.gibsondunn.com/president-trump-latest-executive-order-on-ai-seeks-to-preempt-state-laws/"
+          }
+        ]
       },
       {
         "slug": "nist-ai-rmf",
@@ -154,7 +216,13 @@ window.SITE_PAGES = [
           "風險管理",
           "NIST"
         ],
-        "overview": "NIST AI 風險管理框架（AI RMF 1.0，文件編號 NIST AI 100-1）由美國國家標準暨技術研究院（NIST）於 2023 年 1 月發布。框架非強制性，但已成為聯邦機構及高科技產業的主要合規參考。四大核心功能為：Govern（建立跨機構 AI 風險政策與問責文化）、Map（辨識特定 AI 系統的背景脈絡與風險）、Measure（定量或定性分析風險）、Manage（分配資源應對風險、回應事件）。川普 AI Action Plan（2025 年 7 月）指示 NIST 修訂 AI RMF 以符合新政策方向，修訂版本尚未正式發布，RMF 1.0 仍是目前業界主要參考基準。"
+        "overview": "NIST AI 風險管理框架（AI RMF 1.0，文件編號 NIST AI 100-1）由美國國家標準暨技術研究院（NIST）於 2023 年 1 月發布。框架非強制性，但已成為聯邦機構及高科技產業的主要合規參考。四大核心功能為：Govern（建立跨機構 AI 風險政策與問責文化）、Map（辨識特定 AI 系統的背景脈絡與風險）、Measure（定量或定性分析風險）、Manage（分配資源應對風險、回應事件）。川普 AI Action Plan（2025 年 7 月）指示 NIST 修訂 AI RMF 以符合新政策方向，修訂版本尚未正式發布，RMF 1.0 仍是目前業界主要參考基準。",
+        "sources": [
+          {
+            "title": "NIST AI 風險管理框架 1.0 官方頁面",
+            "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+          }
+        ]
       },
       {
         "slug": "us-colorado-ai-act",
@@ -167,7 +235,17 @@ window.SITE_PAGES = [
           "2026 生效",
           "影響評估"
         ],
-        "overview": "科羅拉多 AI 法（SB 24-205）於 2024 年 5 月由州長簽署，是全美首部針對高風險 AI 系統的完整州級立法，生效日因 SB 25B-004 延後至 2026 年 6 月 30 日。適用對象為開發或部署「高風險 AI 系統」的開發者與部署者，涵蓋就業機會、教育入學、金融信貸、政府基本服務、醫療、住房、保險、法律服務八大領域。核心義務包括：進行影響評估（algorithmic impact assessment）、向消費者揭露 AI 使用情況、建立申訴機制。川普 2025 年 12 月行政命令設立的 AI 訴訟特別工作組可能對本法提起挑戰，立法前景具不確定性。"
+        "overview": "科羅拉多 AI 法（SB 24-205）於 2024 年 5 月由州長簽署，是全美首部針對高風險 AI 系統的完整州級立法，生效日因 SB 25B-004 延後至 2026 年 6 月 30 日。適用對象為開發或部署「高風險 AI 系統」的開發者與部署者，涵蓋就業機會、教育入學、金融信貸、政府基本服務、醫療、住房、保險、法律服務八大領域。核心義務包括：進行影響評估（algorithmic impact assessment）、向消費者揭露 AI 使用情況、建立申訴機制。川普 2025 年 12 月行政命令設立的 AI 訴訟特別工作組可能對本法提起挑戰，立法前景具不確定性。",
+        "sources": [
+          {
+            "title": "Colorado AI Act 分析（Norton Rose Fulbright）",
+            "url": "https://www.nortonrosefulbright.com/en-us/knowledge/publications/18733d31/colorado-enacts-revised-ai-law"
+          },
+          {
+            "title": "各州 AI 法規完整指南 2026",
+            "url": "https://www.ailawsbystate.com/blog/ai-laws-by-state-complete-guide-2026"
+          }
+        ]
       },
       {
         "slug": "us-california-ai-laws",
@@ -180,7 +258,17 @@ window.SITE_PAGES = [
           "2026 生效",
           "州立法"
         ],
-        "overview": "加州是美國 AI 立法最活躍的州，截至 2025 年已通過逾 38 項 AI 相關法律。其中 AB 2013（2024 年簽署）要求 AI 開發者於 2026 年 1 月 1 日前在官方網站公開訓練資料來源說明，已正式生效。備受矚目的 SB 1047——要求大型 AI 模型開發者進行安全測試並承擔相應義務——因爭議過大被州長 Newsom 於 2024 年拒絕簽署否決，主因包括計算資源門檻設定方法存疑及潛在創新阻礙。此外，加州 AB 2839（AI 生成選舉素材揭露義務）於 2024 年 10 月遭聯邦法院以第一修正案言論自由理由發布禁制令。"
+        "overview": "加州是美國 AI 立法最活躍的州，截至 2025 年已通過逾 38 項 AI 相關法律。其中 AB 2013（2024 年簽署）要求 AI 開發者於 2026 年 1 月 1 日前在官方網站公開訓練資料來源說明，已正式生效。備受矚目的 SB 1047——要求大型 AI 模型開發者進行安全測試並承擔相應義務——因爭議過大被州長 Newsom 於 2024 年拒絕簽署否決，主因包括計算資源門檻設定方法存疑及潛在創新阻礙。此外，加州 AB 2839（AI 生成選舉素材揭露義務）於 2024 年 10 月遭聯邦法院以第一修正案言論自由理由發布禁制令。",
+        "sources": [
+          {
+            "title": "加州 AI 法規分析（Pillsbury）",
+            "url": "https://www.pillsburylaw.com/en/news-and-insights/sb-1047-california-ai-laws.html"
+          },
+          {
+            "title": "各州 AI 法規完整指南 2026",
+            "url": "https://www.ailawsbystate.com/blog/ai-laws-by-state-complete-guide-2026"
+          }
+        ]
       },
       {
         "slug": "cn-algo-recommendation",
@@ -193,7 +281,13 @@ window.SITE_PAGES = [
           "網信辦",
           "用戶控制"
         ],
-        "overview": "《互聯網信息服務算法推薦管理規定》由網信辦、工信部、公安部、市場監管總局四部門於 2021 年 12 月 31 日聯合頒布，2022 年 3 月 1 日生效，是全球首部專門規範算法推薦服務的部門規章。適用對象為在中國境內提供具有「輿論屬性或社會動員能力」算法推薦服務的業者。核心義務包括：禁止設置誘導用戶沉迷或過度消費的算法模型；提供用戶關閉個性化推薦的選項；向用戶解釋推薦邏輯基本原則；設置未成年人特殊保護機制；為老年人、殘障人士提供無障礙功能。具輿論屬性的服務者須在開始提供服務後 10 個工作日內向網信辦完成算法備案，並報送算法自評估報告。"
+        "overview": "《互聯網信息服務算法推薦管理規定》由網信辦、工信部、公安部、市場監管總局四部門於 2021 年 12 月 31 日聯合頒布，2022 年 3 月 1 日生效，是全球首部專門規範算法推薦服務的部門規章。適用對象為在中國境內提供具有「輿論屬性或社會動員能力」算法推薦服務的業者。核心義務包括：禁止設置誘導用戶沉迷或過度消費的算法模型；提供用戶關閉個性化推薦的選項；向用戶解釋推薦邏輯基本原則；設置未成年人特殊保護機制；為老年人、殘障人士提供無障礙功能。具輿論屬性的服務者須在開始提供服務後 10 個工作日內向網信辦完成算法備案，並報送算法自評估報告。",
+        "sources": [
+          {
+            "title": "中國《互聯網信息服務算法推薦管理規定》（網信辦官網）",
+            "url": "https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm"
+          }
+        ]
       },
       {
         "slug": "cn-deep-synthesis",
@@ -206,7 +300,17 @@ window.SITE_PAGES = [
           "2023 生效",
           "標識義務"
         ],
-        "overview": "《互聯網信息服務深度合成管理規定》由網信辦聯合公安部、工信部等部門頒布，2023 年 1 月 10 日生效。適用範圍涵蓋提供文字、圖片、音訊、視訊、虛擬場景等深度合成技術服務的業者與用戶。核心要求包括：服務使用者須以手機號或身份證件完成實名認證；服務提供者須對合成的圖片、視訊、音訊內容進行顯著標識；禁止以深度合成技術製作、散布政治謠言、虛假資訊或侵害他人名譽、肖像的內容。具輿論屬性或社會動員能力的深度合成服務提供者，須完成網信辦備案，並在服務界面顯著位置標示備案編號。"
+        "overview": "《互聯網信息服務深度合成管理規定》由網信辦聯合公安部、工信部等部門頒布，2023 年 1 月 10 日生效。適用範圍涵蓋提供文字、圖片、音訊、視訊、虛擬場景等深度合成技術服務的業者與用戶。核心要求包括：服務使用者須以手機號或身份證件完成實名認證；服務提供者須對合成的圖片、視訊、音訊內容進行顯著標識；禁止以深度合成技術製作、散布政治謠言、虛假資訊或侵害他人名譽、肖像的內容。具輿論屬性或社會動員能力的深度合成服務提供者，須完成網信辦備案，並在服務界面顯著位置標示備案編號。",
+        "sources": [
+          {
+            "title": "中國《互聯網信息服務深度合成管理規定》（網信辦官網）",
+            "url": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm"
+          },
+          {
+            "title": "深偽立法追蹤（StackCyber）",
+            "url": "https://stackcyber.com/posts/ai-deepfake-laws"
+          }
+        ]
       },
       {
         "slug": "cn-generative-ai",
@@ -219,7 +323,17 @@ window.SITE_PAGES = [
           "2023 生效",
           "算法備案"
         ],
-        "overview": "《生成式人工智能服務管理暫行辦法》由網信辦等七部門於 2023 年 7 月 10 日頒布，8 月 15 日生效，是全球首部針對生成式 AI 服務的專屬法規。適用於在中國境內向公眾提供生成式 AI 服務的業者（含境外業者），企業間（B2B）非向公眾服務者可部分豁免。核心義務涵蓋：生成內容不得違反社會主義核心價值觀、危害國家政治安全；訓練資料須符合智財權、個資保護、數據安全等法規；圖片視訊等生成內容須依《深度合成規定》標識；服務使用者須完成實名認證；生效前符合條件的服務須先向網信辦完成安全評估。截至 2024 年 12 月底，已有 302 款生成式 AI 服務完成備案，2024 年新增 238 款。"
+        "overview": "《生成式人工智能服務管理暫行辦法》由網信辦等七部門於 2023 年 7 月 10 日頒布，8 月 15 日生效，是全球首部針對生成式 AI 服務的專屬法規。適用於在中國境內向公眾提供生成式 AI 服務的業者（含境外業者），企業間（B2B）非向公眾服務者可部分豁免。核心義務涵蓋：生成內容不得違反社會主義核心價值觀、危害國家政治安全；訓練資料須符合智財權、個資保護、數據安全等法規；圖片視訊等生成內容須依《深度合成規定》標識；服務使用者須完成實名認證；生效前符合條件的服務須先向網信辦完成安全評估。截至 2024 年 12 月底，已有 302 款生成式 AI 服務完成備案，2024 年新增 238 款。",
+        "sources": [
+          {
+            "title": "中國《生成式人工智能服務管理暫行辦法》（網信辦官網）",
+            "url": "https://www.cac.gov.cn/2023-07/13/c_1690898326795531.htm"
+          },
+          {
+            "title": "中國 AI 法規近期動態（Geopolitechs）",
+            "url": "https://www.geopolitechsorg/p/chinas-ai-law-recent-developments"
+          }
+        ]
       },
       {
         "slug": "cn-ai-content-labeling",
@@ -232,7 +346,17 @@ window.SITE_PAGES = [
           "2025 生效",
           "強制標準"
         ],
-        "overview": "《人工智能生成合成內容標識辦法》由網信辦、工信部、公安部、廣電總局四部門於 2025 年 3 月 14 日聯合頒布，2025 年 9 月 1 日正式生效。辦法建立雙重標識義務：「顯式標識」要求以文字、聲音、圖形等使用者可明顯感知的方式，在 AI 生成的文字、圖片、音訊、視訊等內容中標示「AI 生成」；「隱式標識」則要求以技術手段（浮水印、元資料等）將服務提供者名稱、內容屬性及著作權資訊嵌入生成內容。辦法配套強制性國家標準（GB），具有法律強制效力，是迄今全球範圍內對 AI 生成內容標識要求最為系統化的規範之一。"
+        "overview": "《人工智能生成合成內容標識辦法》由網信辦、工信部、公安部、廣電總局四部門於 2025 年 3 月 14 日聯合頒布，2025 年 9 月 1 日正式生效。辦法建立雙重標識義務：「顯式標識」要求以文字、聲音、圖形等使用者可明顯感知的方式，在 AI 生成的文字、圖片、音訊、視訊等內容中標示「AI 生成」；「隱式標識」則要求以技術手段（浮水印、元資料等）將服務提供者名稱、內容屬性及著作權資訊嵌入生成內容。辦法配套強制性國家標準（GB），具有法律強制效力，是迄今全球範圍內對 AI 生成內容標識要求最為系統化的規範之一。",
+        "sources": [
+          {
+            "title": "中國《人工智能生成合成內容標識辦法》（網信辦官網）",
+            "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm"
+          },
+          {
+            "title": "聖島智財：中國 AI 生成合成內容標識新制及影響",
+            "url": "https://www.saint-island.com.tw/TW/News/News_Info.aspx?IT=News_1&CID=266&ID=143289"
+          }
+        ]
       },
       {
         "slug": "uk-pro-innovation",
@@ -245,7 +369,21 @@ window.SITE_PAGES = [
           "AISI",
           "2023 白皮書"
         ],
-        "overview": "英國於 2023 年發布《親創新 AI 監管方針》白皮書，確立五大跨部門原則：安全與韌性、透明度與可解釋性、公平性、問責與治理、申訴與救濟。主管機關為科學、創新與技術部（DSIT），執行主體為各部門現有監管機構（FCA、ICO、CMA、HSE 等），不設置新的 AI 專責機構或新法。AI Safety Institute（2024 年運作）於 2025 年 2 月更名為 AI Security Institute（AISI），政策重心從「安全風險（safety）」轉向「安全與國家安全（security）」，獲政府撥款 2.4 億英鎊，擁有逾 100 名研究員，已對 30 個前沿模型進行測試評估。2025 年 1 月 Starmer 政府另發布 50 點《AI Opportunities Action Plan》，聚焦 AI Growth Zones 與基礎設施建設。英國目前無 AI 專屬立法，2026 年可能提出正式 AI 法案。"
+        "overview": "英國於 2023 年發布《親創新 AI 監管方針》白皮書，確立五大跨部門原則：安全與韌性、透明度與可解釋性、公平性、問責與治理、申訴與救濟。主管機關為科學、創新與技術部（DSIT），執行主體為各部門現有監管機構（FCA、ICO、CMA、HSE 等），不設置新的 AI 專責機構或新法。AI Safety Institute（2024 年運作）於 2025 年 2 月更名為 AI Security Institute（AISI），政策重心從「安全風險（safety）」轉向「安全與國家安全（security）」，獲政府撥款 2.4 億英鎊，擁有逾 100 名研究員，已對 30 個前沿模型進行測試評估。2025 年 1 月 Starmer 政府另發布 50 點《AI Opportunities Action Plan》，聚焦 AI Growth Zones 與基礎設施建設。英國目前無 AI 專屬立法，2026 年可能提出正式 AI 法案。",
+        "sources": [
+          {
+            "title": "英國 AI 監管：親創新方針（GOV.UK）",
+            "url": "https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach"
+          },
+          {
+            "title": "KPMG：英國親創新 AI 監管演進",
+            "url": "https://kpmg.com/xx/en/our-insights/ai-and-technology/the-uk-s-evolving-pro-innovation-approach-to-ai-regulation.html"
+          },
+          {
+            "title": "英國 AI Opportunities Action Plan 周年回顧",
+            "url": "https://www.gov.uk/government/publications/ai-opportunities-action-plan-one-year-on"
+          }
+        ]
       },
       {
         "slug": "kr-ai-basic-act",
@@ -258,7 +396,17 @@ window.SITE_PAGES = [
           "高影響力AI",
           "全面立法"
         ],
-        "overview": "《人工智能基本法》於 2024 年 12 月 26 日經南韓國會通過，2026 年 1 月 22 日正式生效，主管機關為科學與資訊通信技術部（MSIT）。核心義務包括：高影響力 AI 或生成式 AI 服務提供者須提前通知用戶正在與 AI 互動；建立風險管理系統；進行影響評估；境外提供者須設置國內代表人。罰則方面，最高行政罰款為 3,000 萬韓圓（約 2.2 萬美元）。為便於業者因應，法律設有至少一年的緩衝執法期，但涉及嚴重傷亡或重大人權侵害的案件不享豁免。南韓因此成為繼歐盟之後，全球第二個完成全面 AI 立法的主要法域。"
+        "overview": "《人工智能基本法》於 2024 年 12 月 26 日經南韓國會通過，2026 年 1 月 22 日正式生效，主管機關為科學與資訊通信技術部（MSIT）。核心義務包括：高影響力 AI 或生成式 AI 服務提供者須提前通知用戶正在與 AI 互動；建立風險管理系統；進行影響評估；境外提供者須設置國內代表人。罰則方面，最高行政罰款為 3,000 萬韓圓（約 2.2 萬美元）。為便於業者因應，法律設有至少一年的緩衝執法期，但涉及嚴重傷亡或重大人權侵害的案件不享豁免。南韓因此成為繼歐盟之後，全球第二個完成全面 AI 立法的主要法域。",
+        "sources": [
+          {
+            "title": "南韓 AI 基本法（美國 ITA）",
+            "url": "https://www.trade.gov/market-intelligence/south-korea-artificial-intelligence-ai-basic-act"
+          },
+          {
+            "title": "OneTrust：南韓 AI 法合規指引",
+            "url": "https://www.onetrust.com/blog/south-koreas-new-ai-law-what-it-means-for-organizations-and-how-to-prepare/"
+          }
+        ]
       },
       {
         "slug": "jp-ai-promotion-act",
@@ -271,7 +419,17 @@ window.SITE_PAGES = [
           "2025 通過",
           "無強制罰則"
         ],
-        "overview": "《人工智能相關技術研究開發及利用推進法》（AI 推進法）於 2025 年 5 月 28 日由日本國會通過，是日本迄今首部 AI 相關法律，定位 AI 為國家戰略資產，方針以促進應用為優先。法律無明文罰則，依賴業界自律與聲譽機制；METI 與 MIC 另於 2024 年聯合發布《AI 事業者指引》（AI Guidelines for Business），已更新至 1.01 版（2025 年 3 月）。日本同時主導 G7 廣島 AI 進程（Hiroshima AI Process），確立 11 項國際 AI 開發與使用指導原則，成為全球軟法協調的重要基礎。整體定位是「最 AI 友善國家」，優先鼓勵產業創新而非強制監管。"
+        "overview": "《人工智能相關技術研究開發及利用推進法》（AI 推進法）於 2025 年 5 月 28 日由日本國會通過，是日本迄今首部 AI 相關法律，定位 AI 為國家戰略資產，方針以促進應用為優先。法律無明文罰則，依賴業界自律與聲譽機制；METI 與 MIC 另於 2024 年聯合發布《AI 事業者指引》（AI Guidelines for Business），已更新至 1.01 版（2025 年 3 月）。日本同時主導 G7 廣島 AI 進程（Hiroshima AI Process），確立 11 項國際 AI 開發與使用指導原則，成為全球軟法協調的重要基礎。整體定位是「最 AI 友善國家」，優先鼓勵產業創新而非強制監管。",
+        "sources": [
+          {
+            "title": "日本 AI 推進法解析（FPF）",
+            "url": "https://fpf.org/blog/understanding-japans-ai-promotion-act-an-innovation-first-blueprint-for-ai-regulation/"
+          },
+          {
+            "title": "日本 AI 法規 2025（Nemko Digital）",
+            "url": "https://digital.nemko.com/regulations/ai-regulation-japan"
+          }
+        ]
       },
       {
         "slug": "ca-aida",
@@ -284,7 +442,13 @@ window.SITE_PAGES = [
           "聯邦立法",
           "2025"
         ],
-        "overview": "《人工智能與資料法》（AIDA）作為 Bill C-27 的一部分於 2022 年由加拿大聯邦政府提出，旨在建立針對高影響力 AI 系統的風險管理與問責框架。然而，法案因 2025 年 1 月國會選舉解散而廢止（died on the order paper），加拿大目前無聯邦層級 AI 專屬法律。省級方面有補充規範：安大略省 Bill 194 針對公共部門 AI 系統訂有要求；魁北克省 Law 25 強化個人資訊保護，間接影響 AI 訓練資料的使用。預期加拿大新政府仍將推動聯邦 AI 立法，但重啟的時程與內容尚不明確。"
+        "overview": "《人工智能與資料法》（AIDA）作為 Bill C-27 的一部分於 2022 年由加拿大聯邦政府提出，旨在建立針對高影響力 AI 系統的風險管理與問責框架。然而，法案因 2025 年 1 月國會選舉解散而廢止（died on the order paper），加拿大目前無聯邦層級 AI 專屬法律。省級方面有補充規範：安大略省 Bill 194 針對公共部門 AI 系統訂有要求；魁北克省 Law 25 強化個人資訊保護，間接影響 AI 訓練資料的使用。預期加拿大新政府仍將推動聯邦 AI 立法，但重啟的時程與內容尚不明確。",
+        "sources": [
+          {
+            "title": "加拿大 AIDA 概覽（ISED）",
+            "url": "https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act"
+          }
+        ]
       },
       {
         "slug": "br-ai-bill",
@@ -297,7 +461,13 @@ window.SITE_PAGES = [
           "風險分級",
           "ANPD"
         ],
-        "overview": "巴西 AI 法案（Bill 2338/2023）於 2024 年 12 月 10 日由參議院通過，2025 年 3 月移交衆議院審查，截至 2026 年 6 月仍在衆議院委員會審查中，尚未簽署成法。草案採風險分級方式監管 AI 系統，對高風險系統設定更嚴格合規要求，並建立申訴機制。監管主管機關為巴西國家資料保護局（ANPD）。罰則細節（包括行政罰款金額）尚未最終確定。若通過，巴西將成為拉丁美洲第一個具備全面 AI 法律框架的主要經濟體。"
+        "overview": "巴西 AI 法案（Bill 2338/2023）於 2024 年 12 月 10 日由參議院通過，2025 年 3 月移交衆議院審查，截至 2026 年 6 月仍在衆議院委員會審查中，尚未簽署成法。草案採風險分級方式監管 AI 系統，對高風險系統設定更嚴格合規要求，並建立申訴機制。監管主管機關為巴西國家資料保護局（ANPD）。罰則細節（包括行政罰款金額）尚未最終確定。若通過，巴西將成為拉丁美洲第一個具備全面 AI 法律框架的主要經濟體。",
+        "sources": [
+          {
+            "title": "巴西 AI 法案 Bill 2338（美國國會圖書館）",
+            "url": "https://www.loc.gov/item/global-legal-monitor/2025-05-23/brazil-senate-advances-discussions-on-bill-to-regulate-ai-use/"
+          }
+        ]
       },
       {
         "slug": "sg-ai-governance",
@@ -310,7 +480,17 @@ window.SITE_PAGES = [
           "自願框架",
           "AI Verify"
         ],
-        "overview": "新加坡採取與英國相似的「原則導向、親創新」AI 治理路線，不設強制性 AI 專屬立法。2020 年發布《可信賴 AI 模型治理框架 2.0》（Model AI Governance Framework 2.0），2024 年更新《可信賴 AI 驗證框架（AI Verify）》，提供企業進行 AI 系統可信賴性測試的工具與方法論，是亞太地區 AI 治理的領先標竿之一。框架聚焦透明度、可解釋性、公平性與安全性四大面向，鼓勵企業自願揭露 AI 系統風險評估結果。新加坡以「智慧國（Smart Nation）」政策為基礎，積極參與國際 AI 治理協調（包括 OECD AI 原則、G7 廣島進程），定位為亞太地區 AI 治理的橋接節點。"
+        "overview": "新加坡採取與英國相似的「原則導向、親創新」AI 治理路線，不設強制性 AI 專屬立法。2020 年發布《可信賴 AI 模型治理框架 2.0》（Model AI Governance Framework 2.0），2024 年更新《可信賴 AI 驗證框架（AI Verify）》，提供企業進行 AI 系統可信賴性測試的工具與方法論，是亞太地區 AI 治理的領先標竿之一。框架聚焦透明度、可解釋性、公平性與安全性四大面向，鼓勵企業自願揭露 AI 系統風險評估結果。新加坡以「智慧國（Smart Nation）」政策為基礎，積極參與國際 AI 治理協調（包括 OECD AI 原則、G7 廣島進程），定位為亞太地區 AI 治理的橋接節點。",
+        "sources": [
+          {
+            "title": "EU AI Act 高層次摘要（artificialintelligenceact.eu）",
+            "url": "https://artificialintelligenceact.eu/high-level-summary/"
+          },
+          {
+            "title": "White & Case：全球 AI 監管追蹤——英國篇",
+            "url": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-kingdom"
+          }
+        ]
       },
       {
         "slug": "intl-soft-law",
@@ -323,7 +503,21 @@ window.SITE_PAGES = [
           "OECD",
           "G7廣島進程"
         ],
-        "overview": "全球 AI 國際治理協調仍以軟法（soft law）為主。OECD AI 原則（2019 年）是最廣泛採用的國際參考基準，強調包容性成長、以人為本、透明度、安全韌性與問責，已被 50 餘國採納為政策依據。G7 廣島 AI 進程（2023 年，由日本主導）確立 11 項國際 AI 開發與使用指導原則，聚焦先進 AI 系統的風險評估與透明度。GPAI（全球人工智能夥伴關係組織）協調各國 AI 研究與政策。然而，上述機制均不具直接法律效力，尚未形成國際條約層級的約束機制。在「監管套利」風險下，企業需同時應對歐盟高合規成本、美國聯邦─州雙軌格局與中國強制備案要求，多邊協調的實質進展仍受地緣政治分歧制約。"
+        "overview": "全球 AI 國際治理協調仍以軟法（soft law）為主。OECD AI 原則（2019 年）是最廣泛採用的國際參考基準，強調包容性成長、以人為本、透明度、安全韌性與問責，已被 50 餘國採納為政策依據。G7 廣島 AI 進程（2023 年，由日本主導）確立 11 項國際 AI 開發與使用指導原則，聚焦先進 AI 系統的風險評估與透明度。GPAI（全球人工智能夥伴關係組織）協調各國 AI 研究與政策。然而，上述機制均不具直接法律效力，尚未形成國際條約層級的約束機制。在「監管套利」風險下，企業需同時應對歐盟高合規成本、美國聯邦─州雙軌格局與中國強制備案要求，多邊協調的實質進展仍受地緣政治分歧制約。",
+        "sources": [
+          {
+            "title": "OECD.AI：EO 14179 與國際 AI 政策儀表板",
+            "url": "https://oecd.ai/en/dashboards/policy-initiatives/executive-order-14179-removing-barriers-to-american-leadership-in-ai"
+          },
+          {
+            "title": "日本 AI 推進法與 G7 廣島進程（FPF）",
+            "url": "https://fpf.org/blog/understanding-japans-ai-promotion-act-an-innovation-first-blueprint-for-ai-regulation/"
+          },
+          {
+            "title": "EU AI Act 高層次摘要（artificialintelligenceact.eu）",
+            "url": "https://artificialintelligenceact.eu/high-level-summary/"
+          }
+        ]
       }
     ]
   },
@@ -372,7 +566,21 @@ window.SITE_PAGES = [
           "47 個司法管轄區",
           "軟法"
         ],
-        "overview": "由經濟合作暨發展組織（OECD）主導，2019 年 5 月首次採用，是全球第一個政府間 AI 標準。2024 年 5 月於部長級理事會議更新，採用範圍擴至 47 個司法管轄區（含歐盟）。性質為軟法，無法律約束力，倚賴政治承諾與自願性採納。核心為五大價值原則：包容性增長與永續發展、人本價值與公平性、透明度與可解釋性、穩健性與安全性、問責性。2024 年更新新增資訊完整性（對抗深偽虛假訊息）、環境永續性（AI 能源碳足跡）及偏見文件化等要求。EU AI Act 風險分級、G7 廣島 AI 進程及台灣《人工智慧基本法》均高度援引此框架。"
+        "overview": "由經濟合作暨發展組織（OECD）主導，2019 年 5 月首次採用，是全球第一個政府間 AI 標準。2024 年 5 月於部長級理事會議更新，採用範圍擴至 47 個司法管轄區（含歐盟）。性質為軟法，無法律約束力，倚賴政治承諾與自願性採納。核心為五大價值原則：包容性增長與永續發展、人本價值與公平性、透明度與可解釋性、穩健性與安全性、問責性。2024 年更新新增資訊完整性（對抗深偽虛假訊息）、環境永續性（AI 能源碳足跡）及偏見文件化等要求。EU AI Act 風險分級、G7 廣島 AI 進程及台灣《人工智慧基本法》均高度援引此框架。",
+        "sources": [
+          {
+            "title": "OECD AI 原則官方頁面",
+            "url": "https://oecd.ai/en/ai-principles"
+          },
+          {
+            "title": "2024 年 OECD AI 原則更新說明",
+            "url": "https://oecd.ai/en/wonk/evolving-with-innovation-the-2024-oecd-ai-principles-update"
+          },
+          {
+            "title": "OECD 更新 AI 原則新聞稿",
+            "url": "https://www.oecd.org/en/about/news/press-releases/2024/05/oecd-updates-ai-principles-to-stay-abreast-of-rapid-technological-developments.html"
+          }
+        ]
       },
       {
         "slug": "unesco-ai-ethics",
@@ -385,7 +593,21 @@ window.SITE_PAGES = [
           "軟法",
           "全球南方"
         ],
-        "overview": "由聯合國教育、科學及文化組織（UNESCO）主導，2021 年 11 月 23 日於第 41 屆 UNESCO 大會獲 193 個會員國鼓掌通過，是全球首個關於 AI 倫理的全球標準性文件。性質為軟法，無法律約束力，但代表聯合國體系最廣泛的 AI 倫理共識。確立四大核心價值（人權與尊嚴、和平公正、多元包容、生態繁榮）與十大原則（含比例性、不歧視、人類監管等），並轉化為十一大政策行動領域。UNESCO 另建立「整備評估方法論（RAM）」，協助各國評估 AI 倫理治理的實施準備程度，特別重視涵蓋全球南方國家的公平視角，彌補 OECD 以已開發國家為主的局限。"
+        "overview": "由聯合國教育、科學及文化組織（UNESCO）主導，2021 年 11 月 23 日於第 41 屆 UNESCO 大會獲 193 個會員國鼓掌通過，是全球首個關於 AI 倫理的全球標準性文件。性質為軟法，無法律約束力，但代表聯合國體系最廣泛的 AI 倫理共識。確立四大核心價值（人權與尊嚴、和平公正、多元包容、生態繁榮）與十大原則（含比例性、不歧視、人類監管等），並轉化為十一大政策行動領域。UNESCO 另建立「整備評估方法論（RAM）」，協助各國評估 AI 倫理治理的實施準備程度，特別重視涵蓋全球南方國家的公平視角，彌補 OECD 以已開發國家為主的局限。",
+        "sources": [
+          {
+            "title": "UNESCO AI 倫理建議書官方頁面",
+            "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics"
+          },
+          {
+            "title": "UNESCO AI 倫理建議書重點說明",
+            "url": "https://www.unesco.org/en/articles/unescos-recommendation-ethics-artificial-intelligence-key-facts"
+          },
+          {
+            "title": "UNESCO 全球 AI 倫理與治理觀察站",
+            "url": "https://www.unesco.org/ethics-ai/en"
+          }
+        ]
       },
       {
         "slug": "g7-hiroshima-ai-process",
@@ -398,7 +620,21 @@ window.SITE_PAGES = [
           "自願性",
           "生成式 AI"
         ],
-        "overview": "由 G7（七大工業國集團）在日本主席國任內啟動，2023 年 5 月廣島峰會宣布、同年 10 月 30 日發布核心文件。性質為軟法，自願性採納。針對先進 AI 系統（特別是生成式 AI 與基礎模型）提出「國際指導原則」（面向所有 AI 行為者）與「企業行為準則」（面向開發組織，含 11 項自願行動）。11 項行動涵蓋風險評估、部署後監控、透明度報告、AI 生成內容浮水印、安全研究投資等。OECD 受委託建立監測報告框架，企業可透過 transparency.oecd.ai 提交自願報告。義大利 G7（2024）在《特倫托宣言》中延續此承諾，要求企業在巴黎峰會（2025 年 2 月）前公布安全框架。"
+        "overview": "由 G7（七大工業國集團）在日本主席國任內啟動，2023 年 5 月廣島峰會宣布、同年 10 月 30 日發布核心文件。性質為軟法，自願性採納。針對先進 AI 系統（特別是生成式 AI 與基礎模型）提出「國際指導原則」（面向所有 AI 行為者）與「企業行為準則」（面向開發組織，含 11 項自願行動）。11 項行動涵蓋風險評估、部署後監控、透明度報告、AI 生成內容浮水印、安全研究投資等。OECD 受委託建立監測報告框架，企業可透過 transparency.oecd.ai 提交自願報告。義大利 G7（2024）在《特倫托宣言》中延續此承諾，要求企業在巴黎峰會（2025 年 2 月）前公布安全框架。",
+        "sources": [
+          {
+            "title": "廣島 AI 進程國際指導原則",
+            "url": "https://g7.utoronto.ca/summit/2023hiroshima/231030-ai-principles.html"
+          },
+          {
+            "title": "廣島 AI 進程企業行為準則",
+            "url": "https://g7.utoronto.ca/summit/2023hiroshima/231030-ai-code-of-conduct.html"
+          },
+          {
+            "title": "OECD 啟動 G7 行為準則監測試點",
+            "url": "https://www.oecd.org/en/about/news/press-releases/2024/07/oecd-launches-pilot-to-monitor-application-of-g7-code-of-conduct-on-advanced-ai-development.html"
+          }
+        ]
       },
       {
         "slug": "unga-ai-resolution",
@@ -411,7 +647,17 @@ window.SITE_PAGES = [
           "聯合國",
           "永續發展"
         ],
-        "overview": "2024 年 3 月 21 日，聯合國大會以全體協商一致方式通過史上首個 AI 決議（A/RES/78/265），由美國提案，共同提案國達 123 個。決議確立「安全、可靠、可信賴 AI」服務於永續發展目標的核心框架，呼籲各國縮短 AI 數位落差並以人本方式治理 AI。同年 7 月，第二個決議（A/RES/78/311）由中國提案、美國支持通過，聚焦加強對開發中國家 AI 能力建構的國際合作，體現南北方在 AI 治理上罕見的政治共識。兩項決議均屬軟法性質，不具直接法律約束力，但標誌著 AI 治理進入聯合國主流政治議程。"
+        "overview": "2024 年 3 月 21 日，聯合國大會以全體協商一致方式通過史上首個 AI 決議（A/RES/78/265），由美國提案，共同提案國達 123 個。決議確立「安全、可靠、可信賴 AI」服務於永續發展目標的核心框架，呼籲各國縮短 AI 數位落差並以人本方式治理 AI。同年 7 月，第二個決議（A/RES/78/311）由中國提案、美國支持通過，聚焦加強對開發中國家 AI 能力建構的國際合作，體現南北方在 AI 治理上罕見的政治共識。兩項決議均屬軟法性質，不具直接法律約束力，但標誌著 AI 治理進入聯合國主流政治議程。",
+        "sources": [
+          {
+            "title": "聯合國大會首個 AI 決議報導",
+            "url": "https://news.un.org/en/story/2024/03/1147831"
+          },
+          {
+            "title": "A/RES/78/311 AI 能力建構決議",
+            "url": "https://docs.un.org/en/A/RES/78/311"
+          }
+        ]
       },
       {
         "slug": "un-governing-ai-humanity",
@@ -424,7 +670,17 @@ window.SITE_PAGES = [
           "七大建議",
           "HLAB-AI"
         ],
-        "overview": "由聯合國秘書長 António Guterres 於 2023 年 10 月設立的 AI 高階諮詢機構（HLAB-AI）發布，成員為 39 位來自 33 個國家的 AI 領袖專家，以個人身份服務。最終報告《為人類治理 AI》於 2024 年 9 月發布，提出七大建議：建立仿照 IPCC 模式的獨立國際 AI 科學委員會、AI 標準交流平台、能力發展網絡、聯合國 AI 辦公室、全球 AI 資料框架、AI 能力與算力基金，以及多利害關係人論壇。七大建議中的「國際 AI 科學委員會」已獲全球數位契約採納，並於 2025 年 8 月由聯合國大會通過職權範圍，標誌建議從倡議走向制度化。"
+        "overview": "由聯合國秘書長 António Guterres 於 2023 年 10 月設立的 AI 高階諮詢機構（HLAB-AI）發布，成員為 39 位來自 33 個國家的 AI 領袖專家，以個人身份服務。最終報告《為人類治理 AI》於 2024 年 9 月發布，提出七大建議：建立仿照 IPCC 模式的獨立國際 AI 科學委員會、AI 標準交流平台、能力發展網絡、聯合國 AI 辦公室、全球 AI 資料框架、AI 能力與算力基金，以及多利害關係人論壇。七大建議中的「國際 AI 科學委員會」已獲全球數位契約採納，並於 2025 年 8 月由聯合國大會通過職權範圍，標誌建議從倡議走向制度化。",
+        "sources": [
+          {
+            "title": "聯合國 AI 高階諮詢機構官方頁面",
+            "url": "https://www.un.org/en/ai-advisory-body"
+          },
+          {
+            "title": "《為人類治理 AI》最終報告全文",
+            "url": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf"
+          }
+        ]
       },
       {
         "slug": "global-digital-compact",
@@ -437,7 +693,17 @@ window.SITE_PAGES = [
           "普世性",
           "政府間協議"
         ],
-        "overview": "2024 年 9 月 22 日於聯合國「未來峰會（Summit of the Future）」通過，作為《未來契約》的一部分，是全球首個關於 AI 國際治理的普世性政府間協議。性質介於軟法與政治承諾之間。核心 AI 治理機制包括：設立由 40 名成員組成的獨立國際 AI 科學委員會（每年發布一份政策相關評估報告），以及建立包容性「全球 AI 治理對話」（首屆由愛沙尼亞與薩爾瓦多擔任共同協調人，預定 2026 年 7 月於日內瓦舉行）。2025 年 8 月 26 日，聯合國大會通過決議（A/RES/79/325）確立上述兩機制的職權範圍；同年 9 月全球 AI 治理對話正式啟動。"
+        "overview": "2024 年 9 月 22 日於聯合國「未來峰會（Summit of the Future）」通過，作為《未來契約》的一部分，是全球首個關於 AI 國際治理的普世性政府間協議。性質介於軟法與政治承諾之間。核心 AI 治理機制包括：設立由 40 名成員組成的獨立國際 AI 科學委員會（每年發布一份政策相關評估報告），以及建立包容性「全球 AI 治理對話」（首屆由愛沙尼亞與薩爾瓦多擔任共同協調人，預定 2026 年 7 月於日內瓦舉行）。2025 年 8 月 26 日，聯合國大會通過決議（A/RES/79/325）確立上述兩機制的職權範圍；同年 9 月全球 AI 治理對話正式啟動。",
+        "sources": [
+          {
+            "title": "全球數位契約官方頁面",
+            "url": "https://www.un.org/digital-emerging-technologies/global-digital-compact"
+          },
+          {
+            "title": "UNGA 通過 AI 科學委員會職權範圍",
+            "url": "https://dig.watch/updates/un-general-assembly-adopts-terms-of-reference-for-ai-scientific-panel-and-global-dialogue-on-ai-governance"
+          }
+        ]
       },
       {
         "slug": "coe-ai-framework-convention",
@@ -450,7 +716,21 @@ window.SITE_PAGES = [
           "約束力",
           "國際條約"
         ],
-        "overview": "由歐洲委員會（46 個成員國，非歐盟機構）主導，正式名稱為「人工智慧、人權、民主與法治框架公約」。2024 年 5 月 17 日通過，同年 9 月 5 日於立陶宛維爾紐斯開放簽署，是全球首個具法律約束力的 AI 國際條約（硬法）。首批簽署方包括英國、美國、歐盟及多個歐洲國家，截至 2025 年 1 月共 37 個簽署方。生效條件為至少 5 國批准（其中至少 3 國為歐洲委員會成員）後 3 個月。公約架構 8 章 26 條，涵蓋人權保護義務、風險評估、透明度與問責、補救機制。適用於公共機構及代表其行事的私人機構，排除國家安全與國防活動；非歐洲委員會成員（含澳洲、以色列等）亦可加入。"
+        "overview": "由歐洲委員會（46 個成員國，非歐盟機構）主導，正式名稱為「人工智慧、人權、民主與法治框架公約」。2024 年 5 月 17 日通過，同年 9 月 5 日於立陶宛維爾紐斯開放簽署，是全球首個具法律約束力的 AI 國際條約（硬法）。首批簽署方包括英國、美國、歐盟及多個歐洲國家，截至 2025 年 1 月共 37 個簽署方。生效條件為至少 5 國批准（其中至少 3 國為歐洲委員會成員）後 3 個月。公約架構 8 章 26 條，涵蓋人權保護義務、風險評估、透明度與問責、補救機制。適用於公共機構及代表其行事的私人機構，排除國家安全與國防活動；非歐洲委員會成員（含澳洲、以色列等）亦可加入。",
+        "sources": [
+          {
+            "title": "歐洲委員會通過首個國際 AI 條約新聞稿",
+            "url": "https://www.coe.int/en/web/portal/-/council-of-europe-adopts-first-international-treaty-on-artificial-intelligence"
+          },
+          {
+            "title": "歐盟委員會簽署歐洲委員會 AI 框架公約",
+            "url": "https://www.eeas.europa.eu/delegations/council-europe/european-commission-signs-historic-council-europe-framework-convention-artificial-intelligence-and_en"
+          },
+          {
+            "title": "AI 框架公約（維基百科）",
+            "url": "https://en.wikipedia.org/wiki/Framework_Convention_on_Artificial_Intelligence"
+          }
+        ]
       },
       {
         "slug": "iso-iec-42001",
@@ -463,7 +743,17 @@ window.SITE_PAGES = [
           "可認證",
           "管理系統"
         ],
-        "overview": "由 ISO/IEC 聯合技術委員會第一分委員會第 42 工作組（JTC 1/SC 42）制定，2023 年 12 月發布。繼 ISO 27001（資訊安全）、ISO 9001（品質管理）之後，是全球首個 AI 專屬管理系統標準，亦是首個可供第三方認證的 AI 治理框架，適用任何規模與類型的組織。標準結構共 10 個條款，核心要件包括：識別利害關係人與 AIMS 範圍、高層管理承諾、AI 影響評估（為 42001 特有要件）、AI 系統生命週期管理及持續改善機制。ISO 42001 認證已被業界視為符合 EU AI Act 高風險系統要求的重要佐證。術語基礎來自 ISO/IEC 22989，概念框架承接 ISO/IEC TR 24028 與 23894。"
+        "overview": "由 ISO/IEC 聯合技術委員會第一分委員會第 42 工作組（JTC 1/SC 42）制定，2023 年 12 月發布。繼 ISO 27001（資訊安全）、ISO 9001（品質管理）之後，是全球首個 AI 專屬管理系統標準，亦是首個可供第三方認證的 AI 治理框架，適用任何規模與類型的組織。標準結構共 10 個條款，核心要件包括：識別利害關係人與 AIMS 範圍、高層管理承諾、AI 影響評估（為 42001 特有要件）、AI 系統生命週期管理及持續改善機制。ISO 42001 認證已被業界視為符合 EU AI Act 高風險系統要求的重要佐證。術語基礎來自 ISO/IEC 22989，概念框架承接 ISO/IEC TR 24028 與 23894。",
+        "sources": [
+          {
+            "title": "ISO/IEC 42001:2023 標準頁面",
+            "url": "https://www.iso.org/standard/42001"
+          },
+          {
+            "title": "ISO/IEC 42001 合規指引（Microsoft Learn）",
+            "url": "https://learn.microsoft.com/en-us/compliance/regulatory/offering-iso-42001"
+          }
+        ]
       },
       {
         "slug": "iso-iec-23894",
@@ -476,7 +766,17 @@ window.SITE_PAGES = [
           "風險管理",
           "方法論"
         ],
-        "overview": "由 ISO/IEC JTC 1/SC 42 制定，2023 年 2 月發布。在 ISO 31000:2018（通用風險管理標準）基礎上，為 AI 特有風險提供識別、分析、評估與處理的方法論指南，適用於開發、生產、部署或使用 AI 的組織。引入 AI 特有風險類別：演算法透明度風險、公平性與偏見風險（如訓練資料偏差）、穩健性與可靠性風險（如對抗性攻擊）、人機互動風險。風險管理流程涵蓋情境設定、識別、分析、評估、處理至監控各階段。本標準與 ISO/IEC 42001 互補：23894 提供方法論，42001 提供管理系統框架；二者均以 ISO/IEC 22989 術語為基礎。"
+        "overview": "由 ISO/IEC JTC 1/SC 42 制定，2023 年 2 月發布。在 ISO 31000:2018（通用風險管理標準）基礎上，為 AI 特有風險提供識別、分析、評估與處理的方法論指南，適用於開發、生產、部署或使用 AI 的組織。引入 AI 特有風險類別：演算法透明度風險、公平性與偏見風險（如訓練資料偏差）、穩健性與可靠性風險（如對抗性攻擊）、人機互動風險。風險管理流程涵蓋情境設定、識別、分析、評估、處理至監控各階段。本標準與 ISO/IEC 42001 互補：23894 提供方法論，42001 提供管理系統框架；二者均以 ISO/IEC 22989 術語為基礎。",
+        "sources": [
+          {
+            "title": "ISO/IEC 23894:2023 標準頁面",
+            "url": "https://www.iso.org/standard/77304.html"
+          },
+          {
+            "title": "ISO/IEC 23894 AI 風險管理標準介紹（AI Standards Hub）",
+            "url": "https://aistandardshub.org/a-new-standard-for-ai-risk-management"
+          }
+        ]
       },
       {
         "slug": "iso-iec-tr-24028",
@@ -489,7 +789,13 @@ window.SITE_PAGES = [
           "技術報告",
           "可信賴性"
         ],
-        "overview": "由 ISO/IEC JTC 1/SC 42 制定，2020 年 5 月發布，類型為技術報告（Technical Report, TR），屬非規範性文件，提供概念性框架而非具體要求。定義 AI 可信賴性七大維度：問責性、透明度、可靠性、公平性、隱私保護、穩健性，並將各維度映射至 AI 系統生命週期各階段。本報告是 ISO AI 標準生態的概念基礎：其可信賴性框架被 ISO/IEC 42001（管理系統）與 ISO/IEC 23894（風險管理）明確援引；OECD AI 原則、UNESCO 倫理建議書等國際框架的可信賴性語彙亦與本報告高度對齊，成為跨組織術語橋接的重要參考。"
+        "overview": "由 ISO/IEC JTC 1/SC 42 制定，2020 年 5 月發布，類型為技術報告（Technical Report, TR），屬非規範性文件，提供概念性框架而非具體要求。定義 AI 可信賴性七大維度：問責性、透明度、可靠性、公平性、隱私保護、穩健性，並將各維度映射至 AI 系統生命週期各階段。本報告是 ISO AI 標準生態的概念基礎：其可信賴性框架被 ISO/IEC 42001（管理系統）與 ISO/IEC 23894（風險管理）明確援引；OECD AI 原則、UNESCO 倫理建議書等國際框架的可信賴性語彙亦與本報告高度對齊，成為跨組織術語橋接的重要參考。",
+        "sources": [
+          {
+            "title": "ISO/IEC TR 24028:2020 標準頁面",
+            "url": "https://www.iso.org/standard/77608.html"
+          }
+        ]
       },
       {
         "slug": "iso-iec-22989",
@@ -502,7 +808,13 @@ window.SITE_PAGES = [
           "術語標準",
           "基礎標準"
         ],
-        "overview": "由 ISO/IEC JTC 1/SC 42 制定，2022 年 7 月發布，是 ISO AI 標準系列的術語基礎，亦是整個 ISO/IEC JTC 1/SC 42 所有後續 AI 標準的共同詞彙來源。在歐洲採用為 EN ISO/IEC 22989:2023，在美國為 INCITS/ISO/IEC 22989:2022。定義「AI 系統」、「生命週期」、「機器學習」、「訓練資料」等核心術語，確保不同標準、法規文件之間的術語一致性。EU AI Act、歐洲委員會 AI 框架公約等具約束力的法規文本均對齊本標準術語定義，體現「標準入法」的典範路徑，使 ISO 術語實質上具備全球法規影響力。"
+        "overview": "由 ISO/IEC JTC 1/SC 42 制定，2022 年 7 月發布，是 ISO AI 標準系列的術語基礎，亦是整個 ISO/IEC JTC 1/SC 42 所有後續 AI 標準的共同詞彙來源。在歐洲採用為 EN ISO/IEC 22989:2023，在美國為 INCITS/ISO/IEC 22989:2022。定義「AI 系統」、「生命週期」、「機器學習」、「訓練資料」等核心術語，確保不同標準、法規文件之間的術語一致性。EU AI Act、歐洲委員會 AI 框架公約等具約束力的法規文本均對齊本標準術語定義，體現「標準入法」的典範路徑，使 ISO 術語實質上具備全球法規影響力。",
+        "sources": [
+          {
+            "title": "ISO/IEC 22989:2022 標準頁面",
+            "url": "https://www.iso.org/standard/74296.html"
+          }
+        ]
       },
       {
         "slug": "bletchley-declaration",
@@ -515,7 +827,17 @@ window.SITE_PAGES = [
           "政治宣言",
           "前沿 AI"
         ],
-        "overview": "2023 年 11 月 1-2 日於英國布萊切利莊園舉行的首屆 AI 安全峰會上，由 28 個國家（含英、美、中、法、德、日、韓、印、澳、巴西及歐盟）簽署，紐西蘭於 2024 年 10 月加入，共 29 方。性質為政治宣言，屬軟法。宣言確認前沿 AI 模型（frontier AI）可能引發「嚴重甚至災難性傷害」，特別關注生物安全與網路安全領域的蓄意濫用及非蓄意控制失當風險。主要成果包括：確立前沿 AI 安全全球共識、促成英美等國成立 AI 安全研究所（AISI），以及呼籲開發者提交前沿 AI 模型供安全測試。本宣言奠定後續首爾、巴黎峰會系列的政治基礎。"
+        "overview": "2023 年 11 月 1-2 日於英國布萊切利莊園舉行的首屆 AI 安全峰會上，由 28 個國家（含英、美、中、法、德、日、韓、印、澳、巴西及歐盟）簽署，紐西蘭於 2024 年 10 月加入，共 29 方。性質為政治宣言，屬軟法。宣言確認前沿 AI 模型（frontier AI）可能引發「嚴重甚至災難性傷害」，特別關注生物安全與網路安全領域的蓄意濫用及非蓄意控制失當風險。主要成果包括：確立前沿 AI 安全全球共識、促成英美等國成立 AI 安全研究所（AISI），以及呼籲開發者提交前沿 AI 模型供安全測試。本宣言奠定後續首爾、巴黎峰會系列的政治基礎。",
+        "sources": [
+          {
+            "title": "布萊切利宣言官方全文",
+            "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023"
+          },
+          {
+            "title": "AI 安全峰會歷史沿革（維基百科）",
+            "url": "https://en.wikipedia.org/wiki/AI_Safety_Summit"
+          }
+        ]
       },
       {
         "slug": "seoul-ai-summit-2024",
@@ -528,7 +850,17 @@ window.SITE_PAGES = [
           "企業承諾",
           "安全框架"
         ],
-        "overview": "2024 年 5 月 21-22 日於首爾舉行，由韓國與英國聯合主辦。最重要成果是「前沿 AI 安全承諾（Frontier AI Safety Commitments）」：包括 Anthropic、Google DeepMind、Microsoft、Meta、OpenAI、NVIDIA 等 20 家企業自願承諾發布各自的「安全框架」、設定嚴重風險閾值，並承諾在風險過高時不發布新模型，企業須在 2025 年 2 月巴黎峰會前公布安全框架。峰會另達成「首爾宣言」（10 國及歐盟就安全合作協議）、「首爾意向聲明」（27 國及歐盟同意協作識別嚴重風險閾值），並啟動多國合作的首份《國際 AI 安全報告》。"
+        "overview": "2024 年 5 月 21-22 日於首爾舉行，由韓國與英國聯合主辦。最重要成果是「前沿 AI 安全承諾（Frontier AI Safety Commitments）」：包括 Anthropic、Google DeepMind、Microsoft、Meta、OpenAI、NVIDIA 等 20 家企業自願承諾發布各自的「安全框架」、設定嚴重風險閾值，並承諾在風險過高時不發布新模型，企業須在 2025 年 2 月巴黎峰會前公布安全框架。峰會另達成「首爾宣言」（10 國及歐盟就安全合作協議）、「首爾意向聲明」（27 國及歐盟同意協作識別嚴重風險閾值），並啟動多國合作的首份《國際 AI 安全報告》。",
+        "sources": [
+          {
+            "title": "首爾峰會前沿 AI 安全承諾（英國政府）",
+            "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+          },
+          {
+            "title": "首爾 AI 峰會主要成果",
+            "url": "https://www.techuk.org/resource/key-outcomes-of-the-ai-seoul-summit.html"
+          }
+        ]
       },
       {
         "slug": "international-aisi-network",
@@ -541,7 +873,17 @@ window.SITE_PAGES = [
           "政府間",
           "安全測試"
         ],
-        "overview": "2024 年 11 月 20-21 日於美國舊金山舉行首次網絡會議，正式成立國際 AI 安全研究所網絡。創始成員包括澳洲、加拿大、歐盟委員會、法國、日本、肯亞、韓國、新加坡、英國、美國，美國 AISI 擔任首任主席。各成員國 AISI 負責評估前沿 AI 模型潛在風險，英國 AISI 為先驅（2023 年布萊切利峰會後成立）。主要合作成果包括：聯合任務宣言、超過 1,100 萬美元投入合成內容研究、首次多邊 AI 安全測試演習（美英新三方主導），以及先進 AI 系統風險評估聯合聲明。此網絡是將 AI 安全研究從各國單兵作戰轉向多邊協調的關鍵制度安排。"
+        "overview": "2024 年 11 月 20-21 日於美國舊金山舉行首次網絡會議，正式成立國際 AI 安全研究所網絡。創始成員包括澳洲、加拿大、歐盟委員會、法國、日本、肯亞、韓國、新加坡、英國、美國，美國 AISI 擔任首任主席。各成員國 AISI 負責評估前沿 AI 模型潛在風險，英國 AISI 為先驅（2023 年布萊切利峰會後成立）。主要合作成果包括：聯合任務宣言、超過 1,100 萬美元投入合成內容研究、首次多邊 AI 安全測試演習（美英新三方主導），以及先進 AI 系統風險評估聯合聲明。此網絡是將 AI 安全研究從各國單兵作戰轉向多邊協調的關鍵制度安排。",
+        "sources": [
+          {
+            "title": "國際 AI 安全研究所網絡成立（NIST）",
+            "url": "https://www.nist.gov/news-events/news/2024/11/fact-sheet-us-department-commerce-us-department-state-launch-international"
+          },
+          {
+            "title": "首爾峰會前沿 AI 安全承諾（英國政府）",
+            "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+          }
+        ]
       },
       {
         "slug": "paris-ai-action-summit-2025",
@@ -554,7 +896,17 @@ window.SITE_PAGES = [
           "58 國",
           "永續 AI"
         ],
-        "overview": "2025 年 2 月 10-11 日於巴黎大皇宮舉行，由法國總統 Macron 與印度總理 Modi 聯合主持。58 個國家（含法國、中國、印度）簽署「普惠與永續人工智慧宣言」，涵蓋開放 AI、縮短數位落差、可持續 AI、勞動市場正向影響及促進國際合作等議題。峰會宣布啟動「永續 AI 聯盟（Coalition for Sustainable AI）」及面向公眾利益的開源 AI 公共基金「Current AI」。值得注意的是，美國（川普政府）未簽署主要宣言，且 AI 安全社群批評峰會「轉向創新、淡化安全」，標誌峰會系列在政治基調上的轉折。各企業依首爾峰會承諾，在本次峰會前公布各自安全框架。"
+        "overview": "2025 年 2 月 10-11 日於巴黎大皇宮舉行，由法國總統 Macron 與印度總理 Modi 聯合主持。58 個國家（含法國、中國、印度）簽署「普惠與永續人工智慧宣言」，涵蓋開放 AI、縮短數位落差、可持續 AI、勞動市場正向影響及促進國際合作等議題。峰會宣布啟動「永續 AI 聯盟（Coalition for Sustainable AI）」及面向公眾利益的開源 AI 公共基金「Current AI」。值得注意的是，美國（川普政府）未簽署主要宣言，且 AI 安全社群批評峰會「轉向創新、淡化安全」，標誌峰會系列在政治基調上的轉折。各企業依首爾峰會承諾，在本次峰會前公布各自安全框架。",
+        "sources": [
+          {
+            "title": "巴黎 AI 行動峰會 2025（維基百科）",
+            "url": "https://en.wikipedia.org/wiki/AI_Action_Summit_2025"
+          },
+          {
+            "title": "巴黎 AI 行動峰會重點摘要",
+            "url": "https://www.sourcingspeak.com/ai-action-summit-2025-key-takeaways-global-ai-governance/"
+          }
+        ]
       },
       {
         "slug": "new-delhi-ai-impact-summit-2026",
@@ -567,7 +919,21 @@ window.SITE_PAGES = [
           "92 國",
           "包容性"
         ],
-        "overview": "2026 年 2 月於印度新德里舉行，為期五天，由印度政府主辦。92 個國家與國際組織背書「印度 AI 影響峰會宣言」，22 個國家背書「AI 治理指導說明（Guidance Notes on AI Governance）」。峰會發布「新德里前沿 AI 影響承諾」，要求 AI 企業加強透明度（發布 AI 對就業影響的匿名聚合資料）及包容性（強化對全球南方語言與文化語境的 AI 測試）。宣告超過 2,000 億美元的 AI 及深科技投資承諾，並成立「促進 AI 包容性聯盟」（20 國及 UNICEF 背書）與「AI for Science 機構網絡」（19 個夥伴國）。本屆峰會標誌全球南方在 AI 治理中的話語權顯著提升。"
+        "overview": "2026 年 2 月於印度新德里舉行，為期五天，由印度政府主辦。92 個國家與國際組織背書「印度 AI 影響峰會宣言」，22 個國家背書「AI 治理指導說明（Guidance Notes on AI Governance）」。峰會發布「新德里前沿 AI 影響承諾」，要求 AI 企業加強透明度（發布 AI 對就業影響的匿名聚合資料）及包容性（強化對全球南方語言與文化語境的 AI 測試）。宣告超過 2,000 億美元的 AI 及深科技投資承諾，並成立「促進 AI 包容性聯盟」（20 國及 UNICEF 背書）與「AI for Science 機構網絡」（19 個夥伴國）。本屆峰會標誌全球南方在 AI 治理中的話語權顯著提升。",
+        "sources": [
+          {
+            "title": "印度 AI 影響峰會 2026 成果分析（ORF）",
+            "url": "https://www.orfonline.org/expert-speak/from-dialogue-to-deployment-strategic-outcomes-of-the-india-ai-impact-summit-2026"
+          },
+          {
+            "title": "印度 AI 影響峰會宣言（PIB）",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2234343"
+          },
+          {
+            "title": "新德里前沿 AI 影響承諾",
+            "url": "https://ddnews.gov.in/en/india-unveils-new-delhi-frontier-ai-commitments-at-ai-impact-summit/"
+          }
+        ]
       }
     ]
   },
@@ -915,6 +1281,173 @@ window.SITE_PAGES = [
             }
           }
         ]
+      },
+      {
+        "id": "references",
+        "heading": "參考來源",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "本頁內容彙整自下列公開來源（38 筆）；點擊可前往原始出處。"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "title": "ProPublica — Machine Bias: Risk Assessments in Criminal Sentencing",
+                "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+              },
+              {
+                "title": "Chouldechova, A. — Fair prediction with disparate impact: A study of bias in recidivism prediction instruments",
+                "url": "https://arxiv.org/pdf/1703.00056"
+              },
+              {
+                "title": "Buolamwini, J. & Gebru, T. — Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification",
+                "url": "http://proceedings.mlr.press/v81/buolamwini18a.html"
+              },
+              {
+                "title": "NIST — NIST Study Evaluates Effects of Race, Age, Sex on Face Recognition Software",
+                "url": "https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software"
+              },
+              {
+                "title": "Anthropic — Responsible Scaling Policy Version 3.0",
+                "url": "https://www.anthropic.com/news/responsible-scaling-policy-v3"
+              },
+              {
+                "title": "Anthropic — Constitutional AI: Harmlessness from AI Feedback (arXiv)",
+                "url": "https://arxiv.org/abs/2212.08073"
+              },
+              {
+                "title": "Google DeepMind — Updating the Frontier Safety Framework",
+                "url": "https://deepmind.google/blog/updating-the-frontier-safety-framework"
+              },
+              {
+                "title": "Google DeepMind — Gemini 3 Pro Frontier Safety Framework Report",
+                "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf"
+              },
+              {
+                "title": "OpenAI — Our Updated Preparedness Framework",
+                "url": "https://openai.com/index/updating-our-preparedness-framework"
+              },
+              {
+                "title": "Microsoft — Responsible AI Transparency Report 2025",
+                "url": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Responsible-AI-Transparency-Report-2025-vertical.pdf"
+              },
+              {
+                "title": "Microsoft — Responsible AI Principles and Approach",
+                "url": "https://www.microsoft.com/en-us/ai/principles-and-approach"
+              },
+              {
+                "title": "Google — AI Principles",
+                "url": "https://ai.google/principles"
+              },
+              {
+                "title": "IBM Research — Introducing AI Fairness 360",
+                "url": "https://research.ibm.com/blog/ai-fairness-360"
+              },
+              {
+                "title": "Meta AI — Announcing Purple Llama: Towards Open Trust and Safety in the New World of Generative AI",
+                "url": "https://ai.meta.com/blog/purple-llama-open-trust-safety-generative-ai"
+              },
+              {
+                "title": "MLCommons — AILuminate v1.0",
+                "url": "https://mlcommons.org/ailuminate"
+              },
+              {
+                "title": "MLCommons — AILuminate Jailbreak v0.5",
+                "url": "https://mlcommons.org/2025/10/ailuminate-jailbreak-v05"
+              },
+              {
+                "title": "UK AI Security Institute — AISI Frontier AI Trends Report 2025",
+                "url": "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025"
+              },
+              {
+                "title": "UK AISI — Our 2025 Year in Review",
+                "url": "https://www.aisi.gov.uk/blog/our-2025-year-in-review"
+              },
+              {
+                "title": "Frontier Model Forum — Progress Update: Advancing Frontier AI Safety in 2024 and Beyond",
+                "url": "https://www.frontiermodelforum.org/updates/progress-update-advancing-frontier-ai-safety-in-2024-and-beyond"
+              },
+              {
+                "title": "Future of Life Institute — AI Safety Summits",
+                "url": "https://futureoflife.org/project/ai-safety-summits"
+              },
+              {
+                "title": "CSIS — The AI Seoul Summit",
+                "url": "https://www.csis.org/analysis/ai-seoul-summit"
+              },
+              {
+                "title": "Arxiv — International AI Safety Report",
+                "url": "https://arxiv.org/pdf/2501.17805"
+              },
+              {
+                "title": "Arxiv — Why do Experts Disagree on Existential Risk and P(doom)?",
+                "url": "https://arxiv.org/html/2502.14870v1"
+              },
+              {
+                "title": "Arxiv — Redefining AI Red Teaming in the Agentic Era",
+                "url": "https://arxiv.org/html/2605.04019v1"
+              },
+              {
+                "title": "TensorBlue — Explainable AI (XAI) 2025: SHAP, LIME & Model Interpretability",
+                "url": "https://tensorblue.com/blog/explainable-ai-xai-shap-lime-model-interpretability-2025"
+              },
+              {
+                "title": "Wiley Advanced Intelligent Systems — A Perspective on XAI Methods: SHAP and LIME",
+                "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aisy.202400304"
+              },
+              {
+                "title": "CFA Institute — Explainable AI in Finance",
+                "url": "https://rpc.cfainstitute.org/research/reports/2025/explainable-ai-in-finance"
+              },
+              {
+                "title": "ICO — How do we ensure individual rights in our AI systems?",
+                "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/how-do-we-ensure-individual-rights-in-our-ai-systems"
+              },
+              {
+                "title": "FPF — GPA 2025: AI development and human oversight",
+                "url": "https://fpf.org/blog/gpa-2025-ai-development-and-human-oversight-of-decisions-involving-ai-systems-were-this-years-focus-for-global-privacy-regulators"
+              },
+              {
+                "title": "MIT Technology Review — The AI Doomers Feel Undeterred",
+                "url": "https://www.technologyreview.com/2025/12/15/1129171/the-ai-doomers-feel-undeterred"
+              },
+              {
+                "title": "The Next Web — Bengio AI Extinction Warning LawZero Safety",
+                "url": "https://thenextweb.com/news/bengio-ai-extinction-warning-lawzero-safety"
+              },
+              {
+                "title": "Bulletin of the Atomic Scientists — Stopping the Clock on Catastrophic AI Risk",
+                "url": "https://thebulletin.org/premium/2025-12/stopping-the-clock-on-catastrophic-ai-risk"
+              },
+              {
+                "title": "Fortune — Workday, Amazon AI Employment Bias Claims",
+                "url": "https://fortune.com/2025/07/05/workday-amazon-alleged-ai-employment-bias-hiring-discrimination"
+              },
+              {
+                "title": "Mindgard — AI Red Teaming in 2026: The Complete Guide",
+                "url": "https://mindgard.ai/blog/what-is-ai-red-teaming"
+              },
+              {
+                "title": "AI Safety Directory — Demographic Parity Guide 2026",
+                "url": "https://aisecurityandsafety.org/en/guides/demographic-parity-guide"
+              },
+              {
+                "title": "Anthropic — Claude Opus 4.5 System Card",
+                "url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf"
+              },
+              {
+                "title": "Anthropic — Claude 4 System Card (Opus 4 & Sonnet 4)",
+                "url": "https://www.anthropic.com/claude-4-system-card"
+              },
+              {
+                "title": "EPC — The Paris Summit: Au Revoir, Global AI Safety?",
+                "url": "https://www.epc.eu/publication/The-Paris-Summit-Au-Revoir-global-AI-Safety-61ea68"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -1252,6 +1785,133 @@ window.SITE_PAGES = [
                 "法規持續演變：與 GDPR、NIST AI RMF 等更廣泛框架整合，建立活的管理系統"
               ]
             }
+          }
+        ]
+      },
+      {
+        "id": "references",
+        "heading": "參考來源",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "本頁內容彙整自下列公開來源（28 筆）；點擊可前往原始出處。"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "title": "Governance of AI: A Critical Imperative for Today's Boards",
+                "url": "https://corpgov.law.harvard.edu/2025/05/27/governance-of-ai-a-critical-imperative-for-todays-boards-2"
+              },
+              {
+                "title": "How Boards Can Lead in a World Remade by AI",
+                "url": "https://corpgov.law.harvard.edu/2026/02/19/how-boards-can-lead-in-a-world-remade-by-ai"
+              },
+              {
+                "title": "Board Oversight and Artificial Intelligence: Key Governance Priorities for 2026, WilmerHale",
+                "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260122-board-oversight-and-artificial-intelligence-key-governance-priorities-for-2026"
+              },
+              {
+                "title": "Chief AI Officer 2026: Real Role or Just Another C-Level Title?, Digital Chiefs",
+                "url": "https://www.digital-chiefs.de/en/chief-ai-officer-2026"
+              },
+              {
+                "title": "NIST AI 600-1: Artificial Intelligence Risk Management Framework — Generative Artificial Intelligence Profile",
+                "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+              },
+              {
+                "title": "NIST AI RMF: Enterprise Guide, Witness.AI",
+                "url": "https://witness.ai/blog/nist-ai-risk-management-framework"
+              },
+              {
+                "title": "NIST AI RMF 1.0 Complete Guide, Modulos Docs",
+                "url": "https://docs.modulos.ai/frameworks/nist-ai-rmf/index"
+              },
+              {
+                "title": "Generative AI Risk Management: Complete Guide to NIST AI 600-1, Libertify",
+                "url": "https://www.libertify.com/interactive-library/nist-ai-600-1-generative-ai-profile"
+              },
+              {
+                "title": "Building a Practical Framework for AI Governance Maturity in the Enterprise, Dataversity",
+                "url": "https://www.dataversity.net/articles/building-a-practical-framework-for-ai-governance-maturity-in-the-enterprise"
+              },
+              {
+                "title": "Enterprise AI Governance Framework: 4 Components, 4 Risk Tiers, Iternal.ai",
+                "url": "https://iternal.ai/ai-governance-framework"
+              },
+              {
+                "title": "How to Establish an AI Ethics Board and Governance Committee, Agility at Scale",
+                "url": "https://agility-at-scale.com/ai/governance/ai-ethics-board-and-governance-committee"
+              },
+              {
+                "title": "What Is Model Governance?, IBM",
+                "url": "https://www.ibm.com/think/topics/model-governance"
+              },
+              {
+                "title": "How Model Risk Management Teams Comply with SR 11-7, ValidMind",
+                "url": "https://validmind.com/blog/sr-11-7-model-risk-management-compliance"
+              },
+              {
+                "title": "Model Registry and Governance | MLOps Production AI 2025, Introl",
+                "url": "https://introl.com/blog/model-registry-governance-mlops-production-ai-2025"
+              },
+              {
+                "title": "Model Cards for Model Reporting, Mitchell et al. (2019), ACM FAccT",
+                "url": "https://arxiv.org/pdf/1810.03993"
+              },
+              {
+                "title": "Datasheets for Datasets, Gebru et al. (2018)",
+                "url": "https://www.researchgate.net/publication/324055506_Datasheets_for_Datasets"
+              },
+              {
+                "title": "The Rise of Shadow AI: Auditing Unauthorized AI Tools in the Enterprise, ISACA",
+                "url": "https://www.isaca.org/resources/news-and-trends/industry-news/2025/the-rise-of-shadow-ai-auditing-unauthorized-ai-tools-in-the-enterprise"
+              },
+              {
+                "title": "Shadow AI explained: risks, costs, and enterprise governance, Vectra AI",
+                "url": "https://www.vectra.ai/topics/shadow-ai"
+              },
+              {
+                "title": "[2026 Update] The Full Scope of Shadow AI Risk, QueryPie",
+                "url": "https://www.querypie.com/features/documentation/blog/27/shadow-ai-risk-cxo-countermeasures"
+              },
+              {
+                "title": "AI Risk in Third-Party Vendor Tools, Accorian",
+                "url": "https://www.accorian.com/ai-risk-in-third-party-vendor-tools"
+              },
+              {
+                "title": "AI Risk Disclosures in the S&P 500, Harvard Law School Forum on Corporate Governance",
+                "url": "https://corpgov.law.harvard.edu/2025/10/15/ai-risk-disclosures-in-the-sp-500-reputation-cybersecurity-and-regulation"
+              },
+              {
+                "title": "Understanding ISO/IEC 42001: Features, Types & Best Practices, Lasso Security",
+                "url": "https://www.lasso.security/blog/iso-iec-42001"
+              },
+              {
+                "title": "ISO 42001 Certification: The New Benchmark for AI Vendor Selection, SAP Community",
+                "url": "https://community.sap.com/t5/technology-blog-posts-by-sap/iso-42001-certification-the-new-benchmark-for-ai-vendor-selection/ba-p/14331515"
+              },
+              {
+                "title": "ISO/IEC 42001 explained: Why Responsible AI and AI Governance are critical, Cornerstone",
+                "url": "https://www.cornerstoneondemand.com/resources/article/iso-iec-42001-explained"
+              },
+              {
+                "title": "The power of AI in efficient SOX compliance, Grant Thornton",
+                "url": "https://www.grantthornton.com/insights/articles/advisory/2025/the-power-of-ai-in-efficient-sox-compliance"
+              },
+              {
+                "title": "Board Oversight of AI Triples Since '24, Corporate Compliance Insights",
+                "url": "https://www.corporatecomplianceinsights.com/news-roundup-october-31-2025"
+              },
+              {
+                "title": "What Is an AI Audit?, IBM",
+                "url": "https://www.ibm.com/think/topics/ai-audit"
+              },
+              {
+                "title": "NIST AI RMF 600-1 12 Official Risk Categories, Modulos Docs",
+                "url": "https://docs.modulos.ai/frameworks/nist-ai-rmf/generative-ai-profile"
+              }
+            ]
           }
         ]
       }
@@ -1676,6 +2336,189 @@ window.SITE_PAGES = [
             "text": "台灣智慧財產局 2025 年 7 月在台北、新竹、台中、台南舉辦「2025 智財經營研討班」，議題涵蓋未來設計（Future Design）專利合案申請、女性發明人加速審查，以及電腦軟體相關發明（與 AI/ML 技術高度相關）。TIPO 正積極將 AI 時代的 IP 管理議題納入 TIPS 框架，包括 AI 生成發明的發明人認定、AI 輔助創作的著作權策略，以及企業 AI 治理與 IP 合規的整合。"
           }
         ]
+      },
+      {
+        "id": "references",
+        "heading": "參考來源",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "本頁內容彙整自下列公開來源（42 筆）；點擊可前往原始出處。"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "title": "New York Times v. OpenAI case tracker",
+                "url": "https://ailawsuittracker.com"
+              },
+              {
+                "title": "Davis Wright Tremaine: Thomson Reuters v. Ross Intelligence ruling analysis",
+                "url": "https://www.dwt.com/blogs/artificial-intelligence-law-advisor/2025/02/reuters-ross-court-ruling-ai-copyright-fair-use"
+              },
+              {
+                "title": "Reed Smith: Court shuts down AI fair use argument in Thomson Reuters v. Ross",
+                "url": "https://www.reedsmith.com/en/perspectives/2025/03/court-ai-fair-use-thomson-reuters-enterprise-gmbh-ross-intelligence"
+              },
+              {
+                "title": "US Copyright Office: AI Reports Index",
+                "url": "https://www.copyright.gov/ai"
+              },
+              {
+                "title": "US Copyright Office: Part 2 Copyrightability Report",
+                "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf"
+              },
+              {
+                "title": "US Copyright Office: AI Policy Guidance",
+                "url": "https://www.copyright.gov/ai/ai_policy_guidance.pdf"
+              },
+              {
+                "title": "Skadden: Copyright Office Publishes Report on AI Copyrightability",
+                "url": "https://www.skadden.com/insights/publications/2025/02/copyright-office-publishes-report"
+              },
+              {
+                "title": "Jones Day: Copyrightability of AI Outputs (Thaler v. Perlmutter analysis)",
+                "url": "https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement"
+              },
+              {
+                "title": "Skadden: Copyright Office Weighs In on AI Training and Fair Use (Part 3)",
+                "url": "https://www.skadden.com/insights/publications/2025/05/copyright-office-report"
+              },
+              {
+                "title": "Crowell & Moring: US Copyright Office Releases Third Report on AI",
+                "url": "https://www.crowell.com/en/insights/client-alerts/us-copyright-office-releases-third-report-on-ai-and-copyright-addressing-training-ai-models-with-copyrighted-materials"
+              },
+              {
+                "title": "Latham & Watkins: Getty Images v. Stability AI: English High Court Rejects Secondary Copyright Claim",
+                "url": "https://www.lw.com/en/insights/getty-images-v-stability-ai-english-high-court-rejects-secondary-copyright-claim"
+              },
+              {
+                "title": "Mayer Brown: Getty Images v Stability AI UK High Court Analysis",
+                "url": "https://www.mayerbrown.com/en/insights/publications/2025/11/getty-images-v-stability-ai-what-the-high-courts-decision-means-for-rights-holders-and-ai-developers"
+              },
+              {
+                "title": "Knowing Machines: Andersen v. Stability AI",
+                "url": "https://knowingmachines.org/knowing-legal-machines/legal-explainer/cases/andersen-v-stability-ai"
+              },
+              {
+                "title": "Mesh IP Law: Andersen v. Stability AI litigation tracker",
+                "url": "https://www.meshiplaw.com/litigation-tracker/andersen-v-stability-ai"
+              },
+              {
+                "title": "McKool Smith: AI Infringement Case Updates (multiple dates)",
+                "url": "https://www.mckoolsmith.com/newsroom-ailitigation-46"
+              },
+              {
+                "title": "Chat GPT Is Eating the World: Status of all 51 copyright lawsuits v. AI (Oct. 8, 2025)",
+                "url": "https://chatgptiseatingtheworld.com/2025/10/08/status-of-all-51-copyright-lawsuits-v-ai-oct-8-2025-no-more-decisions-on-fair-use-in-2025"
+              },
+              {
+                "title": "Axios: NYT case against OpenAI and Microsoft can advance",
+                "url": "https://www.axios.com/2025/04/01/nyt-openai-microsoft-lawsuit-advances"
+              },
+              {
+                "title": "USPTO: Revised Inventorship Guidance for AI-Assisted Inventions (Federal Register)",
+                "url": "https://www.federalregister.gov/documents/2025/11/28/2025-21457/revised-inventorship-guidance-for-ai-assisted-inventions"
+              },
+              {
+                "title": "IPWatchdog: USPTO AI Guidance Reiterates DABUS Decision",
+                "url": "https://ipwatchdog.com/2024/02/12/uspto-ai-guidance-reiterates-dabus-decision"
+              },
+              {
+                "title": "Goodwin: USPTO Issues Revised Inventorship Guidance for AI-Assisted Inventions",
+                "url": "https://www.goodwinlaw.com/en/insights/publications/2025/12/alerts-lifesciences-uspto-issues-revised-inventorship-guidance"
+              },
+              {
+                "title": "DABUS Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/DABUS"
+              },
+              {
+                "title": "JUVE Patent: UK Supreme Court final say on DABUS",
+                "url": "https://www.juve-patent.com/cases/uk-supreme-court-dabus-named-inventor-patent-stephen-thaler"
+              },
+              {
+                "title": "WIPO: China-Based Inventors Filing Most GenAI Patents",
+                "url": "https://www.wipo.int/pressroom/en/articles/2024/article_0009.html"
+              },
+              {
+                "title": "WIPO Patent Landscape Report: Generative AI",
+                "url": "https://www.wipo.int/web-publications/patent-landscape-report-generative-artificial-intelligence-genai/en/2-global-patenting-and-research-in-genai.html"
+              },
+              {
+                "title": "WIPO: Artificial Intelligence and IP (main page)",
+                "url": "https://www.wipo.int/en/web/frontier-technologies/artificial-intelligence/index"
+              },
+              {
+                "title": "OSI: Open Source AI Definition 1.0",
+                "url": "https://opensource.org/ai/open-source-ai-definition"
+              },
+              {
+                "title": "OSI: Meta's LLaMa license is still not Open Source",
+                "url": "https://opensource.org/blog/metas-llama-license-is-still-not-open-source"
+              },
+              {
+                "title": "TechCrunch: We finally have an 'official' definition for open source AI",
+                "url": "https://techcrunch.com/2024/10/28/we-finally-have-an-official-definition-for-open-source-ai"
+              },
+              {
+                "title": "C2PA Viewer: EU AI Act and C2PA (Article 50 requirements)",
+                "url": "https://c2paviewer.com/articles/eu-ai-act-content-credentials"
+              },
+              {
+                "title": "Institute PM: AI Content Provenance and Watermarking: C2PA and SynthID guide",
+                "url": "https://www.institutepm.com/knowledge-hub/ai-content-provenance-watermarking"
+              },
+              {
+                "title": "Mayer Brown: EU AI Act GPAI rules start applying (August 2025)",
+                "url": "https://www.mayerbrown.com/en/insights/publications/2025/08/eu-ai-act-news-rules-on-general-purpose-ai-start-applying-guidelines-and-template-for-summary-of-training-data-finalized"
+              },
+              {
+                "title": "Clifford Chance: Copyright compliance under EU AI Act for GPAI",
+                "url": "https://www.cliffordchance.com/insights/resources/blogs/ip-insights/2025/10/copyright-compliance-under-the-eu-ai-act-for-gpai-model-providers.html"
+              },
+              {
+                "title": "Ocean Tomo / J.S. Held: IP and AI Asset Management in M&A Transactions",
+                "url": "https://oceantomo.com/insights/increasing-exit-multiples-ip-and-ai-asset-management-in-ma-transactions"
+              },
+              {
+                "title": "Ocean Tomo: AI as IP Framework",
+                "url": "https://oceantomo.com/insights/ai-as-ip-a-framework-for-boards-executives-and-investors"
+              },
+              {
+                "title": "Houston Harbaugh: A 2025 AI and Trade Secret Law Retrospective",
+                "url": "https://hh-law.com/blogs/blog-intellectual-property-litigation-protection-and-prosecution-dtsa-ai-artificial-intelligence-lawyers"
+              },
+              {
+                "title": "Herbert Smith Freehills: Trade secrets in the AI era",
+                "url": "https://www.hsfkramer.com/insights/2025-10/trade-secrets-in-the-ai-ere-navigating-transparency-under-the-eu-ai-act"
+              },
+              {
+                "title": "DLA Piper: Can AI-generated content be protected by copyright? UK, EU and China",
+                "url": "https://www.dlapiper.com/en-us/insights/publications/2026/04/ai-and-copyright-major-issues-and-direction-of-travel-in-the-uk-eu-and-china-in-q2-2026/can-ai-generated-content-be-protected-by-copyright"
+              },
+              {
+                "title": "European Parliament Think Tank: Copyright of AI-generated works: Approaches in the EU",
+                "url": "https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI"
+              },
+              {
+                "title": "TIPO (Taiwan): TIPS 智慧財產管理制度",
+                "url": "https://www.tipo.gov.tw/tw/cp-1069-953784-dd169-1.html"
+              },
+              {
+                "title": "TIPS 官方網站",
+                "url": "https://www.tips.org.tw"
+              },
+              {
+                "title": "Gilbert's LLP: Canadian Patent Appeal Board says AI Cannot be an Inventor",
+                "url": "https://www.gilbertslaw.ca/insights/2025/07/canadian-patent-appeal-board-says-ai-cannot-be-an-inventor"
+              },
+              {
+                "title": "WIPO: AI Infrastructure Interchange (AIII)",
+                "url": "https://www.wipo.int/meetings/en/2025/ai-infrastructure-interchange.html"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -2010,6 +2853,157 @@ window.SITE_PAGES = [
             "text": "台灣學術機構已建立 IRB（研究倫理審查委員會）制度，AI 醫療與 AI 臨床試驗資料治理納入審查範疇。教育部推動「學術倫理 2.0」，因應生成式 AI 對學術誠信的衝擊。AI 基本法第 7–8 條要求政府推動學校、產業、社會的 AI 與倫理教育，落實全民 AI 素養培育。"
           }
         ]
+      },
+      {
+        "id": "references",
+        "heading": "參考來源",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "本頁內容彙整自下列公開來源（34 筆）；點擊可前往原始出處。"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "title": "數位發展部新聞稿：立法院三讀通過《人工智慧基本法》",
+                "url": "https://moda.gov.tw/press/press-releases/18316"
+              },
+              {
+                "title": "行政院新聞：政院通過「人工智慧基本法」草案",
+                "url": "https://www.ey.gov.tw/Page/9277F759E41CCD91/5d673d1e-f418-47dc-ab35-a06600f77f07"
+              },
+              {
+                "title": "Baker McKenzie：Taiwan: AI Basic Act",
+                "url": "https://www.bakermckenzie.com/en/insight/publications/2026/01/taiwan-ai-basic-act"
+              },
+              {
+                "title": "Library of Congress：Taiwan: New Law Establishes Basic Framework on Artificial Intelligence",
+                "url": "https://www.loc.gov/item/global-legal-monitor/2026-05-07/taiwan-new-law-establishes-basic-framework-on-artificial-intelligence"
+              },
+              {
+                "title": "理律法律事務所：人工智慧基本法正式公布並施行",
+                "url": "https://www.leeandli.com/TW/NewslettersDetail/7566.htm"
+              },
+              {
+                "title": "法源法律網：人工智慧基本法三讀通過",
+                "url": "https://www.lawbank.com.tw/news/NewsContent.aspx?NID=211670.00"
+              },
+              {
+                "title": "台灣人工智慧學校：AI基本法通過後產業實戰解讀",
+                "url": "https://aiacademy.tw/news-ai-fundamental-act-futurecity"
+              },
+              {
+                "title": "iThome：立院三讀通過AI基本法，國科會為主管機關",
+                "url": "https://www.ithome.com.tw/news/172980"
+              },
+              {
+                "title": "行政院：台灣AI行動計畫（掌握契機全面啟動產業AI化）",
+                "url": "https://www.ey.gov.tw/Page/5A8A0CB5B41DA11E/a8ec407c-6154-4c14-8f1e-d494ec2dbf23"
+              },
+              {
+                "title": "國科會：臺灣AI行動計畫2.0（2023-2026年）核定本",
+                "url": "https://digi.nstc.gov.tw/File/7C71629D702E2D89"
+              },
+              {
+                "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧(AI)指引」",
+                "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202406200001&dtable=News"
+              },
+              {
+                "title": "FSC：金融業運用人工智慧(AI)指引全文",
+                "url": "https://www.fsc.gov.tw/websitedowndoc?file=chfsc%2F202408231741530.pdf"
+              },
+              {
+                "title": "FSC：金融業運用人工智慧(AI)之核心原則與相關推動政策公布",
+                "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202310170002&dtable=News"
+              },
+              {
+                "title": "法源法律網：以AI為工具投入創意完成著作 智財局可受著作權保護",
+                "url": "https://www.lawbank.com.tw/news/NewsContent.aspx?NID=208489.00"
+              },
+              {
+                "title": "智財局：智慧財產權月刊—生成式AI與著作權議題",
+                "url": "https://www.tipo.gov.tw/tw/tipo1/425-23858.html"
+              },
+              {
+                "title": "理律法律事務所：個人資料保護法修正",
+                "url": "https://www.leeandli.com/TW/NewslettersDetail/7532.htm"
+              },
+              {
+                "title": "理律法律事務所：資通安全管理法修正",
+                "url": "https://www.leeandli.com/TW/NewslettersDetail/7505.htm"
+              },
+              {
+                "title": "行政院：個人資料保護委員會組織法草案暨個資法修正草案",
+                "url": "https://www.ey.gov.tw/Page/9277F759E41CCD91/747cda78-926f-4205-99b3-1a735fc1b97b"
+              },
+              {
+                "title": "AIEC 官網：AI產品與系統評測中心",
+                "url": "https://www.aiec.org.tw"
+              },
+              {
+                "title": "MakerPRO：AIEC首度公布語言模型在地化評測結果",
+                "url": "https://makerpro.cc/2025/10/aiec-drives-localized-ai-testing-and-verification"
+              },
+              {
+                "title": "TAIDE 官網：推動臺灣可信任生成式AI發展計畫",
+                "url": "https://taide.tw"
+              },
+              {
+                "title": "國科會：TAIDE-LX-7B模型釋出",
+                "url": "https://www.nstc.gov.tw/folksonomy/detail/d5a157bf-5aca-4ecf-83ce-012f351fd341?l=CH"
+              },
+              {
+                "title": "行政院：TAIDE對話引擎（重要政策）",
+                "url": "https://www.ey.gov.tw/Page/5A8A0CB5B41DA11E/582206fe-26fc-4184-b911-aa6e4569ff3e"
+              },
+              {
+                "title": "NVIDIA Blog：NVIDIA-Powered Supercomputer to Enable Quantum Leap for Taiwan Research",
+                "url": "https://blogs.nvidia.com/blog/taiwan-research-supercomputer"
+              },
+              {
+                "title": "HPCwire：NVIDIA-Powered Supercomputer to Boost Taiwan's Sovereign AI",
+                "url": "https://www.hpcwire.com/off-the-wire/nvidia-powered-supercomputer-to-boost-taiwans-sovereign-ai-and-scientific-computing"
+              },
+              {
+                "title": "TechNews：黃仁勳示警台灣AI下一關卡不是晶片是電力",
+                "url": "https://technews.tw/2026/05/28/jensen-huang-talk-about-taiwan-ai"
+              },
+              {
+                "title": "國研院：AI新十大建設—打造主權AI「國網雲端算力中心」啟用",
+                "url": "https://www.niar.org.tw/xmdoc/cont?xsmsid=0I148622737263495777&sid=0P349427790375044437"
+              },
+              {
+                "title": "國發會：推動AI新十大建設，落實臺灣成為智慧科技島",
+                "url": "https://www.ndc.gov.tw/nc_14813_39422"
+              },
+              {
+                "title": "智財局：TIPS 強化企業智慧財產經營管理計畫",
+                "url": "https://www.tipo.gov.tw/tw/tipo1/849.html"
+              },
+              {
+                "title": "台灣智財管理協會：TIPS A級與AA級要求",
+                "url": "https://www.tipa.org.tw/tc/monthly_detial508.htm"
+              },
+              {
+                "title": "Join.gov.tw：國科會預告制定AI基本法草案",
+                "url": "https://join.gov.tw/policies/detail/4c714d85-ab9f-4b17-8335-f13b31148dc4"
+              },
+              {
+                "title": "Wikipedia：人工智慧基本法草案",
+                "url": "https://zh.wikipedia.org/zh-tw/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%9F%BA%E6%9C%AC%E6%B3%95%E8%8D%89%E6%A1%88"
+              },
+              {
+                "title": "中央社：立院三讀人工智慧基本法 國科會為主管機關",
+                "url": "https://www.cna.com.tw/news/aipl/202512230036.aspx"
+              },
+              {
+                "title": "IAPP：Taiwan's AI governance framework unveiled",
+                "url": "https://iapp.org/news/a/taiwan-s-ai-governance-framework-unveiled"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -2286,6 +3280,205 @@ window.SITE_PAGES = [
             "text": "美國傾向以自願承諾（voluntary commitments）和行業自律為主，避免過度監管抑制創新，但川普政府廢除拜登 AI 行政命令後，美國的 AI 治理立場更向去管制化靠攏。歐盟則以 EU AI Act 為代表，採取強制性風險分級監管，並透過「布魯塞爾效應」（Brussels Effect）向全球輸出規範標準。中國則建立以國家為中心的 AI 治理模式，強調內容合規（如《生成式 AI 服務管理暫行辦法》，2023 年 8 月生效）與社會主義核心價值觀的一致性。三種治理模式的競爭，將深刻影響未來全球 AI 監管生態的走向。"
           }
         ]
+      },
+      {
+        "id": "references",
+        "heading": "參考來源",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "本頁內容彙整自下列公開來源（46 筆）；點擊可前往原始出處。"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "title": "US BIS Export Control Rules (Oct 2022, Oct 2023, Dec 2024)",
+                "url": "https://www.bis.doc.gov"
+              },
+              {
+                "title": "Framework for Artificial Intelligence Diffusion (Final Rule, Jan 2025)",
+                "url": "https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion"
+              },
+              {
+                "title": "BIS Rescinds AI Diffusion Rule (May 2025)",
+                "url": "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens"
+              },
+              {
+                "title": "CHIPS and Science Act Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/CHIPS_and_Science_Act"
+              },
+              {
+                "title": "Understanding the Biden Administration's Updated Export Controls, CSIS",
+                "url": "https://www.csis.org/analysis/understanding-biden-administrations-updated-export-controls"
+              },
+              {
+                "title": "Timeline: GPU Export Controls & NVIDIA GPU Bans, GamersNexus",
+                "url": "https://gamersnexus.net/gpus-news/timeline-gpu-export-controls-nvidia-gpu-bans-ai-gpu-black-market"
+              },
+              {
+                "title": "U.S. Export Controls and China: Advanced Semiconductors (CRS, Congress.gov)",
+                "url": "https://www.congress.gov/crs-product/R48642"
+              },
+              {
+                "title": "China's Export Controls on Critical Minerals (PIIE, 2024)",
+                "url": "https://www.piie.com/blogs/realtime-economics/2024/chinas-export-controls-critical-minerals-arent-starving-united-states"
+              },
+              {
+                "title": "China Imposes New Export Controls on Gallium and Germanium (Mayer Brown, Jul 2023)",
+                "url": "https://www.mayerbrown.com/en/insights/publications/2023/07/china-imposes-new-export-controls-on-two-minerals-critical-to-the-manufacture-of-semiconductors"
+              },
+              {
+                "title": "China Rare Earth Export Ban (CSET Georgetown, Dec 2024)",
+                "url": "https://cset.georgetown.edu/publication/china-rare-earth-export-ban"
+              },
+              {
+                "title": "The Role of Compute Thresholds for AI Governance (Law-AI Institute)",
+                "url": "https://law-ai.org/the-role-of-compute-thresholds-for-ai-governance"
+              },
+              {
+                "title": "Biden AI EO: Companies Must Report Large Compute Deployments (Data Center Dynamics)",
+                "url": "https://www.datacenterdynamics.com/en/news/biden-ai-executive-order-says-companies-will-have-to-report-large-compute-deployments-to-us-gov"
+              },
+              {
+                "title": "EU AI Act: GPAI Model Obligations in Force (Latham & Watkins, 2025)",
+                "url": "https://www.lw.com/en/insights/eu-ai-act-gpai-model-obligations-in-force-and-final-gpai-code-of-practice-in-place"
+              },
+              {
+                "title": "EU AI Act Full Text",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689"
+              },
+              {
+                "title": "Sovereign AI Agenda (McKinsey, 2025)",
+                "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/the-sovereign-ai-agenda-moving-from-ambition-to-reality"
+              },
+              {
+                "title": "Sovereign AI: What it is, Country Playbooks (STL Partners, 2025)",
+                "url": "https://stlpartners.com/articles/data-centres/sovereign-ai"
+              },
+              {
+                "title": "Sovereign AI: What it is, 6 Ways States Are Building It (WEF, 2024)",
+                "url": "https://www.weforum.org/stories/2024/04/sovereign-ai-what-is-ways-states-building"
+              },
+              {
+                "title": "NYT v. OpenAI: The Times's About-Face (Harvard Law Review, 2024)",
+                "url": "https://harvardlawreview.org/blog/2024/04/nyt-v-openai-the-timess-about-face"
+              },
+              {
+                "title": "Getty Images v. Stability AI Case Tracker (The Fashion Law)",
+                "url": "https://www.thefashionlaw.com/from-chatgpt-to-deepfake-creating-apps-a-running-list-of-key-ai-lawsuits"
+              },
+              {
+                "title": "NVIDIA/Arm Transaction Termination (NVIDIA Newsroom, Feb 2022)",
+                "url": "https://nvidianews.nvidia.com/news/nvidia-and-softbank-group-announce-termination-of-nvidias-acquisition-of-arm-limited"
+              },
+              {
+                "title": "French CNIL Fines Clearview AI EUR 20 Million (EDPB, Oct 2022)",
+                "url": "https://www.edpb.europa.eu/news/national-news/2022/french-sa-fines-clearview-ai-eur-20-million_en"
+              },
+              {
+                "title": "Italian Garante Fines Clearview AI EUR 20 Million (EDPB, Feb 2022)",
+                "url": "https://www.edpb.europa.eu/news/national-news/2022/facial-recognition-italian-sa-fines-clearview-ai-eur-20-million_en"
+              },
+              {
+                "title": "Clearview AI Another CNIL Fine (TechCrunch, May 2023)",
+                "url": "https://techcrunch.com/2023/05/10/clearview-ai-another-cnil-gspr-fine"
+              },
+              {
+                "title": "Amazon Scraps AI Hiring Tool for Being Sexist (Euronews, Oct 2018)",
+                "url": "https://www.euronews.com/business/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women"
+              },
+              {
+                "title": "Dutch Childcare Benefits Scandal (Wikipedia)",
+                "url": "https://en.wikipedia.org/wiki/Dutch_childcare_benefits_scandal"
+              },
+              {
+                "title": "SyRI Case Landmark Ruling (Privacy International)",
+                "url": "https://privacyinternational.org/news-analysis/3363/syri-case-landmark-ruling-benefits-claimants-around-world"
+              },
+              {
+                "title": "OHCHR: Landmark Ruling Stops Government Algorithm Spy on the Poor (Feb 2020)",
+                "url": "https://www.ohchr.org/en/press-releases/2020/02/landmark-ruling-dutch-court-stops-government-attempts-spy-poor-un-expert"
+              },
+              {
+                "title": "Italy Orders ChatGPT Blocked (TechCrunch, Mar 2023)",
+                "url": "https://techcrunch.com/2023/03/31/chatgpt-blocked-italy"
+              },
+              {
+                "title": "Italy Fines OpenAI EUR 15 Million for GDPR Violations (The Hacker News, Dec 2024)",
+                "url": "https://thehackernews.com/2024/12/italy-fines-openai-15-million-for.html"
+              },
+              {
+                "title": "Moffatt v. Air Canada (McCarthy LLP, Feb 2024)",
+                "url": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
+              },
+              {
+                "title": "Air Canada Held Responsible for Chatbot's Hallucinations (AI Business, Feb 2024)",
+                "url": "https://aibusiness.com/nlp/air-canada-held-responsible-for-chatbot-s-hallucinations-"
+              },
+              {
+                "title": "The Geopolitics of AI After DeepSeek (Bruegel, Feb 2025)",
+                "url": "https://www.bruegel.org/first-glance/geopolitics-artificial-intelligence-after-deepseek"
+              },
+              {
+                "title": "DeepSeek, Huawei, Export Controls and Future of US-China AI Race (CSIS, 2025)",
+                "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race"
+              },
+              {
+                "title": "AI Seoul Summit Key Takeaways (Access Partnership, May 2024)",
+                "url": "https://accesspartnership.com/key-takeaways-from-the-ai-seoul-summit-2024"
+              },
+              {
+                "title": "Seoul Declaration (Australian Government, May 2024)",
+                "url": "https://www.industry.gov.au/publications/seoul-declaration-countries-attending-ai-seoul-summit-21-22-may-2024"
+              },
+              {
+                "title": "Hiroshima Process International Code of Conduct (G7, Oct 2023)",
+                "url": "https://digital-strategy.ec.europa.eu/en/library/hiroshima-process-international-code-conduct-advanced-ai-systems"
+              },
+              {
+                "title": "Bletchley Declaration (UK Government, Nov 2023)",
+                "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration"
+              },
+              {
+                "title": "UNESCO Recommendation on the Ethics of AI (Nov 2021)",
+                "url": "https://www.unesco.org/en/articles/recommendation-ethics-artificial-intelligence"
+              },
+              {
+                "title": "UN Unanimously Adopts First Resolution on Promoting Safe AI (Mar 2024)",
+                "url": "https://www.womblebonddickinson.com/us/insights/alerts/united-nations-unanimously-adopts-first-resolution-promoting-safe-secure-and"
+              },
+              {
+                "title": "China's AI Regulations and How They Get Made (Carnegie Endowment, Jul 2023)",
+                "url": "https://carnegieendowment.org/research/2023/07/chinas-ai-regulations-and-how-they-get-made"
+              },
+              {
+                "title": "China Generative AI Measures Finalized (Library of Congress, Jul 2023)",
+                "url": "https://www.loc.gov/item/global-legal-monitor/2023-07-18/china-generative-ai-measures-finalized"
+              },
+              {
+                "title": "Canada's AIDA Death (Montreal AI Ethics Institute, 2025)",
+                "url": "https://montrealethics.ai/the-death-of-canadas-artificial-intelligence-and-data-act-what-happened-and-whats-next-for-ai-regulation-in-canada"
+              },
+              {
+                "title": "Trump Revokes Biden AI EO (Wiley Law, Jan 2025)",
+                "url": "https://www.wiley.law/alert-President-Trump-Revokes-Biden-Administrations-AI-EO-What-To-Know"
+              },
+              {
+                "title": "TSMC Role in Geopolitics (GTI, Mar 2025)",
+                "url": "https://globaltaiwan.org/2025/03/how-taiwans-chip-industry-navigates-us-industrial-policy-and-export-controls"
+              },
+              {
+                "title": "C2PA Content Provenance and Deepfakes (DeepIDV)",
+                "url": "https://www.deepidv.com/media/articles/c2pa-content-provenance-digital-watermarks-fight-deepfakes"
+              },
+              {
+                "title": "White House Voluntary Commitments (Jul 2023)",
+                "url": "https://harvardlawreview.org/print/vol-137/voluntary-commitments-from-leading-artificial-intelligence-companies-on-july-21-2023"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -2339,7 +3532,21 @@ window.SITE_PAGES = [
           "合理使用",
           "審理中"
         ],
-        "overview": "【背景】2023 年 12 月 27 日，《紐約時報》在紐約南區聯邦地方法院對 OpenAI 與 Microsoft 提起著作權侵權訴訟，指控兩公司未經授權使用「數百萬篇」版權新聞報導訓練 AI 語言模型，並提出模型能逐字複製原文的具體示例。\n\n【爭點】核心爭點包括：未授權使用版權新聞內容訓練大型語言模型（LLM）是否構成著作權侵權、被告援引的「合理使用（fair use）」抗辯是否成立，以及 AI 生成內容是否對新聞出版商形成「市場替代效應」。\n\n【結果/現況】案件持續審理中（截至 2026 年）。2025 年 4 月，法官裁定核心侵權主張可繼續進行；OpenAI 因 2,000 萬筆匿名聊天記錄生產令爭議陷入膠著；預計 2026 年 4 月進入摘要判決階段。\n\n【治理啟示】網路爬取訓練資料的版權邊界亟需法律釐清；AI 生成內容對原創媒體的「市場替代效應」是新興法律理論；此案判決結果將影響全球 AI 訓練資料授權模式。"
+        "overview": "【背景】2023 年 12 月 27 日，《紐約時報》在紐約南區聯邦地方法院對 OpenAI 與 Microsoft 提起著作權侵權訴訟，指控兩公司未經授權使用「數百萬篇」版權新聞報導訓練 AI 語言模型，並提出模型能逐字複製原文的具體示例。\n\n【爭點】核心爭點包括：未授權使用版權新聞內容訓練大型語言模型（LLM）是否構成著作權侵權、被告援引的「合理使用（fair use）」抗辯是否成立，以及 AI 生成內容是否對新聞出版商形成「市場替代效應」。\n\n【結果/現況】案件持續審理中（截至 2026 年）。2025 年 4 月，法官裁定核心侵權主張可繼續進行；OpenAI 因 2,000 萬筆匿名聊天記錄生產令爭議陷入膠著；預計 2026 年 4 月進入摘要判決階段。\n\n【治理啟示】網路爬取訓練資料的版權邊界亟需法律釐清；AI 生成內容對原創媒體的「市場替代效應」是新興法律理論；此案判決結果將影響全球 AI 訓練資料授權模式。",
+        "sources": [
+          {
+            "title": "AI 訴訟追蹤（AI Lawsuit Tracker）",
+            "url": "https://ailawsuittracker.com/"
+          },
+          {
+            "title": "NYT v. OpenAI 哈佛法律評論分析",
+            "url": "https://harvardlawreview.org/blog/2024/04/nyt-v-openai-the-timess-about-face/"
+          },
+          {
+            "title": "Axios：NYT 案件可繼續進行",
+            "url": "https://www.axios.com/2025/04/01/nyt-openai-microsoft-lawsuit-advances"
+          }
+        ]
       },
       {
         "slug": "thomson-reuters-v-ross",
@@ -2352,7 +3559,21 @@ window.SITE_PAGES = [
           "已判決",
           "訓練資料"
         ],
-        "overview": "【背景】Thomson Reuters 旗下法律資料庫 Westlaw 的頭注（headnotes）被 AI 法律研究工具 Ross Intelligence 用於訓練其 AI 系統。Ross 原本曾尋求授權遭拒，轉而以 Westlaw 整理的頭注作為訓練資料，欲打造可與 Westlaw 直接競爭的 AI 法律助理。\n\n【爭點】以 Westlaw 頭注訓練 AI 是否構成著作權侵害；Ross 援引的「合理使用」抗辯——特別是「轉化性使用（transformative use）」論點——是否成立；AI 訓練是否對原著作的潛在授權市場造成損害。\n\n【結果/現況】2025 年 2 月 11 日，德拉瓦州聯邦地方法院判決：2,200 餘筆頭注直接侵權成立；使用並非轉化性，且對 Westlaw 授權市場造成競爭損害。此為全球首件聯邦法院正式拒絕 AI 訓練合理使用抗辯的判決，目前已上訴至第三巡迴法院。\n\n【治理啟示】AI 訓練使用若與原著形成直接競爭關係，「轉化性使用」抗辯極難成立；此判決為 2026 年多件類似訴訟的合理使用摘要判決提供重要先例。"
+        "overview": "【背景】Thomson Reuters 旗下法律資料庫 Westlaw 的頭注（headnotes）被 AI 法律研究工具 Ross Intelligence 用於訓練其 AI 系統。Ross 原本曾尋求授權遭拒，轉而以 Westlaw 整理的頭注作為訓練資料，欲打造可與 Westlaw 直接競爭的 AI 法律助理。\n\n【爭點】以 Westlaw 頭注訓練 AI 是否構成著作權侵害；Ross 援引的「合理使用」抗辯——特別是「轉化性使用（transformative use）」論點——是否成立；AI 訓練是否對原著作的潛在授權市場造成損害。\n\n【結果/現況】2025 年 2 月 11 日，德拉瓦州聯邦地方法院判決：2,200 餘筆頭注直接侵權成立；使用並非轉化性，且對 Westlaw 授權市場造成競爭損害。此為全球首件聯邦法院正式拒絕 AI 訓練合理使用抗辯的判決，目前已上訴至第三巡迴法院。\n\n【治理啟示】AI 訓練使用若與原著形成直接競爭關係，「轉化性使用」抗辯極難成立；此判決為 2026 年多件類似訴訟的合理使用摘要判決提供重要先例。",
+        "sources": [
+          {
+            "title": "Davis Wright Tremaine：Thomson Reuters v. Ross 判決分析",
+            "url": "https://www.dwt.com/blogs/artificial-intelligence-law-advisor/2025/02/reuters-ross-court-ruling-ai-copyright-fair-use"
+          },
+          {
+            "title": "Reed Smith：法院否決 AI 合理使用抗辯",
+            "url": "https://www.reedsmith.com/en/perspectives/2025/03/court-ai-fair-use-thomson-reuters-enterprise-gmbh-ross-intelligence"
+          },
+          {
+            "title": "AI 訴訟追蹤（AI Lawsuit Tracker）",
+            "url": "https://ailawsuittracker.com/"
+          }
+        ]
       },
       {
         "slug": "getty-v-stability-ai",
@@ -2365,7 +3586,21 @@ window.SITE_PAGES = [
           "商標侵害",
           "部分勝訴"
         ],
-        "overview": "【背景】2023 年，Getty Images 分別在英國與美國對 Stability AI 提起訴訟，指控 Stable Diffusion 圖像生成模型以逾 1,200 萬張具 Getty 授權的圖片訓練，侵犯著作權與商標權。生成圖像中有時出現 Getty 浮水印殘跡，成為重要物證。\n\n【爭點】以版權授權圖庫訓練生成式 AI 是否構成侵權；Stable Diffusion 輸出圖像帶有 Getty 浮水印殘跡是否構成商標侵害；訴訟管轄地爭議（訓練行為是否發生於英國境內）。\n\n【結果/現況】2025 年 11 月 4 日，英國高等法院做出混合結果裁決：主要著作權侵害主張失敗（Getty 無法證明訓練行為發生於英國境內）；判決模型權重並非著作權法意義下的「複製品」；但水印商標侵害部分成立。Getty 已獲准就次要著作權問題上訴至英國上訴法院。美國訴訟仍在審理中。\n\n【治理啟示】圖像生成 AI 的浮水印殘跡為商標侵害提供有力物證；模型訓練地點的舉證責任成為關鍵程序議題；訓練資料授權市場（如 Adobe 倫理 AI 授權）可能成為主流解決路徑。"
+        "overview": "【背景】2023 年，Getty Images 分別在英國與美國對 Stability AI 提起訴訟，指控 Stable Diffusion 圖像生成模型以逾 1,200 萬張具 Getty 授權的圖片訓練，侵犯著作權與商標權。生成圖像中有時出現 Getty 浮水印殘跡，成為重要物證。\n\n【爭點】以版權授權圖庫訓練生成式 AI 是否構成侵權；Stable Diffusion 輸出圖像帶有 Getty 浮水印殘跡是否構成商標侵害；訴訟管轄地爭議（訓練行為是否發生於英國境內）。\n\n【結果/現況】2025 年 11 月 4 日，英國高等法院做出混合結果裁決：主要著作權侵害主張失敗（Getty 無法證明訓練行為發生於英國境內）；判決模型權重並非著作權法意義下的「複製品」；但水印商標侵害部分成立。Getty 已獲准就次要著作權問題上訴至英國上訴法院。美國訴訟仍在審理中。\n\n【治理啟示】圖像生成 AI 的浮水印殘跡為商標侵害提供有力物證；模型訓練地點的舉證責任成為關鍵程序議題；訓練資料授權市場（如 Adobe 倫理 AI 授權）可能成為主流解決路徑。",
+        "sources": [
+          {
+            "title": "Latham & Watkins：Getty v. Stability AI 英國高等法院分析",
+            "url": "https://www.lw.com/en/insights/getty-images-v-stability-ai-english-high-court-rejects-secondary-copyright-claim"
+          },
+          {
+            "title": "Mayer Brown：Getty v. Stability AI 英國高等法院解析",
+            "url": "https://www.mayerbrown.com/en/insights/publications/2025/11/getty-images-v-stability-ai-what-the-high-courts-decision-means-for-rights-holders-and-ai-developers"
+          },
+          {
+            "title": "The Fashion Law：AI 訴訟追蹤清單（含 Getty 案）",
+            "url": "https://www.thefashionlaw.com/from-chatgpt-to-deepfake-creating-apps-a-running-list-of-key-ai-lawsuits/"
+          }
+        ]
       },
       {
         "slug": "thaler-dabus",
@@ -2378,7 +3613,21 @@ window.SITE_PAGES = [
           "人類作者要件",
           "全球裁決"
         ],
-        "overview": "【背景】Stephen Thaler 博士以其 AI 系統 DABUS（Device for the Autonomous Bootstrapping of Unified Sentience）作為唯一發明人，向美、英、歐、澳等多國提出專利申請；另以 DABUS 自主創作的圖像《天堂的入口》向美國著作權局申請登記，引發全球「AI 是否具發明人及著作人資格」的標誌性法律辯論。\n\n【爭點】AI 系統是否可被列為專利發明人或著作權人；人類作者（human authorship）是否為著作權保護的必要條件；Thaler 提出「以佔有原則主張 AI 輸出之所有權」的論點是否成立。\n\n【結果/現況】著作權層面：2025 年 3 月 18 日，美國哥倫比亞特區巡迴上訴法院一致裁定 AI 生成物不可著作，確認人類作者為必要條件。專利層面：美、英、歐、澳、日、加、瑞士等主要司法管轄區均裁定 AI 不具發明人資格；南非為唯一例外（形式審查體制）。\n\n【治理啟示】全球已形成共識：發明人資格與著作人資格限於自然人；「人機協作」創作中，人類貢獻的充分程度決定受保護範圍；AI 時代的 IP 框架需釐清人類創意介入的最低門檻。"
+        "overview": "【背景】Stephen Thaler 博士以其 AI 系統 DABUS（Device for the Autonomous Bootstrapping of Unified Sentience）作為唯一發明人，向美、英、歐、澳等多國提出專利申請；另以 DABUS 自主創作的圖像《天堂的入口》向美國著作權局申請登記，引發全球「AI 是否具發明人及著作人資格」的標誌性法律辯論。\n\n【爭點】AI 系統是否可被列為專利發明人或著作權人；人類作者（human authorship）是否為著作權保護的必要條件；Thaler 提出「以佔有原則主張 AI 輸出之所有權」的論點是否成立。\n\n【結果/現況】著作權層面：2025 年 3 月 18 日，美國哥倫比亞特區巡迴上訴法院一致裁定 AI 生成物不可著作，確認人類作者為必要條件。專利層面：美、英、歐、澳、日、加、瑞士等主要司法管轄區均裁定 AI 不具發明人資格；南非為唯一例外（形式審查體制）。\n\n【治理啟示】全球已形成共識：發明人資格與著作人資格限於自然人；「人機協作」創作中，人類貢獻的充分程度決定受保護範圍；AI 時代的 IP 框架需釐清人類創意介入的最低門檻。",
+        "sources": [
+          {
+            "title": "Jones Day：AI 輸出可著作權性（Thaler v. Perlmutter 分析）",
+            "url": "https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement"
+          },
+          {
+            "title": "DABUS Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/DABUS"
+          },
+          {
+            "title": "JUVE Patent：UK 最高法院 DABUS 最終裁決",
+            "url": "https://www.juve-patent.com/cases/uk-supreme-court-dabus-named-inventor-patent-stephen-thaler/"
+          }
+        ]
       },
       {
         "slug": "nvidia-arm",
@@ -2391,7 +3640,21 @@ window.SITE_PAGES = [
           "垂直整合",
           "多國監管"
         ],
-        "overview": "【背景】2020 年 9 月，NVIDIA 宣布以 400 億美元收購 ARM Limited（由 SoftBank 持有），是半導體史上規模最大的交易。ARM 的指令集架構授權被超過 500 家公司採用，覆蓋手機、資料中心、汽車、IoT 等幾乎所有運算領域，是 AI 晶片生態系的核心底層技術。\n\n【爭點】垂直整合疑慮：NVIDIA 擁有 ARM 後是否會對競爭對手（高通、Apple、AMD）差別授權或提高授權費？美國 FTC（2021 年 12 月）提起訴訟，指控交易損害競爭；英國競爭及市場管理局（CMA）進行國家安全及競爭審查；歐盟啟動全面反壟斷調查；中國監管機構亦持保留態度。\n\n【結果/現況】2022 年 2 月 8 日，NVIDIA 與 SoftBank 宣布放棄交易，並表示「監管挑戰難以克服」。ARM 隨後於 2023 年在納斯達克重新 IPO，市值一度超過 1,000 億美元。\n\n【治理啟示】晶片架構層（instruction set architecture）是 AI 供應鏈最底層的控制點，反壟斷審查極為嚴格；多國聯合監管可有效阻止「贏者全拿」式垂直整合；AI 時代的反壟斷需考量「潛在未來損害」而非僅現有市場份額。"
+        "overview": "【背景】2020 年 9 月，NVIDIA 宣布以 400 億美元收購 ARM Limited（由 SoftBank 持有），是半導體史上規模最大的交易。ARM 的指令集架構授權被超過 500 家公司採用，覆蓋手機、資料中心、汽車、IoT 等幾乎所有運算領域，是 AI 晶片生態系的核心底層技術。\n\n【爭點】垂直整合疑慮：NVIDIA 擁有 ARM 後是否會對競爭對手（高通、Apple、AMD）差別授權或提高授權費？美國 FTC（2021 年 12 月）提起訴訟，指控交易損害競爭；英國競爭及市場管理局（CMA）進行國家安全及競爭審查；歐盟啟動全面反壟斷調查；中國監管機構亦持保留態度。\n\n【結果/現況】2022 年 2 月 8 日，NVIDIA 與 SoftBank 宣布放棄交易，並表示「監管挑戰難以克服」。ARM 隨後於 2023 年在納斯達克重新 IPO，市值一度超過 1,000 億美元。\n\n【治理啟示】晶片架構層（instruction set architecture）是 AI 供應鏈最底層的控制點，反壟斷審查極為嚴格；多國聯合監管可有效阻止「贏者全拿」式垂直整合；AI 時代的反壟斷需考量「潛在未來損害」而非僅現有市場份額。",
+        "sources": [
+          {
+            "title": "NVIDIA/ARM 收購終止公告（NVIDIA Newsroom）",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-and-softbank-group-announce-termination-of-nvidias-acquisition-of-arm-limited"
+          },
+          {
+            "title": "美國 BIS 出口管制規則",
+            "url": "https://www.bis.doc.gov"
+          },
+          {
+            "title": "CSIS：拜登政府更新出口管制解析",
+            "url": "https://www.csis.org/analysis/understanding-biden-administrations-updated-export-controls"
+          }
+        ]
       },
       {
         "slug": "clearview-ai-fines",
@@ -2404,7 +3667,21 @@ window.SITE_PAGES = [
           "跨境執法",
           "隱私"
         ],
-        "overview": "【背景】Clearview AI 透過網路爬取逾 300 億張人臉影像（來自社交媒體、新聞網站等公開網路），建立生物特徵資料庫，並向全球執法機關銷售人臉辨識服務。公司辯稱爬取公開資料屬合法行為。\n\n【爭點】在無合法依據下蒐集並處理生物特徵資料（特殊類別個人資料）是否違反 GDPR；資料主體的存取與刪除請求未獲回應是否構成額外違規；「公開可得」資料是否等同「可自由用於 AI 訓練」。\n\n【結果/現況】法國 CNIL 於 2022 年 10 月罰款 2,000 萬歐元，2023 年 5 月再罰 520 萬歐元；義大利 Garante 於 2022 年 2 月罰款 2,000 萬歐元；希臘 HDPA 於 2022 年 7 月罰款 2,000 萬歐元（希臘史上最高額）。英國 ICO 2022 年罰款 752 萬英鎊，但 2023 年 10 月上訴仲裁庭以「轄區主張有誤」為由推翻。\n\n【治理啟示】「公開可得資料」不等於「可自由用於 AI 訓練」，GDPR 的合法依據要求仍完整適用於生物特徵資料；跨境 AI 服務的執法能力差距（如轄區主張爭議）是全球 AI 治理的重大缺口。"
+        "overview": "【背景】Clearview AI 透過網路爬取逾 300 億張人臉影像（來自社交媒體、新聞網站等公開網路），建立生物特徵資料庫，並向全球執法機關銷售人臉辨識服務。公司辯稱爬取公開資料屬合法行為。\n\n【爭點】在無合法依據下蒐集並處理生物特徵資料（特殊類別個人資料）是否違反 GDPR；資料主體的存取與刪除請求未獲回應是否構成額外違規；「公開可得」資料是否等同「可自由用於 AI 訓練」。\n\n【結果/現況】法國 CNIL 於 2022 年 10 月罰款 2,000 萬歐元，2023 年 5 月再罰 520 萬歐元；義大利 Garante 於 2022 年 2 月罰款 2,000 萬歐元；希臘 HDPA 於 2022 年 7 月罰款 2,000 萬歐元（希臘史上最高額）。英國 ICO 2022 年罰款 752 萬英鎊，但 2023 年 10 月上訴仲裁庭以「轄區主張有誤」為由推翻。\n\n【治理啟示】「公開可得資料」不等於「可自由用於 AI 訓練」，GDPR 的合法依據要求仍完整適用於生物特徵資料；跨境 AI 服務的執法能力差距（如轄區主張爭議）是全球 AI 治理的重大缺口。",
+        "sources": [
+          {
+            "title": "EDPB：法國 CNIL 對 Clearview AI 罰款 2,000 萬歐元",
+            "url": "https://www.edpb.europa.eu/news/national-news/2022/french-sa-fines-clearview-ai-eur-20-million_en"
+          },
+          {
+            "title": "EDPB：義大利 Garante 對 Clearview AI 罰款 2,000 萬歐元",
+            "url": "https://www.edpb.europa.eu/news/national-news/2022/facial-recognition-italian-sa-fines-clearview-ai-eur-20-million_en"
+          },
+          {
+            "title": "TechCrunch：Clearview AI 再遭法國 CNIL 罰款",
+            "url": "https://techcrunch.com/2023/05/10/clearview-ai-another-cnil-gspr-fine/"
+          }
+        ]
       },
       {
         "slug": "amazon-hiring-bias",
@@ -2417,7 +3694,17 @@ window.SITE_PAGES = [
           "訓練資料",
           "性別平等"
         ],
-        "overview": "【背景】Amazon 自 2014 年起秘密建立 AI 履歷篩選系統，以機器學習對求職者履歷自動評分（1–5 星），旨在加速篩選優質人才。系統以過去十年的公司招聘資料訓練，而歷史招聘資料中男性占絕大多數，尤以技術職位為甚。\n\n【爭點】AI 系統習得歷史性別偏見，對「women's chess club」等含女性相關詞彙的履歷降分；曾就讀兩所女子大學的申請人被系統排除；即使工程師嘗試修正特定詞彙，系統仍可能發展出其他替代的歧視性篩選邏輯。\n\n【結果/現況】Amazon 管理層對系統無法保證中立性失去信心，於 2018 年初解散該開發團隊。2018 年 10 月，Reuters 報導此事件後引發媒體廣泛關注，Amazon 確認系統從未正式用於招聘決策。\n\n【治理啟示】歷史訓練資料中的結構性偏見會被 AI 系統複製並放大；高風險決策場景（招聘、信貸、司法）中的 AI 系統需要獨立偏見稽核；「AI 客觀中立」的假設是錯誤的，公平性需要主動設計與持續驗證。"
+        "overview": "【背景】Amazon 自 2014 年起秘密建立 AI 履歷篩選系統，以機器學習對求職者履歷自動評分（1–5 星），旨在加速篩選優質人才。系統以過去十年的公司招聘資料訓練，而歷史招聘資料中男性占絕大多數，尤以技術職位為甚。\n\n【爭點】AI 系統習得歷史性別偏見，對「women's chess club」等含女性相關詞彙的履歷降分；曾就讀兩所女子大學的申請人被系統排除；即使工程師嘗試修正特定詞彙，系統仍可能發展出其他替代的歧視性篩選邏輯。\n\n【結果/現況】Amazon 管理層對系統無法保證中立性失去信心，於 2018 年初解散該開發團隊。2018 年 10 月，Reuters 報導此事件後引發媒體廣泛關注，Amazon 確認系統從未正式用於招聘決策。\n\n【治理啟示】歷史訓練資料中的結構性偏見會被 AI 系統複製並放大；高風險決策場景（招聘、信貸、司法）中的 AI 系統需要獨立偏見稽核；「AI 客觀中立」的假設是錯誤的，公平性需要主動設計與持續驗證。",
+        "sources": [
+          {
+            "title": "Euronews：Amazon 因性別歧視廢除 AI 招聘工具",
+            "url": "https://www.euronews.com/business/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women"
+          },
+          {
+            "title": "AI 訴訟追蹤（AI Lawsuit Tracker）",
+            "url": "https://ailawsuittracker.com/"
+          }
+        ]
       },
       {
         "slug": "netherlands-syri-childcare",
@@ -2430,7 +3717,21 @@ window.SITE_PAGES = [
           "人權",
           "問責"
         ],
-        "overview": "【背景】荷蘭發生兩起相互關聯的演算法政府醜聞：SyRI 系統（2003–2020）整合公民就業、福利、稅務資料，以演算法篩選「高風險個人」進行深入調查，且優先部署於低收入及移民比例較高的社區。稅務局托兒津貼詐欺偵測系統（2013–2019）則將「雙重國籍」和「低收入」列為高風險因子。\n\n【爭點】演算法決策是否違反無差別對待原則與隱私權；以國籍等代理變數作為風險指標是否構成間接歧視；系統不透明使受害者無從知悉並申訴決定的問題。\n\n【結果/現況】2020 年 2 月，海牙地方法院裁定 SyRI 法規違反歐洲人權公約第 8 條，SyRI 立即停止運作，為全球首例以人權理由叫停數位福利系統的司法裁決。托兒津貼醜聞導致逾 26,000 個家庭被認定為詐欺者、被迫歸還鉅額補貼；2021 年 1 月 15 日，魯特第三內閣宣布總辭。政府啟動補償計畫，每受害家庭至少賠償 30,000 歐元。\n\n【治理啟示】政府 AI 系統可造成真實且系統性的人身損害，尤其對弱勢及移民群體；「歧視性代理變數」即使非明確使用，也可透過關聯特徵間接進入模型；演算法不透明性使受害者難以行使申訴權。"
+        "overview": "【背景】荷蘭發生兩起相互關聯的演算法政府醜聞：SyRI 系統（2003–2020）整合公民就業、福利、稅務資料，以演算法篩選「高風險個人」進行深入調查，且優先部署於低收入及移民比例較高的社區。稅務局托兒津貼詐欺偵測系統（2013–2019）則將「雙重國籍」和「低收入」列為高風險因子。\n\n【爭點】演算法決策是否違反無差別對待原則與隱私權；以國籍等代理變數作為風險指標是否構成間接歧視；系統不透明使受害者無從知悉並申訴決定的問題。\n\n【結果/現況】2020 年 2 月，海牙地方法院裁定 SyRI 法規違反歐洲人權公約第 8 條，SyRI 立即停止運作，為全球首例以人權理由叫停數位福利系統的司法裁決。托兒津貼醜聞導致逾 26,000 個家庭被認定為詐欺者、被迫歸還鉅額補貼；2021 年 1 月 15 日，魯特第三內閣宣布總辭。政府啟動補償計畫，每受害家庭至少賠償 30,000 歐元。\n\n【治理啟示】政府 AI 系統可造成真實且系統性的人身損害，尤其對弱勢及移民群體；「歧視性代理變數」即使非明確使用，也可透過關聯特徵間接進入模型；演算法不透明性使受害者難以行使申訴權。",
+        "sources": [
+          {
+            "title": "Privacy International：SyRI 案標誌性裁決",
+            "url": "https://privacyinternational.org/news-analysis/3363/syri-case-landmark-ruling-benefits-claimants-around-world"
+          },
+          {
+            "title": "OHCHR：荷蘭法院停止政府監控窮人演算法系統",
+            "url": "https://www.ohchr.org/en/press-releases/2020/02/landmark-ruling-dutch-court-stops-government-attempts-spy-poor-un-expert"
+          },
+          {
+            "title": "荷蘭托兒津貼醜聞（Wikipedia）",
+            "url": "https://en.wikipedia.org/wiki/Dutch_childcare_benefits_scandal"
+          }
+        ]
       },
       {
         "slug": "italy-chatgpt-block",
@@ -2443,7 +3744,21 @@ window.SITE_PAGES = [
           "生成式AI",
           "資料保護"
         ],
-        "overview": "【背景】2023 年 3 月，OpenAI 的 ChatGPT 發生資料外洩事件，部分用戶可見他人聊天標題與付費資訊。義大利資料保護局（Garante）隨即展開調查，關注點包括：用戶未獲充分告知其資料如何被處理、訓練 AI 的個人資料處理合法依據，以及未驗證用戶年齡導致兒童可能接觸不當內容。\n\n【爭點】ChatGPT 的資料處理是否違反 GDPR 透明度義務及合法性基礎要求；OpenAI 是否為未成年人提供足夠的年齡驗證保護；GDPR 執法機關是否有權在正式調查前發布緊急服務暫停令。\n\n【結果/現況】2023 年 3 月 30 日，Garante 發布緊急命令，立即暫停 ChatGPT 在義大利的個人資料處理。約一個月後，OpenAI 新增隱私告知與年齡驗證機制，Garante 於 2023 年 4 月底恢復服務。2024 年 12 月，Garante 對 OpenAI 就 ChatGPT GDPR 違規裁罰 1,500 萬歐元。德國、法國、愛爾蘭、西班牙等國監管機關隨後亦啟動調查。\n\n【治理啟示】GDPR 賦予監管機關緊急暫停 AI 服務的執法工具，威嚇力不容小覷；此案開創「先封鎖後談判」的 AI 執法先例；生成式 AI 訓練資料的合法依據問題已成各國監管機關的共同焦點。"
+        "overview": "【背景】2023 年 3 月，OpenAI 的 ChatGPT 發生資料外洩事件，部分用戶可見他人聊天標題與付費資訊。義大利資料保護局（Garante）隨即展開調查，關注點包括：用戶未獲充分告知其資料如何被處理、訓練 AI 的個人資料處理合法依據，以及未驗證用戶年齡導致兒童可能接觸不當內容。\n\n【爭點】ChatGPT 的資料處理是否違反 GDPR 透明度義務及合法性基礎要求；OpenAI 是否為未成年人提供足夠的年齡驗證保護；GDPR 執法機關是否有權在正式調查前發布緊急服務暫停令。\n\n【結果/現況】2023 年 3 月 30 日，Garante 發布緊急命令，立即暫停 ChatGPT 在義大利的個人資料處理。約一個月後，OpenAI 新增隱私告知與年齡驗證機制，Garante 於 2023 年 4 月底恢復服務。2024 年 12 月，Garante 對 OpenAI 就 ChatGPT GDPR 違規裁罰 1,500 萬歐元。德國、法國、愛爾蘭、西班牙等國監管機關隨後亦啟動調查。\n\n【治理啟示】GDPR 賦予監管機關緊急暫停 AI 服務的執法工具，威嚇力不容小覷；此案開創「先封鎖後談判」的 AI 執法先例；生成式 AI 訓練資料的合法依據問題已成各國監管機關的共同焦點。",
+        "sources": [
+          {
+            "title": "TechCrunch：義大利封鎖 ChatGPT",
+            "url": "https://techcrunch.com/2023/03/31/chatgpt-blocked-italy/"
+          },
+          {
+            "title": "The Hacker News：義大利對 OpenAI 罰款 1,500 萬歐元",
+            "url": "https://thehackernews.com/2024/12/italy-fines-openai-15-million-for.html"
+          },
+          {
+            "title": "Garante：ChatGPT 暫停令原文（義大利語）",
+            "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9870847"
+          }
+        ]
       },
       {
         "slug": "air-canada-chatbot",
@@ -2456,7 +3771,17 @@ window.SITE_PAGES = [
           "消費者保護",
           "判賠"
         ],
-        "overview": "【背景】2022 年 11 月，加拿大客戶 Jake Moffatt 在購票前詢問 Air Canada 網站 AI 聊天機器人關於哀傷優惠票的退款政策。聊天機器人告知可在旅行後 90 天內申請部分退款；Moffatt 信任此回覆，購票後申請退款，但 Air Canada 拒絕，並稱聊天機器人提供了錯誤資訊。\n\n【爭點】企業是否須為自家 AI 聊天機器人提供的錯誤資訊承擔法律責任；Air Canada 提出的抗辯稱聊天機器人是「獨立的法律實體」，企業不應對其言論負責。\n\n【結果/現況】2024 年 2 月 14 日，英屬哥倫比亞民事裁決法庭裁定 Air Canada 須為聊天機器人的疏失錯誤陳述負責，命令賠償 812.02 加幣（含退款差額、利息、法庭費）。法庭明確指出：企業對其網站上的所有資訊負責，無論來源是靜態頁面或 AI 聊天機器人，「聊天機器人獨立實體」論點毫無法律依據。\n\n【治理啟示】AI 聊天機器人的「幻覺（hallucination）」在消費者服務場景中可形成具體法律賠償責任；「AI 是獨立實體」的免責論點被司法明確否定；企業部署 AI 系統即須為其行為全面負責。"
+        "overview": "【背景】2022 年 11 月，加拿大客戶 Jake Moffatt 在購票前詢問 Air Canada 網站 AI 聊天機器人關於哀傷優惠票的退款政策。聊天機器人告知可在旅行後 90 天內申請部分退款；Moffatt 信任此回覆，購票後申請退款，但 Air Canada 拒絕，並稱聊天機器人提供了錯誤資訊。\n\n【爭點】企業是否須為自家 AI 聊天機器人提供的錯誤資訊承擔法律責任；Air Canada 提出的抗辯稱聊天機器人是「獨立的法律實體」，企業不應對其言論負責。\n\n【結果/現況】2024 年 2 月 14 日，英屬哥倫比亞民事裁決法庭裁定 Air Canada 須為聊天機器人的疏失錯誤陳述負責，命令賠償 812.02 加幣（含退款差額、利息、法庭費）。法庭明確指出：企業對其網站上的所有資訊負責，無論來源是靜態頁面或 AI 聊天機器人，「聊天機器人獨立實體」論點毫無法律依據。\n\n【治理啟示】AI 聊天機器人的「幻覺（hallucination）」在消費者服務場景中可形成具體法律賠償責任；「AI 是獨立實體」的免責論點被司法明確否定；企業部署 AI 系統即須為其行為全面負責。",
+        "sources": [
+          {
+            "title": "McCarthy LLP：Moffatt v. Air Canada 聊天機器人錯誤陳述案",
+            "url": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
+          },
+          {
+            "title": "AI Business：Air Canada 須為聊天機器人幻覺負責",
+            "url": "https://aibusiness.com/nlp/air-canada-held-responsible-for-chatbot-s-hallucinations-"
+          }
+        ]
       },
       {
         "slug": "deepseek-shock",
@@ -2469,7 +3794,21 @@ window.SITE_PAGES = [
           "主權AI",
           "出口管制"
         ],
-        "overview": "【背景】2025 年 1 月 20 日，中國新創公司 DeepSeek 發布 R1 推理模型，聲稱僅以約 600 萬美元訓練成本、主要使用受美國出口管制限制的 NVIDIA H800 晶片，達到與 OpenAI o1 相當的推理性能，並以 MIT 授權開源發布。\n\n【爭點】美國半導體出口管制是否真能有效阻礙中國 AI 發展；以更低算力訓練高性能模型是否意味著「算力封鎖」策略根本性失效；DeepSeek 將用戶資料儲存於中國境內，引發全球資料主權疑慮。\n\n【結果/現況】NVIDIA 單日市值蒸發超過 6,000 億美元（歷史單日最大跌幅之一），DeepSeek iOS App 躍升美國 App Store 下載第一。義大利（2025 年 1 月 30 日）、比利時等國以資料主權疑慮封鎖或調查 DeepSeek；川普政府將此視為「警醒時刻」，加強對算力出口管制的關注。\n\n【治理啟示】算力封鎖策略存在根本限制：演算法效率突破可大幅降低對頂端晶片的依賴；開源模型的全球擴散使傳統出口管制工具效力下降；中國 AI 能力的實際發展水準可能被西方低估，「算力差距即能力差距」的假設需重新審視。"
+        "overview": "【背景】2025 年 1 月 20 日，中國新創公司 DeepSeek 發布 R1 推理模型，聲稱僅以約 600 萬美元訓練成本、主要使用受美國出口管制限制的 NVIDIA H800 晶片，達到與 OpenAI o1 相當的推理性能，並以 MIT 授權開源發布。\n\n【爭點】美國半導體出口管制是否真能有效阻礙中國 AI 發展；以更低算力訓練高性能模型是否意味著「算力封鎖」策略根本性失效；DeepSeek 將用戶資料儲存於中國境內，引發全球資料主權疑慮。\n\n【結果/現況】NVIDIA 單日市值蒸發超過 6,000 億美元（歷史單日最大跌幅之一），DeepSeek iOS App 躍升美國 App Store 下載第一。義大利（2025 年 1 月 30 日）、比利時等國以資料主權疑慮封鎖或調查 DeepSeek；川普政府將此視為「警醒時刻」，加強對算力出口管制的關注。\n\n【治理啟示】算力封鎖策略存在根本限制：演算法效率突破可大幅降低對頂端晶片的依賴；開源模型的全球擴散使傳統出口管制工具效力下降；中國 AI 能力的實際發展水準可能被西方低估，「算力差距即能力差距」的假設需重新審視。",
+        "sources": [
+          {
+            "title": "Bruegel：DeepSeek 後的 AI 地緣政治",
+            "url": "https://www.bruegel.org/first-glance/geopolitics-artificial-intelligence-after-deepseek"
+          },
+          {
+            "title": "CSIS：DeepSeek、華為、出口管制與美中 AI 競賽",
+            "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race"
+          },
+          {
+            "title": "美國 BIS 出口管制規則",
+            "url": "https://www.bis.doc.gov"
+          }
+        ]
       }
     ]
   },

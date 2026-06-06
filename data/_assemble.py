@@ -30,6 +30,42 @@ def chunk(name: str):
     return load(os.path.join(CHUNKS, name + ".json"))
 
 
+def chunk_opt(name: str):
+    p = os.path.join(CHUNKS, name + ".json")
+    return load(p) if os.path.exists(p) else {}
+
+
+def attach_sources(items: list, smap: dict) -> list:
+    """Attach a `sources` list ([{title,url}]) to each gallery item by slug."""
+    for it in items:
+        srcs = smap.get(it["slug"])
+        if srcs:
+            it["sources"] = srcs
+    return items
+
+
+def sources_for(prefix: str) -> list:
+    """All de-duplicated sources whose research file starts with `prefix`."""
+    seen, out = set(), []
+    for s in load(os.path.join(DERIVED, "sources.json")):
+        if s.get("file", "").startswith(prefix) and s["url"] not in seen:
+            seen.add(s["url"])
+            out.append({"title": s["title"], "url": s["url"]})
+    return out
+
+
+def ref_section(prefix: str) -> dict:
+    """A '參考來源' appendix section for an article, built from its file's sources."""
+    links = sources_for(prefix)
+    return {
+        "id": "references", "heading": "參考來源",
+        "blocks": [
+            {"type": "p", "text": f"本頁內容彙整自下列公開來源（{len(links)} 筆）；點擊可前往原始出處。"},
+            {"type": "links", "items": links},
+        ],
+    }
+
+
 # --- glossary filter categories (page-level) ------------------------------ #
 GLOSSARY_CATS = [
     {"key": "law", "zh": "法規政策", "en": "Law & Policy"},
@@ -84,6 +120,18 @@ def main() -> None:
     glossary = chunk("glossary")          # list of {term,def,cat}
     learn = chunk("learn")                # {quiz, cards}
     sources = build_sources_page()
+
+    # ---- attach per-item reference links to gallery cards ----
+    attach_sources(reg["items"], chunk_opt("regulation_sources"))
+    attach_sources(std["items"], chunk_opt("standards_sources"))
+    attach_sources(cases["items"], chunk_opt("cases_sources"))
+
+    # ---- append a '參考來源' appendix to each long-form article ----
+    ethics["sections"].append(ref_section("03"))
+    corp["sections"].append(ref_section("04"))
+    ip["sections"].append(ref_section("05"))
+    tw["sections"].append(ref_section("06"))
+    geo["sections"].append(ref_section("07"))
 
     # ---- hub stats (animated counters) ----
     n_frameworks = len(reg["items"]) + len(std["items"])
