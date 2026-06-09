@@ -10,7 +10,7 @@
 
 | | |
 |---|---|
-| 🌐 網站 | <https://tingwei161803.github.io/ai-governance/> |
+| 🌐 網站 | <https://ai-governance.peteraim.com/> |
 
 > 直接點進去就能用，無需安裝。卡片型頁面（全球法規／國際標準／案例研究）支援 `…/regulation.html#<slug>` 深連結，可直接分享到特定項目。
 
