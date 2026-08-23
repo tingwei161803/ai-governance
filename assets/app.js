@@ -6,8 +6,7 @@
 
      1. reads the current page from <body data-page="..."> (via LDW),
      2. picks a renderer from RENDERERS by that page's `layout`,
-     3. paints it into <main id="page"> and wires its interactions,
-     4. registers an onLang() callback so a language switch repaints the body.
+     3. paints it into <main id="page"> and wires its interactions.
 
    RENDERERS is the LAYOUT REGISTRY — one entry per supported page layout:
      hub | gallery | article | dashboard | timeline | table |
@@ -788,7 +787,6 @@
       if (w) w(p);
     }
 
-    L.onLang(render);
     render();
   }
 
