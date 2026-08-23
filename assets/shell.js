@@ -162,9 +162,12 @@
     }
   }
 
-  /* ---------- chrome text in the active language ---------- */
+  /* ---------- chrome text ---------- */
+  /* <html lang> is declared by the page itself as zh-Hant and is deliberately
+     not rewritten here: state.lang is a data-dictionary key ("zh"), not a
+     BCP-47 tag, so writing it back downgrades the declared language to a less
+     precise code for anything that reads the DOM after scripts have run. */
   function refreshChrome() {
-    document.documentElement.setAttribute("lang", state.lang);
     var page = currentPage();
     var siteTitle = t(META.title);
     var pageTitle = page ? t(page.title) : "";
