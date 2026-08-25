@@ -2,19 +2,18 @@
    multipage · shell.js   (vanilla, no build)
 
    The SHARED CHROME for every page: app bar, cross-page nav, footer and the
-   detail <dialog>. It also owns global state (language + theme) and exposes a
-   tiny toolkit on window.LDW that each page's app.js reuses.
+   detail <dialog>. It also owns the theme and exposes a tiny toolkit on
+   window.LDW that each page's app.js reuses.
 
    Loaded on EVERY page BEFORE app.js. It:
-     1. reads persisted lang/theme (localStorage, sandbox-safe),
+     1. reads the persisted theme (localStorage, sandbox-safe),
      2. injects app bar + nav + footer + dialog around <main id="page">,
-     3. wires the language / theme toggles,
-     4. highlights the current page (from <body data-page="...">),
-     5. lets app.js register an onLang() callback so a language switch repaints
-        BOTH the chrome AND the page body — nothing is ever left in one language.
+     3. wires the theme toggle,
+     4. highlights the current page (from <body data-page="...">).
 
-   Cross-page persistence is automatic: lang/theme live in localStorage (an
-   origin-wide store), so navigating to another .html restores the same state.
+   This is a single-language site (Traditional Chinese); there is no language
+   toggle. Theme persists across pages via localStorage (an origin-wide store),
+   so navigating to another .html restores the same state.
    ========================================================================= */
 (function () {
   "use strict";
@@ -62,10 +61,6 @@
     for (var i = 0; i < PAGES.length; i++) if (PAGES[i].slug === slug) return PAGES[i];
     return PAGES[0] || null;
   }
-
-  /* ---------- onLang callback registry (app.js plugs in here) ---------- */
-  var langSubscribers = [];
-  function onLang(fn) { if (typeof fn === "function") langSubscribers.push(fn); }
 
   /* =======================================================================
      CHROME INJECTION — app bar, nav, footer, dialog around <main id="page">
@@ -162,9 +157,12 @@
     }
   }
 
-  /* ---------- chrome text in the active language ---------- */
+  /* ---------- chrome text ---------- */
+  /* <html lang> is declared by the page itself as zh-Hant and is deliberately
+     not rewritten here: state.lang is a data-dictionary key ("zh"), not a
+     BCP-47 tag, so writing it back downgrades the declared language to a less
+     precise code for anything that reads the DOM after scripts have run. */
   function refreshChrome() {
-    document.documentElement.setAttribute("lang", state.lang);
     var page = currentPage();
     var siteTitle = t(META.title);
     var pageTitle = page ? t(page.title) : "";
@@ -184,18 +182,13 @@
   }
 
   /* =======================================================================
-     THEME + LANGUAGE
+     THEME
      ===================================================================== */
   function applyTheme() {
     document.documentElement.setAttribute("data-theme", state.theme);
     var icon = document.getElementById("themeIcon");
     if (icon) icon.textContent = state.theme === "dark" ? "light_mode" : "dark_mode";
     lsSet("theme", state.theme);
-  }
-  function applyLangChrome() {
-    var label = document.getElementById("langLabel");
-    if (label) label.textContent = state.lang === "en" ? "EN" : "中";
-    lsSet("lang", state.lang);
   }
 
   function wire() {
@@ -215,7 +208,6 @@
     lsGet: lsGet, lsSet: lsSet,
     pages: PAGES, meta: META,
     currentPage: currentPage, currentSlug: currentSlug, pageHref: pageHref,
-    onLang: onLang,
     refreshChrome: refreshChrome,
     dialog: function () { return document.getElementById("dialog"); }
   };
@@ -243,7 +235,6 @@
   function init() {
     injectChrome();
     applyTheme();
-    applyLangChrome();
     refreshChrome();
     wire();
     fetchStars();
