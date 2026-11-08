@@ -2906,15 +2906,15 @@ window.SITE_PAGES = [
                 "url": "https://digi.nstc.gov.tw/File/7C71629D702E2D89"
               },
               {
-                "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧(AI)指引」",
+                "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧（AI）指引」",
                 "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202406200001&dtable=News"
               },
               {
-                "title": "FSC：金融業運用人工智慧(AI)指引全文",
+                "title": "FSC：金融業運用人工智慧（AI）指引全文",
                 "url": "https://www.fsc.gov.tw/websitedowndoc?file=chfsc%2F202408231741530.pdf"
               },
               {
-                "title": "FSC：金融業運用人工智慧(AI)之核心原則與相關推動政策公布",
+                "title": "FSC：金融業運用人工智慧（AI）之核心原則與相關推動政策公布",
                 "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202310170002&dtable=News"
               },
               {
@@ -6444,17 +6444,17 @@ window.SITE_PAGES = [
         "url": "https://digi.nstc.gov.tw/File/7C71629D702E2D89"
       },
       {
-        "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧(AI)指引」",
+        "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧（AI）指引」",
         "topic": "台灣治理",
         "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202406200001&dtable=News"
       },
       {
-        "title": "FSC：金融業運用人工智慧(AI)指引全文",
+        "title": "FSC：金融業運用人工智慧（AI）指引全文",
         "topic": "台灣治理",
         "url": "https://www.fsc.gov.tw/websitedowndoc?file=chfsc%2F202408231741530.pdf"
       },
       {
-        "title": "FSC：金融業運用人工智慧(AI)之核心原則與相關推動政策公布",
+        "title": "FSC：金融業運用人工智慧（AI）之核心原則與相關推動政策公布",
         "topic": "台灣治理",
         "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202310170002&dtable=News"
       },

@@ -12,7 +12,7 @@
     "rawcat": "法規"
   },
   {
-    "term": "AI新十大建設 (AI New Ten Major Infrastructure Projects)",
+    "term": "AI新十大建設（AI New Ten Major Infrastructure Projects）",
     "def": "2025年台灣推出的AI基礎設施建設藍圖，涵蓋算力、人才、應用等十大項目",
     "cat": "law",
     "rawcat": "制度"
@@ -78,7 +78,7 @@
     "rawcat": "法規"
   },
   {
-    "term": "OECD AI 原則 (OECD AI Principles)",
+    "term": "OECD AI 原則（OECD AI Principles）",
     "def": "經濟合作暨發展組織 2019 年制定、2024 年更新的 AI 治理軟法框架，涵蓋五大價值原則與五項政策建議，為全球首個政府間 AI 標準",
     "cat": "law",
     "rawcat": "法規"
@@ -90,7 +90,7 @@
     "rawcat": "法律"
   },
   {
-    "term": "UNESCO AI 倫理建議書 (UNESCO Recommendation on the Ethics of AI)",
+    "term": "UNESCO AI 倫理建議書（UNESCO Recommendation on the Ethics of AI）",
     "def": "2021 年 193 個 UNESCO 會員國通過的全球首個 AI 倫理標準性文件，包含四大核心價值、十大原則及十一大政策行動領域",
     "cat": "law",
     "rawcat": "法規"
@@ -108,13 +108,13 @@
     "rawcat": "法規"
   },
   {
-    "term": "七大治理原則 (Seven Governance Principles)",
+    "term": "七大治理原則（Seven Governance Principles）",
     "def": "AI基本法第4條規定：永續發展、人類自主、隱私保護、資安、透明可解釋、公平不歧視、問責",
     "cat": "law",
     "rawcat": "法規"
   },
   {
-    "term": "人工智慧基本法 (Artificial Intelligence Basic Act)",
+    "term": "人工智慧基本法（Artificial Intelligence Basic Act）",
     "def": "台灣首部 AI 專法，2026年1月施行，以七大原則為架構，國科會為中央主管機關",
     "cat": "law",
     "rawcat": "法規"
@@ -126,13 +126,13 @@
     "rawcat": "法律"
   },
   {
-    "term": "個人資料保護法 (Personal Data Protection Act, PDPA)",
+    "term": "個人資料保護法（Personal Data Protection Act, PDPA）",
     "def": "台灣個資保護基本法，2025年重大修正設立PDPC獨立監督機關",
     "cat": "law",
     "rawcat": "法規"
   },
   {
-    "term": "全球數位契約 (Global Digital Compact, GDC)",
+    "term": "全球數位契約（Global Digital Compact, GDC）",
     "def": "2024 年 9 月聯合國未來峰會通過的首個 AI 治理普世性政府間協議，確立獨立國際 AI 科學委員會與全球 AI 治理對話",
     "cat": "law",
     "rawcat": "法規"
@@ -144,7 +144,7 @@
     "rawcat": "政策"
   },
   {
-    "term": "前沿 AI 安全承諾 (Frontier AI Safety Commitments)",
+    "term": "前沿 AI 安全承諾（Frontier AI Safety Commitments）",
     "def": "首爾 AI 峰會（2024 年 5 月）20 家企業自願簽署的安全承諾，包括發布安全框架及在風險過高時不發布新模型",
     "cat": "law",
     "rawcat": "法規"
@@ -156,7 +156,7 @@
     "rawcat": "制度"
   },
   {
-    "term": "台灣智慧財產管理制度 (Taiwan Intellectual Property Management System, TIPS)",
+    "term": "台灣智慧財產管理制度（Taiwan Intellectual Property Management System, TIPS）",
     "def": "由產業發展署推動之企業IP管理認證制度，分A/AA/AAA三級",
     "cat": "law",
     "rawcat": "制度"
@@ -180,13 +180,13 @@
     "rawcat": "政策"
   },
   {
-    "term": "布萊切利宣言 (Bletchley Declaration)",
+    "term": "布萊切利宣言（Bletchley Declaration）",
     "def": "2023 年 11 月 AI 安全峰會上 28 國簽署的政治宣言，確立前沿 AI 安全的國際共識，強調蓄意濫用與控制失當的雙重風險",
     "cat": "law",
     "rawcat": "法規"
   },
   {
-    "term": "廣島 AI 進程 (Hiroshima AI Process, HAIP)",
+    "term": "廣島 AI 進程（Hiroshima AI Process, HAIP）",
     "def": "G7 於 2023 年廣島峰會啟動的多邊框架，為先進 AI 系統（特別是生成式 AI）制定自願性國際指導原則與企業行為準則",
     "cat": "law",
     "rawcat": "法規"
@@ -204,13 +204,13 @@
     "rawcat": "政策"
   },
   {
-    "term": "新德里宣言 (New Delhi Declaration)",
+    "term": "新德里宣言（New Delhi Declaration）",
     "def": "2026 年 2 月印度 AI 影響峰會通過的宣言，92 國背書，聚焦包容性、全球南方 AI 發展及透明度承諾",
     "cat": "law",
     "rawcat": "法規"
   },
   {
-    "term": "歐洲委員會 AI 框架公約 (CoE Framework Convention on AI)",
+    "term": "歐洲委員會 AI 框架公約（CoE Framework Convention on AI）",
     "def": "2024 年 9 月開放簽署的首個具法律約束力 AI 國際條約，要求締約方確保 AI 生命週期符合人權、民主與法治；適用公共機構及代表其行事的私人機構",
     "cat": "law",
     "rawcat": "法規"
@@ -246,7 +246,7 @@
     "rawcat": "政策"
   },
   {
-    "term": "資通安全管理法 (Cybersecurity Management Act)",
+    "term": "資通安全管理法（Cybersecurity Management Act）",
     "def": "台灣資安基本法，2025年首度修正，主管機關改為數位發展部",
     "cat": "law",
     "rawcat": "法規"
@@ -270,7 +270,7 @@
     "rawcat": "政策"
   },
   {
-    "term": "金融業運用AI指引 (Financial Industry AI Guidelines)",
+    "term": "金融業運用AI指引（Financial Industry AI Guidelines）",
     "def": "FSC於2024年6月發布之六大原則行政指引，規範金融機構AI治理",
     "cat": "law",
     "rawcat": "法規"
@@ -282,7 +282,7 @@
     "rawcat": "政策"
   },
   {
-    "term": "風險分類框架 (AI Risk Classification Framework)",
+    "term": "風險分類框架（AI Risk Classification Framework）",
     "def": "AI基本法第16條要求數位部建立之AI風險分級制度，與國際標準接軌",
     "cat": "law",
     "rawcat": "法規"
@@ -360,19 +360,19 @@
     "rawcat": "機構"
   },
   {
-    "term": "AI 安全研究所 (AI Safety Institute, AISI)",
+    "term": "AI 安全研究所（AI Safety Institute, AISI）",
     "def": "各國政府設立的 AI 安全研究機構（英國為先驅），負責評估前沿 AI 模型風險；已組成國際網絡（10 國及歐盟）",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "AI 安全等級(ASL)",
+    "term": "AI 安全等級（ASL）",
     "def": "Anthropic RSP 中 ASL-1 至 ASL-4 的四級風險分類體系",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "AI產品與系統評測中心 (Artificial Intelligence Evaluation Center, AIEC)",
+    "term": "AI產品與系統評測中心（Artificial Intelligence Evaluation Center, AIEC）",
     "def": "數位產業署主管之AI評測機構，由工研院與國資安研院執行",
     "cat": "org",
     "rawcat": "機構"
@@ -408,31 +408,31 @@
     "rawcat": "機構"
   },
   {
-    "term": "個人資料保護委員會 (Personal Data Protection Commission, PDPC)",
+    "term": "個人資料保護委員會（Personal Data Protection Commission, PDPC）",
     "def": "2025年個資法修正後設立之獨立監督機關，監督AI時代個資保護",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "前沿安全框架(Frontier Safety Framework)",
+    "term": "前沿安全框架（Frontier Safety Framework）",
     "def": "Google DeepMind 以關鍵能力等級（CCL）為核心的 AI 安全治理框架",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "前沿模型論壇(FMF)",
+    "term": "前沿模型論壇（FMF）",
     "def": "由 Anthropic、Google、Microsoft、OpenAI 組成的前沿 AI 安全自律非營利組織（2023）",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "國家人工智慧戰略特別委員會 (National AI Strategy Special Committee)",
+    "term": "國家人工智慧戰略特別委員會（National AI Strategy Special Committee）",
     "def": "AI基本法第6條要求行政院設立，由院長主持，每年至少召開一次",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "國家科學及技術委員會 (National Science and Technology Council, NSTC)",
+    "term": "國家科學及技術委員會（National Science and Technology Council, NSTC）",
     "def": "台灣中央政府AI政策主管機關，統籌AI研發策略與TAIDE計畫",
     "cat": "org",
     "rawcat": "機構"
@@ -444,85 +444,85 @@
     "rawcat": "機構"
   },
   {
-    "term": "數位產業署 (Administration for Digital Industries, ADI)",
+    "term": "數位產業署（Administration for Digital Industries, ADI）",
     "def": "MODA下設機構，主管數位經濟產業政策與AI評測中心",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "數位發展部 (Ministry of Digital Affairs, MODA)",
+    "term": "數位發展部（Ministry of Digital Affairs, MODA）",
     "def": "2022年成立，負責AI風險分類框架、AIEC主管、資安署管轄",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "準備框架(Preparedness Framework)",
+    "term": "準備框架（Preparedness Framework）",
     "def": "OpenAI 的前沿 AI 風險評估與管理框架，區分高風險與嚴重風險",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "獨立國際 AI 科學委員會 (Independent International Scientific Panel on AI)",
+    "term": "獨立國際 AI 科學委員會（Independent International Scientific Panel on AI）",
     "def": "根據全球數位契約設立的 40 名成員科學機構，每年發布一份政策相關 AI 評估報告",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "美國 AI 安全研究所(US AISI/CAISI)",
+    "term": "美國 AI 安全研究所（US AISI/CAISI）",
     "def": "美國 NIST 下設的 AI 安全評估機構，2025 年整合為 CAISI",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "英國 AI 安全研究所(AISI/UKASI)",
+    "term": "英國 AI 安全研究所（AISI/UKASI）",
     "def": "英國政府設立的前沿 AI 評估機構，2025 年更名為 AI Security Institute",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "負責任擴展政策(RSP)",
+    "term": "負責任擴展政策（RSP）",
     "def": "Anthropic 依 AI 安全等級管理模型開發與部署的風險治理框架",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "金融監督管理委員會 (Financial Supervisory Commission, FSC)",
+    "term": "金融監督管理委員會（Financial Supervisory Commission, FSC）",
     "def": "金融業AI應用主管機關，2024年發布AI指引",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "高階諮詢機構 (High-Level Advisory Body on AI, HLAB-AI)",
+    "term": "高階諮詢機構（High-Level Advisory Body on AI, HLAB-AI）",
     "def": "聯合國秘書長 2023 年設立的 39 位跨國 AI 專家諮詢機構，發布《為人類治理 AI》報告，提出七大全球 AI 治理建議",
     "cat": "org",
     "rawcat": "機構"
   },
   {
-    "term": "人類監督(Human Oversight)",
+    "term": "人類監督（Human Oversight）",
     "def": "在 AI 決策流程中保留人類審查與介入能力的設計要求",
     "cat": "ethics",
     "rawcat": "原則"
   },
   {
-    "term": "公平性(Fairness)",
+    "term": "公平性（Fairness）",
     "def": "AI 決策不因受保護特徵對特定群體產生系統性不利結果的屬性",
     "cat": "ethics",
     "rawcat": "原則"
   },
   {
-    "term": "問責(Accountability)",
+    "term": "問責（Accountability）",
     "def": "AI 系統開發與部署各方對結果負有可識別且可追究責任的屬性",
     "cat": "ethics",
     "rawcat": "原則"
   },
   {
-    "term": "透明度(Transparency)",
+    "term": "透明度（Transparency）",
     "def": "AI 系統的運作、訓練資料與決策流程以可理解方式公開披露的屬性",
     "cat": "ethics",
     "rawcat": "原則"
   },
   {
-    "term": "非歧視(Non-Discrimination)",
+    "term": "非歧視（Non-Discrimination）",
     "def": "AI 系統不基於受保護特徵（種族、性別等）產生不平等結果的要求",
     "cat": "ethics",
     "rawcat": "原則"
@@ -540,7 +540,7 @@
     "rawcat": "技術"
   },
   {
-    "term": "AI 管理系統 (AI Management System, AIMS)",
+    "term": "AI 管理系統（AI Management System, AIMS）",
     "def": "組織用於建立、實施、維護並持續改善 AI 治理的結構化管理框架；ISO/IEC 42001 為全球首個 AIMS 可認證標準",
     "cat": "tech",
     "rawcat": "技術"
@@ -594,7 +594,7 @@
     "rawcat": "技術"
   },
   {
-    "term": "人口統計平等(Demographic Parity)",
+    "term": "人口統計平等（Demographic Parity）",
     "def": "各受保護群體獲得正面預測比率相同的公平性指標",
     "cat": "tech",
     "rawcat": "技術"
@@ -630,13 +630,13 @@
     "rawcat": "技術"
   },
   {
-    "term": "對抗性攻擊(Adversarial Attack)",
+    "term": "對抗性攻擊（Adversarial Attack）",
     "def": "對輸入資料施加微小擾動使 AI 模型做出錯誤預測的攻擊技術",
     "cat": "tech",
     "rawcat": "技術"
   },
   {
-    "term": "提示注入(Prompt Injection)",
+    "term": "提示注入（Prompt Injection）",
     "def": "在外部內容中嵌入惡意指令、影響 AI 代理系統行為的攻擊手法",
     "cat": "tech",
     "rawcat": "技術"
@@ -648,7 +648,7 @@
     "rawcat": "技術"
   },
   {
-    "term": "機會均等(Equalized Odds)",
+    "term": "機會均等（Equalized Odds）",
     "def": "各群體真陽性率與假陽性率均相同的公平性指標",
     "cat": "tech",
     "rawcat": "技術"
@@ -660,13 +660,13 @@
     "rawcat": "技術"
   },
   {
-    "term": "紅隊測試(Red Teaming)",
+    "term": "紅隊測試（Red Teaming）",
     "def": "組織專業團隊模擬攻擊者尋找 AI 系統漏洞的對抗性安全測試方法",
     "cat": "tech",
     "rawcat": "技術"
   },
   {
-    "term": "紅隊演練 (Red-Teaming)",
+    "term": "紅隊演練（Red-Teaming）",
     "def": "透過模擬對抗性攻擊測試 AI 系統安全漏洞的方法，G7 行為準則及各國 AISI 測試協議均明確要求",
     "cat": "tech",
     "rawcat": "技術"
@@ -678,19 +678,19 @@
     "rawcat": "技術"
   },
   {
-    "term": "越獄(Jailbreak)",
+    "term": "越獄（Jailbreak）",
     "def": "透過精心設計的提示繞過 AI 安全過濾器、誘使模型輸出被限制內容的攻擊手法",
     "cat": "tech",
     "rawcat": "技術"
   },
   {
-    "term": "關鍵能力等級(CCL)",
+    "term": "關鍵能力等級（CCL）",
     "def": "Google DeepMind FSF 中定義的高風險能力閾值，觸發強化防護措施",
     "cat": "tech",
     "rawcat": "技術"
   },
   {
-    "term": "預測平等(Predictive Parity)",
+    "term": "預測平等（Predictive Parity）",
     "def": "各群體中高風險標籤對應的實際發生率相同的公平性指標；與機會均等在基礎率不同時互不相容",
     "cat": "tech",
     "rawcat": "技術"
@@ -810,19 +810,19 @@
     "rawcat": "概念"
   },
   {
-    "term": "代理變數(Proxy Variable)",
+    "term": "代理變數（Proxy Variable）",
     "def": "與受保護特徵高度相關的輸入特徵，可造成間接歧視（如郵遞區號代理種族）",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "全球南方 (Global South)",
+    "term": "全球南方（Global South）",
     "def": "指亞洲、非洲、拉丁美洲等多數開發中國家，在 AI 治理討論中代表數位落差、能力建構及技術主權的主要訴求方",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "公平性不可能定理(Fairness Impossibility Theorem)",
+    "term": "公平性不可能定理（Fairness Impossibility Theorem）",
     "def": "多種公平性定義無法同時成立的數學結論（Chouldechova, 2017；Kleinberg et al., 2016）",
     "cat": "concept",
     "rawcat": "概念"
@@ -840,31 +840,31 @@
     "rawcat": "概念"
   },
   {
-    "term": "可究責性(Auditability)",
+    "term": "可究責性（Auditability）",
     "def": "AI 系統可被獨立第三方稽核，包含決策記錄與驗證能力",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "可解釋性(Explainability/XAI)",
+    "term": "可解釋性（Explainability/XAI）",
     "def": "能以人類可理解方式說明 AI 決策原因的能力或技術",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "存在性風險(X-Risk)",
+    "term": "存在性風險（X-Risk）",
     "def": "AI 系統導致人類文明滅絕或永久性衰退的風險類別",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "對齊(Alignment)",
+    "term": "對齊（Alignment）",
     "def": "確保 AI 系統目標、價值與行為符合人類意圖的研究領域",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "幻覺(Hallucination)",
+    "term": "幻覺（Hallucination）",
     "def": "大型語言模型生成看似真實但實際錯誤或虛構資訊的現象",
     "cat": "concept",
     "rawcat": "概念"
@@ -882,7 +882,7 @@
     "rawcat": "概念"
   },
   {
-    "term": "整備評估方法論 (Readiness Assessment Methodology, RAM)",
+    "term": "整備評估方法論（Readiness Assessment Methodology, RAM）",
     "def": "UNESCO 建立的工具，協助政府評估其以符合倫理方式實施 AI 的整備程度，並產出國家概況納入全球觀察站",
     "cat": "concept",
     "rawcat": "概念"
@@ -918,13 +918,13 @@
     "rawcat": "概念"
   },
   {
-    "term": "欺騙性對齊(Deceptive Alignment)",
+    "term": "欺騙性對齊（Deceptive Alignment）",
     "def": "AI 系統在評估時表現正常、實際部署時追求不同目標的失靈模式假說",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "演算法偏見(Algorithmic Bias)",
+    "term": "演算法偏見（Algorithmic Bias）",
     "def": "AI 模型因資料、標注或設計缺陷，對特定群體產生系統性不公平結果的現象",
     "cat": "concept",
     "rawcat": "概念"
@@ -936,13 +936,13 @@
     "rawcat": "概念"
   },
   {
-    "term": "硬法 (Hard Law)",
+    "term": "硬法（Hard Law）",
     "def": "具法律約束力的國際規範，如條約、公約，通過批准程序對締約方產生法律義務",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "穩健性(Robustness)",
+    "term": "穩健性（Robustness）",
     "def": "AI 系統在異常輸入、對抗攻擊或分佈外資料下維持預期行為的能力",
     "cat": "concept",
     "rawcat": "概念"
@@ -972,7 +972,7 @@
     "rawcat": "概念"
   },
   {
-    "term": "軟法 (Soft Law)",
+    "term": "軟法（Soft Law）",
     "def": "不具直接法律約束力，但對國家行為具政治或道德拘束力的規範性文件，包括原則、宣言、指南與建議書",
     "cat": "concept",
     "rawcat": "概念"
@@ -990,13 +990,13 @@
     "rawcat": "概念"
   },
   {
-    "term": "風險分級方法 (Risk-Based Approach)",
+    "term": "風險分級方法（Risk-Based Approach）",
     "def": "AI 治理中依 AI 系統的潛在危害程度實施差異化監管義務的方法論，為 EU AI Act、OECD 原則及歐洲委員會公約共同採用",
     "cat": "concept",
     "rawcat": "概念"
   },
   {
-    "term": "黑箱問題(Black Box Problem)",
+    "term": "黑箱問題（Black Box Problem）",
     "def": "深度學習模型決策過程不透明、人類難以理解其推理的問題",
     "cat": "concept",
     "rawcat": "概念"
@@ -1110,7 +1110,7 @@
     "rawcat": "產業"
   },
   {
-    "term": "台智雲 (Taiwan AI Cloud, TWC)",
+    "term": "台智雲（Taiwan AI Cloud, TWC）",
     "def": "華碩與政府合資之AI算力與服務平台，提供主權AI基礎設施",
     "cat": "ipbiz",
     "rawcat": "產業"
@@ -1152,7 +1152,7 @@
     "rawcat": "工具"
   },
   {
-    "term": "沛星互動科技 (Appier Inc.)",
+    "term": "沛星互動科技（Appier Inc.）",
     "def": "台灣出身、東京上市之AI SaaS公司，以行銷AI為核心業務",
     "cat": "ipbiz",
     "rawcat": "產業"
