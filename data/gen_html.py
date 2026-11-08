@@ -45,8 +45,7 @@ GA4 = f"""  <!-- Google tag (gtag.js) -->
 FONTS = (
     '  <link rel="preconnect" href="https://fonts.googleapis.com" />\n'
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n'
-    '  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />\n'
-    '  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />\n'
+    '  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet" />\n'
 )
 
 
@@ -79,7 +78,7 @@ def page_html(slug: str, title: str, desc: str) -> str:
 {GA4}  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>{full_title}</title>
   <meta name="description" content="{desc}" />
-  <meta name="theme-color" content="#355070" />
+  <meta name="theme-color" content="#F5F1E8" />
   <link rel="canonical" href="{canonical}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{SITE_NAME}" />
