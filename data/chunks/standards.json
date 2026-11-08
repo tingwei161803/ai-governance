@@ -10,6 +10,7 @@
   "items": [
     {
       "slug": "oecd-ai-principles",
+      "force": "soft",
       "category": "principle",
       "title": "OECD AI 原則（OECD Principles on Artificial Intelligence）",
       "summary": "全球首個政府間 AI 標準，五大價值原則涵蓋人本、透明、問責，2024 年更新納入生成式 AI 挑戰。",
@@ -18,6 +19,7 @@
     },
     {
       "slug": "unesco-ai-ethics",
+      "force": "soft",
       "category": "principle",
       "title": "UNESCO AI 倫理建議書（UNESCO Recommendation on the Ethics of Artificial Intelligence）",
       "summary": "全球首個 AI 倫理全球標準文件，193 國鼓掌通過，涵蓋十大原則與十一大政策行動領域。",
@@ -26,6 +28,7 @@
     },
     {
       "slug": "g7-hiroshima-ai-process",
+      "force": "soft",
       "category": "principle",
       "title": "G7 廣島 AI 進程（G7 Hiroshima AI Process, HAIP）",
       "summary": "G7 針對生成式 AI 與基礎模型制定的自願性國際框架，包含 11 項企業行為準則，建立在 OECD 原則之上。",
@@ -34,6 +37,7 @@
     },
     {
       "slug": "unga-ai-resolution",
+      "force": "soft",
       "category": "un",
       "title": "聯合國大會 AI 決議（UNGA Resolutions on AI）",
       "summary": "2024 年聯合國大會史上首個 AI 決議，193 國一致通過，確立「安全可信 AI 服務永續發展」核心框架。",
@@ -42,6 +46,7 @@
     },
     {
       "slug": "un-governing-ai-humanity",
+      "force": "soft",
       "category": "un",
       "title": "聯合國《為人類治理 AI》報告（Governing AI for Humanity）",
       "summary": "聯合國 AI 高階諮詢機構最終報告，提出七大全球治理建議，包括建立 AI 科學委員會與聯合國 AI 辦公室。",
@@ -50,6 +55,7 @@
     },
     {
       "slug": "global-digital-compact",
+      "force": "soft",
       "category": "un",
       "title": "全球數位契約（Global Digital Compact, GDC）",
       "summary": "2024 年聯合國未來峰會通過，首個 AI 治理普世性政府間協議，確立獨立 AI 科學委員會與全球 AI 治理對話機制。",
@@ -58,6 +64,7 @@
     },
     {
       "slug": "coe-ai-framework-convention",
+      "force": "binding",
       "category": "treaty",
       "title": "歐洲委員會 AI 框架公約（Council of Europe Framework Convention on AI）",
       "summary": "全球首個具法律約束力的 AI 國際條約，要求締約方確保 AI 生命週期符合人權、民主與法治，2024 年開放簽署。",
@@ -66,6 +73,7 @@
     },
     {
       "slug": "iso-iec-42001",
+      "force": "soft",
       "category": "iso",
       "title": "ISO/IEC 42001 AI 管理系統標準（AI Management System）",
       "summary": "全球首個可供第三方認證的 AI 管理系統國際標準，規定組織建立 AIMS 的要求，2023 年 12 月發布。",
@@ -74,6 +82,7 @@
     },
     {
       "slug": "iso-iec-23894",
+      "force": "soft",
       "category": "iso",
       "title": "ISO/IEC 23894 AI 風險管理指南（AI Risk Management Guidance）",
       "summary": "延伸 ISO 31000 通用風險管理至 AI 特有風險的國際標準，涵蓋偏見、穩健性、人機互動等風險類別。",
@@ -82,6 +91,7 @@
     },
     {
       "slug": "iso-iec-tr-24028",
+      "force": "soft",
       "category": "iso",
       "title": "ISO/IEC TR 24028 AI 可信賴性概述（Overview of Trustworthiness in AI）",
       "summary": "定義 AI 可信賴性維度的技術報告，奠定後續 ISO AI 標準系列的概念基礎，2020 年發布。",
@@ -90,6 +100,7 @@
     },
     {
       "slug": "iso-iec-22989",
+      "force": "soft",
       "category": "iso",
       "title": "ISO/IEC 22989 AI 概念與術語（AI Concepts and Terminology）",
       "summary": "為全球 AI 標準體系提供統一術語定義，已被 EU AI Act 等重要法規文本直接引用，2022 年發布。",
@@ -98,6 +109,7 @@
     },
     {
       "slug": "bletchley-declaration",
+      "force": "soft",
       "category": "summit",
       "title": "布萊切利宣言（Bletchley Declaration）",
       "summary": "2023 年首屆 AI 安全峰會 28 國簽署，確立前沿 AI 安全的國際共識，並啟動各國 AI 安全研究所成立浪潮。",
@@ -106,6 +118,7 @@
     },
     {
       "slug": "seoul-ai-summit-2024",
+      "force": "soft",
       "category": "summit",
       "title": "首爾 AI 峰會（AI Seoul Summit）與前沿 AI 安全承諾",
       "summary": "2024 年第二屆 AI 安全峰會，20 家頂尖 AI 企業簽署自願安全承諾，並確立首爾宣言與國際研究所合作架構。",
@@ -114,6 +127,7 @@
     },
     {
       "slug": "international-aisi-network",
+      "force": "soft",
       "category": "summit",
       "title": "國際 AI 安全研究所網絡（International Network of AI Safety Institutes）",
       "summary": "首爾峰會後由 10 國及歐盟共同成立的政府間 AI 安全研究合作網絡，負責前沿 AI 風險評估與多邊安全測試。",
@@ -122,6 +136,7 @@
     },
     {
       "slug": "paris-ai-action-summit-2025",
+      "force": "soft",
       "category": "summit",
       "title": "巴黎 AI 行動峰會（AI Action Summit, Paris 2025）",
       "summary": "2025 年第三屆 AI 峰會，58 國簽署永續 AI 宣言，峰會重心從安全轉向創新應用，但美國缺席主要宣言。",
@@ -130,6 +145,7 @@
     },
     {
       "slug": "new-delhi-ai-impact-summit-2026",
+      "force": "soft",
       "category": "summit",
       "title": "新德里 AI 影響峰會（AI Impact Summit, New Delhi 2026）",
       "summary": "2026 年第四屆 AI 峰會，92 國背書宣言，聚焦包容性與全球南方 AI 發展，宣告逾 2,000 億美元投資承諾。",

@@ -11,6 +11,7 @@
   "items": [
     {
       "slug": "eu-ai-act-risk-tiers",
+      "force": "binding",
       "category": "eu",
       "title": "歐盟 AI 法：風險分級架構（EU AI Act）",
       "summary": "全球首部 AI 橫向立法，依危害高低將 AI 系統分為不可接受、高風險、有限風險、最小風險四層，義務自 2025 年起分波生效至 2027 年。",
@@ -19,6 +20,7 @@
     },
     {
       "slug": "eu-ai-act-gpai",
+      "force": "binding",
       "category": "eu",
       "title": "歐盟 AI 法：通用型 AI 義務（GPAI）",
       "summary": "訓練算力逾 10²³ FLOPs 的 GPAI 模型須維護技術文件、公開訓練資料摘要；逾 10²⁵ FLOPs 的「系統性風險」模型另須紅隊測試與事件通報。",
@@ -27,6 +29,7 @@
     },
     {
       "slug": "us-eo-14110",
+      "force": "binding",
       "category": "us",
       "title": "美國拜登行政命令 EO 14110（2023）",
       "summary": "要求大型基礎模型開發商向聯邦政府提交安全測試結果，並指示 NIST 制訂標準；川普於 2025 年 1 月 20 日就職首日予以廢止。",
@@ -35,6 +38,7 @@
     },
     {
       "slug": "us-eo-14179",
+      "force": "binding",
       "category": "us",
       "title": "美國川普行政命令 EO 14179（2025）",
       "summary": "確立「美國 AI 霸主地位」為國家優先目標，指示移除聯邦 AI 法規障礙、促進開源模型、清除意識形態偏見，並取代拜登時期全部 AI 政策。",
@@ -43,6 +47,7 @@
     },
     {
       "slug": "us-federal-preemption-eo",
+      "force": "binding",
       "category": "us",
       "title": "美國川普聯邦─州 AI 框架行政命令（2025-12）",
       "summary": "設立 AI 訴訟特別工作組（AI Litigation Task Force），自 2026 年 1 月起以聯邦訴訟壓制被認定阻礙聯邦 AI 政策的各州法律，引發憲法爭議。",
@@ -51,6 +56,7 @@
     },
     {
       "slug": "nist-ai-rmf",
+      "force": "soft",
       "category": "us",
       "title": "NIST AI 風險管理框架（AI RMF 1.0）",
       "summary": "美國 NIST 2023 年發布的自願性框架（NIST AI 100-1），以 Govern、Map、Measure、Manage 四大核心功能引導組織識別與應對 AI 風險，聯邦機構及業界廣泛採用。",
@@ -59,6 +65,7 @@
     },
     {
       "slug": "us-colorado-ai-act",
+      "force": "binding",
       "category": "us",
       "title": "科羅拉多州 AI 法（Colorado AI Act, SB 24-205）",
       "summary": "全美首部完整州級 AI 法，規範高風險 AI 系統開發者與部署者，涵蓋就業、教育、金融等八大領域，原定 2026 年 6 月 30 日生效。",
@@ -67,6 +74,7 @@
     },
     {
       "slug": "us-california-ai-laws",
+      "force": "binding",
       "category": "us",
       "title": "加州 AI 相關立法（AB 2013 等）",
       "summary": "加州已有逾 38 項 AI 法律，AB 2013 要求 AI 開發者自 2026 年 1 月起公開訓練資料說明；SB 1047 大型模型安全法案遭州長否決。",
@@ -75,6 +83,7 @@
     },
     {
       "slug": "cn-algo-recommendation",
+      "force": "binding",
       "category": "cn",
       "title": "中國《互聯網信息服務算法推薦管理規定》（2022）",
       "summary": "全球首部針對算法推薦服務的部門規章，要求具輿論屬性的服務者完成算法備案、提供用戶關閉個性化推薦選項，並保護未成年人。",
@@ -83,6 +92,7 @@
     },
     {
       "slug": "cn-deep-synthesis",
+      "force": "binding",
       "category": "cn",
       "title": "中國《互聯網信息服務深度合成管理規定》（2023）",
       "summary": "規範深偽（Deepfake）技術服務，要求服務使用者實名認證、合成內容顯著標識，並禁止製作散布政治謠言；2023 年 1 月 10 日生效。",
@@ -91,6 +101,7 @@
     },
     {
       "slug": "cn-generative-ai",
+      "force": "binding",
       "category": "cn",
       "title": "中國《生成式人工智能服務管理暫行辦法》（2023）",
       "summary": "全球首部生成式 AI 專屬法規，要求服務提供者確保內容符合社會主義核心價值觀、訓練資料合規、用戶實名，並完成算法備案；2023 年 8 月 15 日生效。",
@@ -99,6 +110,7 @@
     },
     {
       "slug": "cn-ai-content-labeling",
+      "force": "binding",
       "category": "cn",
       "title": "中國《人工智能生成合成內容標識辦法》（2025）",
       "summary": "要求 AI 生成內容同時具備使用者可感知的「顯式標識」與技術浮水印等「隱式標識」，配套強制性國家標準（GB），2025 年 9 月 1 日生效。",
@@ -107,6 +119,7 @@
     },
     {
       "slug": "uk-pro-innovation",
+      "force": "soft",
       "category": "uk",
       "title": "英國親創新 AI 監管方針與 AISI（2023–2025）",
       "summary": "不設新的 AI 專屬立法，由 FCA、ICO、CMA 等現有機構在各自領域執行五大跨部門原則；AI Security Institute（AISI）負責前沿模型安全評估。",
@@ -115,6 +128,7 @@
     },
     {
       "slug": "kr-ai-basic-act",
+      "force": "binding",
       "category": "apac",
       "title": "南韓《人工智能基本法》（AI Basic Act，2024）",
       "summary": "南韓國會 2024 年 12 月通過、2026 年 1 月 22 日正式生效，使南韓成為繼歐盟後全球第二個通過全面 AI 法律的主要法域。",
@@ -123,6 +137,7 @@
     },
     {
       "slug": "jp-ai-promotion-act",
+      "force": "binding",
       "category": "apac",
       "title": "日本《人工智能相關技術研究開發及利用推進法》（AI 推進法，2025）",
       "summary": "日本國會 2025 年 5 月通過、無明文罰則的促進型立法，強調業界自律，定位 AI 為國家戰略資產，並主導 G7 廣島 AI 進程國際軟法協調。",
@@ -131,6 +146,7 @@
     },
     {
       "slug": "ca-aida",
+      "force": "pending",
       "category": "intl",
       "title": "加拿大《人工智能與資料法》（AIDA，Bill C-27）",
       "summary": "2022 年提出的聯邦 AI 立法，因 2025 年 1 月國會選舉解散而廢止；加拿大目前無聯邦層級 AI 專屬法律，聯邦立法重啟時程不明。",
@@ -139,6 +155,7 @@
     },
     {
       "slug": "br-ai-bill",
+      "force": "pending",
       "category": "intl",
       "title": "巴西 AI 法案（Bill 2338/2023）",
       "summary": "2024 年 12 月巴西參議院通過，移交衆議院審查；截至 2026 年 6 月仍在委員會審議中，尚未簽署成法。",
@@ -147,6 +164,7 @@
     },
     {
       "slug": "sg-ai-governance",
+      "force": "soft",
       "category": "apac",
       "title": "新加坡 AI 治理框架（Model AI Governance Framework 2.0）",
       "summary": "原則導向、非強制性框架，以 AI Verify 可信賴驗證工具為核心，2024 年更新，是亞太地區 AI 治理的重要參考標準。",
@@ -155,6 +173,7 @@
     },
     {
       "slug": "intl-soft-law",
+      "force": "soft",
       "category": "intl",
       "title": "國際 AI 治理軟法：OECD 原則、G7 廣島進程、GPAI",
       "summary": "目前全球 AI 多邊協調以軟法為主，OECD AI 原則（2019）、G7 廣島 AI 進程（2023）、GPAI 組織尚未形成具法律效力的國際條約。",

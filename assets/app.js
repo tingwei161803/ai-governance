@@ -1,5 +1,5 @@
 /* =========================================================================
-   multipage · app.js   (vanilla, no build, no chart lib)
+   AI 治理百科 · app.js   (vanilla, no build)
 
    The PAGE-LEVEL LAYOUT ENGINE. shell.js has already injected the shared
    chrome and published window.LDW. This script:
@@ -8,11 +8,8 @@
      2. picks a renderer from RENDERERS by that page's `layout`,
      3. paints it into <main id="page"> and wires its interactions.
 
-   RENDERERS is the LAYOUT REGISTRY — one entry per supported page layout:
-     hub | gallery | article | dashboard | timeline | table |
-     bento | kanban | faq | comparison | leaderboard | scrolly | map
-   To add a layout, add one renderer (returns the inner HTML for #page) and,
-   if it needs interaction, one matching WIRE entry. Nothing else changes.
+   Layouts used by this site:
+     hub (front page) | gallery | article | timeline | glossary | learn | table
    ========================================================================= */
 (function () {
   "use strict";
@@ -27,59 +24,52 @@
     }
     var L = window.LDW;
 
-    var t = L.t, esc = L.escapeHtml, r = L.r;
+    var t = L.t, esc = L.escapeHtml;
     var pageEl = document.getElementById("page");
     var teardowns = [];   // observers / listeners to disconnect before each repaint
 
+    /* ---------- legal force: seal red (硬法) vs treaty blue (軟法) ---------- */
+    var FORCE = {
+      binding: { label: "硬法", title: "具法律拘束力" },
+      soft:    { label: "軟法", title: "原則、標準或自願性框架，不具直接拘束力" },
+      pending: { label: "草案", title: "審議中或未完成立法" },
+      mixed:   { label: "混合", title: "行政命令與自願框架並行" }
+    };
+    function stamp(force) {
+      var f = FORCE[force];
+      if (!f) return "";
+      return '<span class="stamp stamp--' + esc(force) + '" title="' + esc(f.title) + '">' + esc(f.label) + "</span>";
+    }
+
+    function findPage(slug) {
+      return L.pages.filter(function (q) { return q.slug === slug; })[0] || null;
+    }
+
     /* ---------- shared bits ---------- */
     function head(p) {
+      var vol = p.volume
+        ? '<p class="page-head__vol"><span class="page-head__no">' + esc(p.volume.no) + "</span>" + esc(p.volume.name) + "</p>"
+        : "";
       var sub = t(p.subtitle)
         ? '<p class="page-head__sub">' + esc(t(p.subtitle)) + "</p>" : "";
-      return '<header class="page-head"><h1>' + esc(t(p.title)) + "</h1>" + sub + "</header>";
+      return '<header class="page-head">' + vol + "<h1>" + esc(t(p.title)) + "</h1>" + sub + "</header>";
     }
 
-    function barChart(series, accent) {
-      var W = 520, H = 240, padL = 16, padR = 16, padT = 16, padB = 44;
-      var plotW = W - padL - padR, plotH = H - padT - padB;
-      var max = Math.max.apply(null, series.map(function (d) { return d.value; }).concat([1]));
-      var n = series.length || 1, gap = 14, bw = (plotW - gap * (n - 1)) / n, baseY = padT + plotH;
-      var bars = series.map(function (d, i) {
-        var x = padL + i * (bw + gap), h = (d.value / max) * plotH, y = baseY - h;
-        var label = esc(t(d.label)), val = esc(String(d.value));
-        return '<rect class="bar-rect" x="' + r(x) + '" y="' + r(y) + '" width="' + r(bw) +
-          '" height="' + r(h) + '" rx="5"' + (accent ? ' style="fill:' + esc(accent) + '"' : "") +
-          '><title>' + label + ": " + val + "</title></rect>" +
-          '<text class="bar-value" x="' + r(x + bw / 2) + '" y="' + r(y - 6) + '" text-anchor="middle">' + val + "</text>" +
-          '<text class="bar-label" x="' + r(x + bw / 2) + '" y="' + r(baseY + 18) + '" text-anchor="middle">' + label + "</text>";
-      }).join("");
-      return '<svg viewBox="0 0 ' + W + " " + H + '" role="img" preserveAspectRatio="xMidYMid meet" aria-label="bar chart">' +
-        '<line class="axis-line" x1="' + padL + '" y1="' + r(baseY) + '" x2="' + r(W - padR) + '" y2="' + r(baseY) + '" />' +
-        bars + "</svg>";
+    /* how much each page holds, in the unit that fits it */
+    function pageCount(q) {
+      if (q.items) return q.items.length + " 則";
+      if (q.sections) return q.sections.filter(function (s) { return s.id !== "references"; }).length + " 章";
+      if (q.events) return q.events.length + " 則";
+      if (q.terms) return q.terms.length + " 條";
+      if (q.quiz) return q.quiz.length + " 題";
+      if (q.rows) return q.rows.length + " 筆";
+      return "";
     }
 
-    function lineChart(points) {
-      var W = 520, H = 240, padL = 28, padR = 16, padT = 16, padB = 32;
-      var plotW = W - padL - padR, plotH = H - padT - padB;
-      var ys = points.map(function (d) { return d.y; });
-      var max = Math.max.apply(null, ys.concat([1])), min = Math.min.apply(null, ys.concat([0]));
-      var span = (max - min) || 1, n = points.length || 1;
-      var xy = points.map(function (d, i) {
-        var x = padL + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW);
-        var y = padT + plotH - ((d.y - min) / span) * plotH;
-        return { x: x, y: y, d: d };
-      });
-      var path = xy.map(function (pt, i) { return (i ? "L" : "M") + r(pt.x) + " " + r(pt.y); }).join(" ");
-      var area = path + " L" + r(xy[xy.length - 1].x) + " " + r(padT + plotH) + " L" + r(xy[0].x) + " " + r(padT + plotH) + " Z";
-      var dots = xy.map(function (pt) {
-        return '<circle class="line-dot" cx="' + r(pt.x) + '" cy="' + r(pt.y) + '" r="3"><title>' +
-          esc(String(pt.d.x)) + ": " + esc(String(pt.d.y)) + "</title></circle>";
-      }).join("");
-      var labels = xy.map(function (pt) {
-        return '<text class="bar-label" x="' + r(pt.x) + '" y="' + r(padT + plotH + 20) + '" text-anchor="middle">' + esc(String(pt.d.x)) + "</text>";
-      }).join("");
-      return '<svg viewBox="0 0 ' + W + " " + H + '" role="img" preserveAspectRatio="xMidYMid meet" aria-label="line chart">' +
-        '<path class="line-area" d="' + area + '" />' +
-        '<path class="line-path" d="' + path + '" fill="none" />' + dots + labels + "</svg>";
+    function tlCats(p) {
+      var m = {};
+      (p.categories || []).forEach(function (c) { m[c.key] = c.zh; });
+      return m;
     }
 
     /* =====================================================================
@@ -87,235 +77,224 @@
        ===================================================================== */
     var RENDERERS = {
 
-      /* ---- hub: hero stats + a card linking to every other page ---- */
+      /* ---- hub: gazette front page ---- */
       hub: function (p) {
-        var stats = (p.stats || []).map(function (s) {
-          return '<div class="hero__stat" data-item>' +
-            '<b class="hero__stat-value" data-count="' + esc(String(s.value)) + '">0</b>' +
-            '<span class="hero__stat-label">' + esc(t(s.label)) + "</span></div>";
+        var stat = {};
+        (p.stats || []).forEach(function (s) { stat[t(s.label)] = s.value; });
+        function n(label) { return '<b class="num">' + esc(String(stat[label] != null ? stat[label] : "")) + "</b>"; }
+
+        var masthead =
+          '<section class="masthead" aria-labelledby="mast-h">' +
+            '<div class="masthead__meta">' +
+              "<span>" + esc(t(p.dateline)) + "</span>" +
+              '<span class="masthead__meta-mid">非官方教育整理</span>' +
+              "<span>繁體中文・台灣</span>" +
+            "</div>" +
+            '<h1 class="masthead__title" id="mast-h">' + esc(t(L.meta.title)) + "</h1>" +
+            '<p class="masthead__sub">' + esc(t(p.subtitle)) + "</p>" +
+            '<p class="masthead__dateline">本卷收錄 ' + n("法規與標準") + " 部法規與標準、" +
+              n("大事紀里程碑") + " 則大事紀、" + n("案例研究") + " 件案例、" +
+              n("收錄術語") + " 條術語，引用 " + n("引用來源") + " 筆公開來源。</p>" +
+          "</section>";
+
+        var approaches = (p.approaches || []).map(function (a) {
+          return '<li class="approach approach--' + esc(a.force) + '">' +
+            '<a class="approach__link" href="' + esc(a.href) + '">' +
+              '<span class="approach__mark" aria-hidden="true"></span>' +
+              '<span class="approach__region">' + esc(a.region) + stamp(a.force) + "</span>" +
+              '<span class="approach__name">' + esc(a.approach) + "</span>" +
+              '<span class="approach__body">' + esc(a.body) + "</span>" +
+            "</a></li>";
         }).join("");
-        var cards = L.pages.filter(function (q) { return q.slug !== "home"; }).map(function (q) {
-          return '<a class="card card--nav" data-item href="' + esc(L.pageHref(q)) + '" ' +
-              'aria-label="' + esc(t(q.title)) + '">' +
-            '<span class="material-symbols-rounded card__icon" aria-hidden="true">' + esc(q.icon || "label") + "</span>" +
-            '<h3 class="card__title">' + esc(t(q.title)) + "</h3>" +
-            '<p class="card__summary">' + esc(t(q.subtitle)) + "</p></a>";
+        var spectrum = approaches ?
+          '<section class="spectrum" aria-labelledby="spectrum-h">' +
+            '<header class="sec-head"><h2 id="spectrum-h">四種監理路線</h2>' +
+              "<p>各國管 AI 的方式，從具拘束力的專法，到只宣示原則的基本法。紅印代表硬法，藍環代表軟法。</p></header>" +
+            '<div class="spectrum__axis" aria-hidden="true">' +
+              '<span class="spectrum__end spectrum__end--hard">硬法・有罰則</span>' +
+              '<span class="spectrum__end spectrum__end--soft">軟法・宣示原則</span>' +
+            "</div>" +
+            '<ol class="spectrum__list">' + approaches + "</ol>" +
+          "</section>" : "";
+
+        var vols = (p.volumes || []).map(function (v) {
+          var entries = (v.pages || []).map(function (slug) {
+            var q = findPage(slug); if (!q) return "";
+            return '<li><a class="entry" href="' + esc(L.pageHref(q)) + '">' +
+              '<span class="entry__line"><span class="entry__title">' + esc(t(q.title)) + "</span>" +
+              '<span class="entry__leader" aria-hidden="true"></span>' +
+              '<span class="entry__count">' + esc(pageCount(q)) + "</span></span>" +
+              '<span class="entry__sum">' + esc(t(q.subtitle)) + "</span></a></li>";
+          }).join("");
+          return '<div class="vol"><h3 class="vol__head"><span class="vol__no">' + esc(v.no) + "</span>" +
+            esc(v.name) + '</h3><ol class="vol__list">' + entries + "</ol></div>";
         }).join("");
-        return head(p) +
-          (stats ? '<div class="hero__stats">' + stats + "</div>" : "") +
-          '<div class="grid">' + cards + "</div>";
+
+        var tl = findPage("timeline");
+        var cats = tl ? tlCats(tl) : {};
+        var recent = tl ? (tl.events || []).slice(-6).reverse().map(function (ev) {
+          return '<li class="recent__item recent__item--' + esc(ev.cat || "") + '">' +
+            '<time class="recent__date" datetime="' + esc(ev.date) + '">' + esc(ev.date) + "</time>" +
+            '<span class="recent__cat">' + esc(cats[ev.cat] || "") + "</span>" +
+            '<span class="recent__title">' + esc(t(ev.title)) + "</span></li>";
+        }).join("") : "";
+
+        return masthead + spectrum +
+          '<div class="front">' +
+            '<section class="codex" aria-labelledby="codex-h">' +
+              '<header class="sec-head"><h2 id="codex-h">本卷目錄</h2></header>' + vols +
+            "</section>" +
+            (recent ? '<aside class="recent" aria-labelledby="recent-h">' +
+              '<header class="sec-head"><h2 id="recent-h">最新紀事</h2></header>' +
+              '<ol class="recent__list">' + recent + "</ol>" +
+              '<a class="more-link" href="timeline.html">看完整大事紀（2016–2027）</a>' +
+            "</aside>" : "") +
+          "</div>";
       },
 
-      /* ---- gallery: search + chips + card grid + dialog ---- */
+      /* ---- gallery: search + chips + entry list + dialog ---- */
       gallery: function (p) {
         var cats = (p.categories || []).map(function (c) {
           return '<button class="chip" type="button" data-cat="' + esc(c.key) + '">' +
-            esc(c[L.state.lang] || c.en) + "</button>";
+            esc(c[L.state.lang] || c.zh || c.en) + "</button>";
         }).join("");
-        var allLabel = L.state.lang === "en" ? "All" : "全部";
-        return head(p) +
+        var hasForce = (p.items || []).some(function (it) { return it.force; });
+        var legend = hasForce ?
+          '<p class="force-legend">' + stamp("binding") + "具法律拘束力" + stamp("soft") + "原則或自願性框架" +
+            ((p.items || []).some(function (it) { return it.force === "pending"; }) ? stamp("pending") + "審議中或未完成立法" : "") +
+          "</p>" : "";
+        return head(p) + legend +
           '<div class="toolbar">' +
-            '<input id="search" class="search" type="search" autocomplete="off" ' +
-              'placeholder="' + (L.state.lang === "en" ? "Search…" : "搜尋…") + '" ' +
-              'aria-label="' + (L.state.lang === "en" ? "Search" : "搜尋") + '" />' +
-            (cats ? '<div class="chips"><button class="chip chip--active" type="button" data-cat="">' + esc(allLabel) + "</button>" + cats + "</div>" : "") +
+            '<input id="search" class="search" type="search" autocomplete="off" placeholder="搜尋標題、摘要或標籤…" aria-label="搜尋" />' +
+            (cats ? '<div class="chips"><button class="chip chip--active" type="button" data-cat="">全部</button>' + cats + "</div>" : "") +
           "</div>" +
           '<p class="result-count" id="resultCount" aria-live="polite"></p>' +
-          '<div class="grid" id="grid"></div>';
+          '<div class="entries" id="grid"></div>';
       },
 
-      /* ---- article: sticky TOC + prose + reading progress ---- */
+      /* ---- article: marginal TOC + serif prose + reading progress ---- */
       article: function (p) {
+        var CHRONO = /^(\d{4}\s?年(?:\s?\d{1,2}\s?月)?(?:\s?\d{1,2}\s?日)?)[：:]\s*(.+)$/;
+        var num = 0;
         var toc = (p.sections || []).map(function (s) {
-          return '<a class="toc-link" href="#' + esc(s.id) + '" data-toc="' + esc(s.id) + '">' + esc(t(s.heading)) + "</a>";
+          var isRef = s.id === "references";
+          if (!isRef) num++;
+          return '<a class="toc-link" href="#' + esc(s.id) + '" data-toc="' + esc(s.id) + '">' +
+            '<span class="toc-link__no">' + (isRef ? "附" : "§" + num) + "</span>" + esc(t(s.heading)) + "</a>";
         }).join("");
+        num = 0;
         var body = (p.sections || []).map(function (s) {
+          var isRef = s.id === "references";
+          if (!isRef) num++;
           var blocks = (s.blocks || []).map(function (b) {
             if (b.type === "h3") return "<h3>" + esc(t(b.text)) + "</h3>";
-            if (b.type === "quote") return "<blockquote>" + esc(t(b.text)) + "</blockquote>";
+            if (b.type === "quote") return '<blockquote class="note"><span class="note__label" aria-label="按語">按</span><p>' + esc(t(b.text)) + "</p></blockquote>";
             if (b.type === "code") return "<pre><code>" + esc(t(b.text)) + "</code></pre>";
             if (b.type === "ul") {
               var arr = (b.items && (b.items[L.state.lang] || b.items.en || b.items.zh)) || [];
+              /* a list where every line starts with a date becomes a chronology */
+              if (arr.length > 2 && arr.every(function (li) { return CHRONO.test(li); })) {
+                return '<ol class="chrono">' + arr.map(function (li) {
+                  var m = li.match(CHRONO);
+                  return '<li><span class="chrono__date">' + esc(m[1]) + '</span><span class="chrono__text">' + esc(m[2]) + "</span></li>";
+                }).join("") + "</ol>";
+              }
               return "<ul>" + arr.map(function (li) { return "<li>" + esc(li) + "</li>"; }).join("") + "</ul>";
             }
             if (b.type === "links") {
               var ls = b.items || [];
               return '<ul class="ref-list">' + ls.map(function (l) {
                 return '<li><a class="ref-link" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
-                  esc(l.title || l.url) + " ↗</a></li>";
+                  esc(l.title || l.url) + "</a></li>";
               }).join("") + "</ul>";
             }
             return "<p>" + esc(t(b.text)) + "</p>";
           }).join("");
-          return '<section class="article-section" id="' + esc(s.id) + '" data-item ' +
-            'aria-labelledby="' + esc(s.id) + '-h"><h2 id="' + esc(s.id) + '-h">' + esc(t(s.heading)) + "</h2>" + blocks + "</section>";
+          return '<section class="article-section' + (isRef ? " article-section--refs" : "") + '" id="' + esc(s.id) + '" ' +
+            'aria-labelledby="' + esc(s.id) + '-h"><h2 id="' + esc(s.id) + '-h">' +
+            '<span class="sec-no" aria-hidden="true">' + (isRef ? "附錄" : "§ " + num) + "</span>" +
+            esc(t(s.heading)) + "</h2>" + blocks + "</section>";
         }).join("");
         return '<div class="reading-progress" id="readingProgress" aria-hidden="true"></div>' +
           head(p) +
           '<div class="article-layout">' +
-            '<nav class="toc" aria-label="Contents"><div class="toc__inner">' + toc + "</div></nav>" +
+            '<nav class="toc" aria-label="本篇目次"><p class="toc__head">本篇目次</p><div class="toc__inner">' + toc + "</div></nav>" +
             '<div class="article-body prose">' + body + "</div>" +
           "</div>";
       },
 
-      /* ---- dashboard: stat cards + bar + line + table ---- */
-      dashboard: function (p) {
-        var stats = (p.stats || []).map(function (s) {
-          var d = s.delta;
-          var deltaHtml = (d === 0 || d) ?
-            '<span class="stat-delta stat-delta--' + (d >= 0 ? "up" : "down") + '">' +
-              (d >= 0 ? "▲ " : "▼ ") + esc(String(Math.abs(d))) + "%</span>" : "";
-          return '<div class="stat-card" data-item>' +
-            '<span class="stat-label">' + esc(t(s.label)) + "</span>" +
-            '<b class="stat-value">' + esc(String(s.value)) +
-              (t(s.unit) ? ' <span class="stat-unit">' + esc(t(s.unit)) + "</span>" : "") + "</b>" +
-            deltaHtml + "</div>";
-        }).join("");
-        var bars = p.bars ? '<figure class="panel" data-item><figcaption>' + esc(t(p.bars.title)) + "</figcaption>" +
-          '<div class="chart-wrap">' + barChart(p.bars.series || []) + "</div></figure>" : "";
-        var line = p.line ? '<figure class="panel" data-item><figcaption>' + esc(t(p.line.title)) + "</figcaption>" +
-          '<div class="chart-wrap">' + lineChart(p.line.points || []) + "</div></figure>" : "";
-        var table = "";
-        if (p.table) {
-          var thead = (p.table.columns || []).map(function (c) { return "<th>" + esc(t(c.label)) + "</th>"; }).join("");
-          var tbody = (p.table.rows || []).map(function (row) {
-            return "<tr data-item>" + (p.table.columns || []).map(function (c) {
-              var v = row[c.key];
-              return "<td>" + esc(typeof v === "object" ? t(v) : String(v == null ? "" : v)) + "</td>";
-            }).join("") + "</tr>";
-          }).join("");
-          table = '<div class="panel panel--wide" data-item><div class="table-wrap"><table class="data-table">' +
-            "<thead><tr>" + thead + "</tr></thead><tbody>" + tbody + "</tbody></table></div></div>";
-        }
-        return head(p) +
-          '<div class="stat-grid">' + stats + "</div>" +
-          '<div class="panel-grid">' + bars + line + "</div>" + table;
-      },
-
-      /* ---- timeline: dated event cards down a rail ---- */
+      /* ---- timeline: year-grouped register with a density strip ---- */
       timeline: function (p) {
-        var items = (p.events || []).map(function (ev) {
-          var src = ev.url ? '<a class="tl-src" href="' + esc(ev.url) +
-            '" target="_blank" rel="noopener">來源 ↗</a>' : "";
-          return '<li class="tl-item" data-item><div class="tl-dot" aria-hidden="true"></div>' +
-            '<div class="tl-card"><span class="tl-date">' + esc(t(ev.date)) + "</span>" +
-            '<h3 class="tl-title">' + esc(t(ev.title)) + "</h3>" +
-            '<p class="tl-body">' + esc(t(ev.body)) + "</p>" + src + "</div></li>";
+        var cats = tlCats(p);
+        var events = p.events || [];
+        var years = [], byYear = {};
+        events.forEach(function (ev, i) {
+          var y = String(ev.date).slice(0, 4);
+          if (!byYear[y]) { byYear[y] = []; years.push(y); }
+          byYear[y].push({ ev: ev, i: i });
+        });
+        var maxN = Math.max.apply(null, years.map(function (y) { return byYear[y].length; }).concat([1]));
+
+        /* density strip: one square per event, stacked per year */
+        var hist = years.map(function (y) {
+          var sq = byYear[y].map(function (o) {
+            return '<span class="sq sq--' + esc(o.ev.cat || "") + (o.ev.milestone ? " sq--key" : "") + '"></span>';
+          }).join("");
+          return '<a class="hist__col" href="#y' + y + '" aria-label="' + y + " 年，" + byYear[y].length + ' 則">' +
+            '<span class="hist__n">' + byYear[y].length + "</span>" +
+            '<span class="hist__stack" style="--rows:' + maxN + '">' + sq + "</span>" +
+            '<span class="hist__year"><span class="hist__cent">' + y.slice(0, 2) + "</span>" + y.slice(2) + "</span></a>";
         }).join("");
-        return head(p) + '<ol class="timeline">' + items + "</ol>";
+
+        var counts = {};
+        events.forEach(function (ev) { counts[ev.cat] = (counts[ev.cat] || 0) + 1; });
+        var nKey = events.filter(function (ev) { return ev.milestone; }).length;
+        var chips = '<button class="chip chip--active" type="button" data-cat="">全部 <span class="chip__n">' + events.length + "</span></button>" +
+          (p.categories || []).map(function (c) {
+            return '<button class="chip chip--cat" type="button" data-cat="' + esc(c.key) + '">' +
+              '<span class="sw sw--' + esc(c.key) + '" aria-hidden="true"></span>' + esc(c.zh) +
+              ' <span class="chip__n">' + (counts[c.key] || 0) + "</span></button>";
+          }).join("") +
+          '<button class="chip" type="button" data-cat="milestone"><span class="sw sw--key" aria-hidden="true"></span>里程碑 <span class="chip__n">' + nKey + "</span></button>";
+
+        var sections = years.map(function (y) {
+          var rows = byYear[y].map(function (o) {
+            var ev = o.ev;
+            var md = String(ev.date).slice(5) || "";
+            var src = ev.url ? '<a class="tl-src" href="' + esc(ev.url) + '" target="_blank" rel="noopener">來源</a>' : "";
+            return '<li class="tl-ev tl-ev--' + esc(ev.cat || "") + (ev.milestone ? " tl-ev--key" : "") + '" ' +
+                'data-cat="' + esc(ev.cat || "") + '"' + (ev.milestone ? " data-key" : "") + ' id="ev-' + o.i + '">' +
+              '<div class="tl-ev__main">' +
+                '<p class="tl-ev__meta"><time class="tl-ev__date" datetime="' + esc(ev.date) + '">' + esc(md) + "</time>" +
+                  '<span class="tl-ev__cat">' + esc(cats[ev.cat] || "") + "</span>" +
+                  (ev.milestone ? '<span class="tl-ev__key">里程碑</span>' : "") + "</p>" +
+                '<h3 class="tl-ev__title">' + esc(t(ev.title)) + "</h3>" +
+                '<p class="tl-ev__body">' + esc(t(ev.body)) + src + "</p>" +
+              "</div></li>";
+          }).join("");
+          return '<section class="tl-year" id="y' + y + '" aria-labelledby="y' + y + '-h">' +
+            '<h2 class="tl-year__head" id="y' + y + '-h"><span class="tl-year__num">' + y + "</span>" +
+              '<span class="tl-year__n">' + byYear[y].length + " 則</span></h2>" +
+            '<ol class="tl-list">' + rows + "</ol></section>";
+        }).join("");
+
+        return head(p) +
+          '<div class="tl-overview">' +
+            '<nav class="hist" aria-label="依年份跳至">' + hist + "</nav>" +
+            '<div class="chips tl-filter" role="group" aria-label="依性質篩選">' + chips + "</div>" +
+          "</div>" +
+          '<p class="result-count" id="resultCount" aria-live="polite"></p>' +
+          '<div class="tl-years" id="tlYears">' + sections + "</div>";
       },
 
       /* ---- table: searchable + sortable ---- */
       table: function (p) {
         return head(p) +
           '<div class="toolbar">' +
-            '<input id="search" class="search" type="search" autocomplete="off" ' +
-              'placeholder="' + (L.state.lang === "en" ? "Search…" : "搜尋…") + '" ' +
-              'aria-label="' + (L.state.lang === "en" ? "Search" : "搜尋") + '" />' +
+            '<input id="search" class="search" type="search" autocomplete="off" placeholder="搜尋來源標題或網址…" aria-label="搜尋" />' +
             '<div class="chips" id="tableChips"></div>' +
           "</div>" +
           '<div class="table-wrap"><table class="data-table" id="dataTable"><thead></thead><tbody></tbody></table></div>';
-      },
-
-      /* ---- bento: asymmetric tile grid ---- */
-      bento: function (p) {
-        var tiles = (p.tiles || []).map(function (tile) {
-          return '<article class="tile tile--' + esc(tile.size || "sm") + (tile.accent ? " tile--accent" : "") + '" data-item>' +
-            (tile.icon ? '<span class="material-symbols-rounded tile__icon" aria-hidden="true">' + esc(tile.icon) + "</span>" : "") +
-            (tile.value ? '<b class="tile__value">' + esc(tile.value) + "</b>" : "") +
-            '<h3 class="tile__title">' + esc(t(tile.title)) + "</h3>" +
-            (t(tile.body) ? '<p class="tile__body">' + esc(t(tile.body)) + "</p>" : "") + "</article>";
-        }).join("");
-        return head(p) + '<div class="bento">' + tiles + "</div>";
-      },
-
-      /* ---- kanban: cards grouped by status column ---- */
-      kanban: function (p) {
-        var cols = (p.columns || []).map(function (col) {
-          var cards = (p.cards || []).filter(function (c) { return c.column === col.key; }).map(function (c) {
-            var tags = (c.tags || []).map(function (g) { return '<span class="tag">' + esc(g) + "</span>"; }).join("");
-            return '<article class="kb-card" data-item><h3 class="kb-card__title">' + esc(t(c.title)) + "</h3>" +
-              (t(c.body) ? '<p class="kb-card__body">' + esc(t(c.body)) + "</p>" : "") +
-              (tags ? '<div class="card__tags">' + tags + "</div>" : "") + "</article>";
-          }).join("");
-          var count = (p.cards || []).filter(function (c) { return c.column === col.key; }).length;
-          return '<div class="kb-col"><div class="kb-col__head">' + esc(t(col.label)) +
-            ' <span class="kb-col__count">' + count + "</span></div>" +
-            '<div class="kb-col__body">' + cards + "</div></div>";
-        }).join("");
-        return head(p) + '<div class="kanban">' + cols + "</div>";
-      },
-
-      /* ---- faq: searchable accordion ---- */
-      faq: function (p) {
-        var items = (p.qa || []).map(function (row) {
-          return '<details class="acc-item" data-item data-q="' + esc((t(row.q) + " " + t(row.a)).toLowerCase()) + '">' +
-            '<summary class="acc-q"><span>' + esc(t(row.q)) + "</span>" +
-            '<span class="material-symbols-rounded acc-chevron" aria-hidden="true">expand_more</span></summary>' +
-            '<div class="acc-a">' + esc(t(row.a)) + "</div></details>";
-        }).join("");
-        return head(p) +
-          '<div class="toolbar"><input id="search" class="search" type="search" autocomplete="off" ' +
-            'placeholder="' + (L.state.lang === "en" ? "Search…" : "搜尋…") + '" ' +
-            'aria-label="' + (L.state.lang === "en" ? "Search" : "搜尋") + '" /></div>' +
-          '<div class="accordion" id="accordion">' + items + "</div>";
-      },
-
-      /* ---- comparison: plans (cols) x features (rows) ---- */
-      comparison: function (p) {
-        var plans = p.plans || [], feats = p.features || [];
-        var thead = '<th scope="col"></th>' + plans.map(function (pl) {
-          return '<th scope="col" class="' + (pl.highlight ? "cmp-col--hl" : "") + '">' +
-            '<div class="cmp-plan">' + esc(t(pl.name)) + "</div>" +
-            '<div class="cmp-price">' + esc(t(pl.price)) + "</div>" +
-            (t(pl.note) ? '<div class="cmp-note">' + esc(t(pl.note)) + "</div>" : "") + "</th>";
-        }).join("");
-        var rows = feats.map(function (f) {
-          var cells = plans.map(function (pl) {
-            var v = f.values ? f.values[pl.key] : undefined;
-            var cell;
-            if (v === true) cell = '<span class="cmp-yes material-symbols-rounded" aria-label="yes">check</span>';
-            else if (v === false || v == null) cell = '<span class="cmp-no" aria-label="no">—</span>';
-            else cell = esc(t(v));
-            return '<td class="' + (pl.highlight ? "cmp-col--hl" : "") + '">' + cell + "</td>";
-          }).join("");
-          return '<tr data-item><th scope="row" class="cmp-feat">' + esc(t(f.label)) + "</th>" + cells + "</tr>";
-        }).join("");
-        return head(p) + '<div class="table-wrap"><table class="cmp-table">' +
-          "<thead><tr>" + thead + "</tr></thead><tbody>" + rows + "</tbody></table></div>";
-      },
-
-      /* ---- leaderboard: ranked list + tier grouping toggle ---- */
-      leaderboard: function (p) {
-        var listLabel = L.state.lang === "en" ? "List" : "排名";
-        var tierLabel = L.state.lang === "en" ? "Tiers" : "階級";
-        return head(p) +
-          '<div class="seg" role="tablist">' +
-            '<button class="seg__btn seg__btn--active" type="button" data-view="list">' + esc(listLabel) + "</button>" +
-            '<button class="seg__btn" type="button" data-view="tier">' + esc(tierLabel) + "</button>" +
-          "</div>" +
-          '<div id="lbView"></div>';
-      },
-
-      /* ---- scrolly: sticky visual + stepped narrative ---- */
-      scrolly: function (p) {
-        var steps = (p.steps || []).map(function (s, i) {
-          return '<div class="scrolly-step" data-item data-step="' + i + '"><p>' + esc(t(s.text)) + "</p></div>";
-        }).join("");
-        return head(p) +
-          '<div class="scrolly">' +
-            '<div class="scrolly-sticky"><div class="scrolly-visual" id="scrollyVisual"></div></div>' +
-            '<div class="scrolly-steps">' + steps + "</div>" +
-          "</div>";
-      },
-
-      /* ---- map: Leaflet map + list (needs Leaflet on the page) ---- */
-      map: function (p) {
-        return head(p) +
-          '<div class="map-layout">' +
-            '<div class="map-box" id="map" role="application" aria-label="Map"></div>' +
-            '<ul class="map-list" id="mapList"></ul>' +
-          "</div>";
       },
 
       /* ---- glossary: searchable + category-filtered term list ---- */
@@ -349,13 +328,13 @@
        WIRING (interactions) — keyed by layout, run after innerHTML is set
        ===================================================================== */
     var WIRE = {
-      hub: function () { animateCounters(); },
-
       gallery: function (p) {
         var grid = document.getElementById("grid");
         var search = document.getElementById("search");
         var count = document.getElementById("resultCount");
         var chips = [].slice.call(pageEl.querySelectorAll(".chip"));
+        var catMap = {};
+        (p.categories || []).forEach(function (c) { catMap[c.key] = c[L.state.lang] || c.zh || c.en; });
         var st = { q: "", cat: "" };
 
         function matches(item) {
@@ -368,13 +347,14 @@
           var rows = (p.items || []).filter(matches);
           grid.innerHTML = rows.map(function (item) {
             var tags = (item.tags || []).map(function (g) { return '<span class="tag">' + esc(g) + "</span>"; }).join("");
-            return '<article class="card" tabindex="0" role="button" data-item data-slug="' + esc(item.slug) + '" ' +
-              'aria-label="' + esc(t(item.title)) + '">' +
+            return '<article class="card' + (item.force ? " card--" + esc(item.force) : "") + '" tabindex="0" role="button" ' +
+                'data-item data-slug="' + esc(item.slug) + '" aria-label="' + esc(t(item.title)) + '">' +
+              '<p class="card__meta">' + stamp(item.force) + '<span class="card__cat">' + esc(catMap[item.category] || "") + "</span></p>" +
               '<h3 class="card__title">' + esc(t(item.title)) + "</h3>" +
               '<p class="card__summary">' + esc(t(item.summary)) + "</p>" +
-              (tags ? '<div class="card__tags">' + tags + "</div>" : "") + "</article>";
+              (tags ? '<p class="card__tags">' + tags + "</p>" : "") + "</article>";
           }).join("");
-          if (count) count.textContent = rows.length + (L.state.lang === "en" ? " result(s)" : " 筆結果");
+          if (count) count.textContent = rows.length === (p.items || []).length ? "共 " + rows.length + " 則" : rows.length + " 筆結果";
           wireCards();
         }
         function wireCards() {
@@ -398,13 +378,15 @@
             .map(function (para) { return "<p>" + esc(para) + "</p>"; }).join("");
           var srcArr = (item.sources && item.sources.length) ? item.sources
             : (item.url ? [{ url: item.url }] : []);
-          var refs = srcArr.length ? '<div class="dialog__src"><h4 class="ref-head">參考來源</h4>' +
+          var refs = srcArr.length ? '<div class="dialog__src"><h3 class="ref-head">參考來源</h3>' +
             '<ul class="ref-list">' + srcArr.map(function (s) {
               return '<li><a class="ref-link" href="' + esc(s.url) + '" target="_blank" rel="noopener">' +
-                esc(s.title || s.url) + " ↗</a></li>";
+                esc(s.title || s.url) + "</a></li>";
             }).join("") + "</ul></div>" : "";
-          body.innerHTML = '<h2 id="dialogTitle">' + esc(t(item.title)) + "</h2>" +
-            (tags ? '<div class="card__tags">' + tags + "</div>" : "") + paras + refs;
+          body.innerHTML =
+            '<p class="card__meta">' + stamp(item.force) + '<span class="card__cat">' + esc(catMap[item.category] || "") + "</span></p>" +
+            '<h2 id="dialogTitle">' + esc(t(item.title)) + "</h2>" +
+            (tags ? '<p class="card__tags">' + tags + "</p>" : "") + paras + refs;
           if (!dlg.open) dlg.showModal();
           if (location.hash.slice(1) !== slug) history.replaceState(null, "", "#" + slug);
         }
@@ -446,7 +428,7 @@
         function onScroll() {
           var h = document.documentElement;
           var max = h.scrollHeight - h.clientHeight;
-          if (prog) prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+          if (prog) prog.style.transform = "scaleX(" + (max > 0 ? h.scrollTop / max : 0) + ")";
         }
         window.addEventListener("scroll", onScroll, { passive: true });
         onScroll();
@@ -466,7 +448,36 @@
         }
       },
 
-      dashboard: function () { /* static charts; nothing to wire */ },
+      timeline: function () {
+        var chips = [].slice.call(pageEl.querySelectorAll(".tl-filter .chip"));
+        var evs = [].slice.call(pageEl.querySelectorAll(".tl-ev"));
+        var years = [].slice.call(pageEl.querySelectorAll(".tl-year"));
+        var count = document.getElementById("resultCount");
+        function apply(cat) {
+          var shown = 0;
+          evs.forEach(function (li) {
+            var hit = !cat || (cat === "milestone" ? li.hasAttribute("data-key") : li.dataset.cat === cat);
+            li.hidden = !hit;
+            if (hit) shown++;
+          });
+          years.forEach(function (sec) {
+            var n = sec.querySelectorAll(".tl-ev:not([hidden])").length;
+            sec.hidden = n === 0;
+            var lab = sec.querySelector(".tl-year__n");
+            if (lab) lab.textContent = n + " 則";
+          });
+          pageEl.querySelector(".hist").setAttribute("data-filter", cat || "");
+          if (count) count.textContent = cat ? "篩選後 " + shown + " 則" : "";
+        }
+        chips.forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            chips.forEach(function (c) { c.classList.remove("chip--active"); c.setAttribute("aria-pressed", "false"); });
+            chip.classList.add("chip--active");
+            chip.setAttribute("aria-pressed", "true");
+            apply(chip.dataset.cat || "");
+          });
+        });
+      },
 
       table: function (p) {
         var table = document.getElementById("dataTable");
@@ -486,8 +497,8 @@
         function paintHead() {
           thead.innerHTML = "<tr>" + cols.map(function (c) {
             var arrow = st.sortKey === c.key ? (st.dir > 0 ? " ▲" : " ▼") : "";
-            return '<th class="th-sort" data-key="' + esc(c.key) + '" role="button" tabindex="0" aria-label="Sort by ' +
-              esc(t(c.label)) + '">' + esc(t(c.label)) + esc(arrow) + "</th>";
+            return '<th class="th-sort th--' + esc(c.type || "text") + '" data-key="' + esc(c.key) + '" role="button" tabindex="0" aria-label="依' +
+              esc(t(c.label)) + '排序">' + esc(t(c.label)) + esc(arrow) + "</th>";
           }).join("") + "</tr>";
           [].forEach.call(thead.querySelectorAll(".th-sort"), function (th) {
             th.addEventListener("click", function () { sortBy(th.dataset.key); });
@@ -513,17 +524,16 @@
             return "<tr data-item>" + cols.map(function (c) {
               if (c.type === "link") {
                 var u = row[c.key];
-                return '<td><a class="row-link" href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u) + "</a></td>";
+                return '<td class="td--link"><a class="row-link" href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u) + "</a></td>";
               }
-              return "<td>" + esc(cellText(row, c)) + "</td>";
+              return '<td class="td--' + esc(c.type || "text") + '">' + esc(cellText(row, c)) + "</td>";
             }).join("") + "</tr>";
           }).join("");
         }
         if (filterCol) {
           var vals = [];
           (p.rows || []).forEach(function (row) { var v = cellText(row, filterCol); if (vals.indexOf(v) === -1) vals.push(v); });
-          var allLabel = L.state.lang === "en" ? "All" : "全部";
-          chipsBox.innerHTML = '<button class="chip chip--active" type="button" data-v="">' + esc(allLabel) + "</button>" +
+          chipsBox.innerHTML = '<button class="chip chip--active" type="button" data-v="">全部</button>' +
             vals.map(function (v) { return '<button class="chip" type="button" data-v="' + esc(v) + '">' + esc(v) + "</button>"; }).join("");
           [].forEach.call(chipsBox.querySelectorAll(".chip"), function (chip) {
             chip.addEventListener("click", function () {
@@ -536,121 +546,6 @@
         }
         if (search) search.addEventListener("input", function () { st.q = this.value.trim().toLowerCase(); paint(); });
         paint();
-      },
-
-      bento: function () { /* static */ },
-      kanban: function () { /* static */ },
-
-      faq: function () {
-        var search = document.getElementById("search");
-        var items = [].slice.call(pageEl.querySelectorAll(".acc-item"));
-        if (search) search.addEventListener("input", function () {
-          var q = this.value.trim().toLowerCase();
-          items.forEach(function (it) {
-            var hit = !q || (it.dataset.q || "").indexOf(q) !== -1;
-            it.style.display = hit ? "" : "none";
-          });
-        });
-      },
-
-      comparison: function () { /* static */ },
-
-      leaderboard: function (p) {
-        var view = document.getElementById("lbView");
-        var btns = [].slice.call(pageEl.querySelectorAll(".seg__btn"));
-        var entries = (p.entries || []).slice().sort(function (a, b) { return b.score - a.score; });
-        function row(e, rank) {
-          return '<li class="lb-row" data-item>' +
-            (rank ? '<span class="lb-rank">' + rank + "</span>" : "") +
-            '<span class="lb-tier lb-tier--' + esc(e.tier || "") + '">' + esc(e.tier || "") + "</span>" +
-            '<span class="lb-name">' + esc(t(e.name)) + "</span>" +
-            '<span class="lb-meta">' + esc(t(e.meta)) + "</span>" +
-            '<span class="lb-score">' + esc(String(e.score)) + "</span></li>";
-        }
-        function listView() {
-          view.innerHTML = '<ol class="lb-list">' + entries.map(function (e, i) { return row(e, i + 1); }).join("") + "</ol>";
-        }
-        function tierView() {
-          var tiers = [];
-          entries.forEach(function (e) { if (tiers.indexOf(e.tier) === -1) tiers.push(e.tier); });
-          view.innerHTML = tiers.map(function (tier) {
-            var rows = entries.filter(function (e) { return e.tier === tier; }).map(function (e) { return row(e); }).join("");
-            return '<div class="lb-tier-group"><div class="lb-tier-head lb-tier--' + esc(tier) + '">' + esc(tier) + "</div>" +
-              '<ol class="lb-list">' + rows + "</ol></div>";
-          }).join("");
-        }
-        btns.forEach(function (b) {
-          b.addEventListener("click", function () {
-            btns.forEach(function (x) { x.classList.remove("seg__btn--active"); });
-            b.classList.add("seg__btn--active");
-            if (b.dataset.view === "tier") tierView(); else listView();
-          });
-        });
-        listView();
-      },
-
-      scrolly: function (p) {
-        var visual = document.getElementById("scrollyVisual");
-        var steps = [].slice.call(pageEl.querySelectorAll(".scrolly-step"));
-        function paintVisual(i) {
-          var s = (p.steps || [])[i]; if (!s) return;
-          var v = s.visual || {};
-          if (v.type === "bars") {
-            visual.innerHTML = '<div class="chart-wrap">' + barChart(v.bars || [], v.color) + "</div>";
-          } else {
-            visual.innerHTML = '<div class="scrolly-stat" style="color:' + esc(v.color || "var(--primary)") + '">' +
-              esc(t(v.value)) + "</div>";
-          }
-        }
-        paintVisual(0);
-        if ("IntersectionObserver" in window) {
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (en) {
-              if (en.isIntersecting) {
-                steps.forEach(function (s) { s.classList.remove("scrolly-step--active"); });
-                en.target.classList.add("scrolly-step--active");
-                paintVisual(parseInt(en.target.dataset.step, 10) || 0);
-              }
-            });
-          }, { rootMargin: "-45% 0px -45% 0px" });
-          steps.forEach(function (s) { io.observe(s); });
-          teardowns.push(function () { io.disconnect(); });
-        }
-      },
-
-      map: function (p) {
-        var listEl = document.getElementById("mapList");
-        var places = p.places || [];
-        listEl.innerHTML = places.map(function (pl) {
-          return '<li class="place" data-item data-slug="' + esc(pl.slug) + '" tabindex="0" role="button" ' +
-            'aria-label="' + esc(t(pl.name)) + '"><b>' + esc(t(pl.name)) + "</b>" +
-            '<span>' + esc(t(pl.body)) + "</span></li>";
-        }).join("");
-
-        if (typeof window.L === "undefined" || !window.L.map) {
-          // Leaflet not loaded (offline / blocked): list-only graceful fallback.
-          document.getElementById("map").innerHTML =
-            '<div class="map-fallback">' + esc(L.state.lang === "en" ? "Map unavailable offline — see the list." : "離線時地圖無法載入 — 請看清單。") + "</div>";
-          return;
-        }
-        var map = window.L.map("map", { scrollWheelZoom: false });
-        window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution: "© OpenStreetMap", maxZoom: 19
-        }).addTo(map);
-        var markers = {}, group = [];
-        places.forEach(function (pl) {
-          /* alt + title give Leaflet's marker <img role="button"> an accessible name */
-          var m = window.L.marker([pl.lat, pl.lng], { alt: t(pl.name), title: t(pl.name), keyboard: true })
-            .addTo(map).bindPopup("<b>" + esc(t(pl.name)) + "</b><br>" + esc(t(pl.body)));
-          markers[pl.slug] = m; group.push([pl.lat, pl.lng]);
-        });
-        if (group.length) map.fitBounds(group, { padding: [30, 30] });
-        [].forEach.call(listEl.querySelectorAll(".place"), function (li) {
-          function go() { var m = markers[li.dataset.slug]; if (m) { map.panTo(m.getLatLng()); m.openPopup(); } }
-          li.addEventListener("click", go);
-          li.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
-        });
-        teardowns.push(function () { try { map.remove(); } catch (e) {} });
       },
 
       glossary: function (p) {
@@ -697,7 +592,8 @@
           view.innerHTML = '<p class="quiz-score" id="quizScore"></p><div class="quiz">' +
             (p.quiz || []).map(function (q, qi) {
               var opts = (q.options || []).map(function (o, oi) {
-                return '<button class="quiz-opt" type="button" data-o="' + oi + '">' + esc(t(o)) + "</button>";
+                return '<button class="quiz-opt" type="button" data-o="' + oi + '">' +
+                  '<span class="quiz-opt__key">' + "ABCDEFGH".charAt(oi) + "</span>" + esc(t(o)) + "</button>";
               }).join("");
               return '<div class="quiz-card" data-item data-answer="' + esc(String(q.answer)) + '">' +
                 '<p class="quiz-q"><span class="quiz-n">' + (qi + 1) + "</span>" + esc(t(q.q)) + "</p>" +
@@ -750,36 +646,14 @@
       }
     };
 
-    /* ---- hero count-up (shared by hub) ---- */
-    function animateCounters() {
-      var els = [].slice.call(pageEl.querySelectorAll(".hero__stat-value[data-count]"));
-      if (!els.length) return;
-      function run(el) {
-        var target = parseFloat(el.dataset.count) || 0, dur = 1000, start = null;
-        function step(ts) {
-          if (start === null) start = ts;
-          var pr = Math.min(1, (ts - start) / dur), eased = 1 - Math.pow(1 - pr, 3);
-          el.textContent = String(Math.round(target * eased));
-          if (pr < 1) requestAnimationFrame(step); else el.textContent = String(target);
-        }
-        requestAnimationFrame(step);
-      }
-      if (!("IntersectionObserver" in window)) { els.forEach(run); return; }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { run(en.target); io.unobserve(en.target); } });
-      }, { threshold: 0.4 });
-      els.forEach(function (el) { io.observe(el); });
-      teardowns.push(function () { io.disconnect(); });
-    }
-
     /* =====================================================================
-       RENDER the current page; re-runnable on language switch
+       RENDER the current page
        ===================================================================== */
     function render() {
       teardowns.forEach(function (fn) { try { fn(); } catch (e) {} });
       teardowns = [];
       var p = L.currentPage();
-      if (!p) { pageEl.innerHTML = '<p class="empty">No page data.</p>'; return; }
+      if (!p) { pageEl.innerHTML = '<p class="empty">找不到這一頁的資料。</p>'; return; }
       var fn = RENDERERS[p.layout] || RENDERERS.gallery;
       pageEl.className = "page page--" + p.layout;
       pageEl.innerHTML = fn(p);

@@ -10,8 +10,9 @@ window.SITE_PAGES = [
     "slug": "home",
     "layout": "hub",
     "icon": "travel_explore",
-    "title": "總覽",
-    "subtitle": "選一個面向開始探索。AI 治理橫跨法律、倫理、技術、商業與地緣政治——本站把它整理成一張可瀏覽、可搜尋的地圖。",
+    "title": "首頁",
+    "subtitle": "全球人工智慧治理的法規、標準、判例與台灣在地發展，彙編成一部可查閱的中文百科。",
+    "dateline": "內容截至 2026 年 6 月",
     "stats": [
       {
         "value": 7,
@@ -36,6 +37,80 @@ window.SITE_PAGES = [
       {
         "value": 267,
         "label": "引用來源"
+      }
+    ],
+    "approaches": [
+      {
+        "region": "歐盟",
+        "approach": "立法導向",
+        "force": "binding",
+        "body": "《AI 法》依風險分四級，違反禁止規定最高罰全球年營收 7%；2024 年生效，2026 年高風險義務全面適用。",
+        "href": "regulation.html#eu-ai-act-risk-tiers"
+      },
+      {
+        "region": "中國",
+        "approach": "分類規範",
+        "force": "binding",
+        "body": "演算法推薦、深度合成、生成式 AI、內容標識各訂專門規章，搭配演算法備案與標識義務。",
+        "href": "regulation.html#cn-generative-ai"
+      },
+      {
+        "region": "美國",
+        "approach": "行政命令",
+        "force": "mixed",
+        "body": "聯邦層級靠總統行政命令與 NIST 自願框架，政權更替即翻轉；科羅拉多、加州等州法補位。",
+        "href": "regulation.html#us-eo-14179"
+      },
+      {
+        "region": "台灣・日本・英國",
+        "approach": "原則導向",
+        "force": "soft",
+        "body": "以基本法或白皮書宣示原則、不直接設罰則，細則交由各目的事業主管機關訂定。",
+        "href": "taiwan.html#ai-basic-act"
+      }
+    ],
+    "volumes": [
+      {
+        "no": "第一編",
+        "name": "規範與標準",
+        "pages": [
+          "regulation",
+          "standards"
+        ]
+      },
+      {
+        "no": "第二編",
+        "name": "原則與實務",
+        "pages": [
+          "ethics",
+          "corporate",
+          "ip"
+        ]
+      },
+      {
+        "no": "第三編",
+        "name": "在地與地緣",
+        "pages": [
+          "taiwan",
+          "geopolitics"
+        ]
+      },
+      {
+        "no": "第四編",
+        "name": "判例與紀事",
+        "pages": [
+          "cases",
+          "timeline"
+        ]
+      },
+      {
+        "no": "附錄",
+        "name": "工具與出處",
+        "pages": [
+          "glossary",
+          "learn",
+          "sources"
+        ]
       }
     ]
   },
@@ -80,6 +155,7 @@ window.SITE_PAGES = [
     "items": [
       {
         "slug": "eu-ai-act-risk-tiers",
+        "force": "binding",
         "category": "eu",
         "title": "歐盟 AI 法：風險分級架構（EU AI Act）",
         "summary": "全球首部 AI 橫向立法，依危害高低將 AI 系統分為不可接受、高風險、有限風險、最小風險四層，義務自 2025 年起分波生效至 2027 年。",
@@ -107,6 +183,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "eu-ai-act-gpai",
+        "force": "binding",
         "category": "eu",
         "title": "歐盟 AI 法：通用型 AI 義務（GPAI）",
         "summary": "訓練算力逾 10²³ FLOPs 的 GPAI 模型須維護技術文件、公開訓練資料摘要；逾 10²⁵ FLOPs 的「系統性風險」模型另須紅隊測試與事件通報。",
@@ -134,6 +211,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "us-eo-14110",
+        "force": "binding",
         "category": "us",
         "title": "美國拜登行政命令 EO 14110（2023）",
         "summary": "要求大型基礎模型開發商向聯邦政府提交安全測試結果，並指示 NIST 制訂標準；川普於 2025 年 1 月 20 日就職首日予以廢止。",
@@ -157,6 +235,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "us-eo-14179",
+        "force": "binding",
         "category": "us",
         "title": "美國川普行政命令 EO 14179（2025）",
         "summary": "確立「美國 AI 霸主地位」為國家優先目標，指示移除聯邦 AI 法規障礙、促進開源模型、清除意識形態偏見，並取代拜登時期全部 AI 政策。",
@@ -184,6 +263,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "us-federal-preemption-eo",
+        "force": "binding",
         "category": "us",
         "title": "美國川普聯邦─州 AI 框架行政命令（2025-12）",
         "summary": "設立 AI 訴訟特別工作組（AI Litigation Task Force），自 2026 年 1 月起以聯邦訴訟壓制被認定阻礙聯邦 AI 政策的各州法律，引發憲法爭議。",
@@ -207,6 +287,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "nist-ai-rmf",
+        "force": "soft",
         "category": "us",
         "title": "NIST AI 風險管理框架（AI RMF 1.0）",
         "summary": "美國 NIST 2023 年發布的自願性框架（NIST AI 100-1），以 Govern、Map、Measure、Manage 四大核心功能引導組織識別與應對 AI 風險，聯邦機構及業界廣泛採用。",
@@ -226,6 +307,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "us-colorado-ai-act",
+        "force": "binding",
         "category": "us",
         "title": "科羅拉多州 AI 法（Colorado AI Act, SB 24-205）",
         "summary": "全美首部完整州級 AI 法，規範高風險 AI 系統開發者與部署者，涵蓋就業、教育、金融等八大領域，原定 2026 年 6 月 30 日生效。",
@@ -249,6 +331,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "us-california-ai-laws",
+        "force": "binding",
         "category": "us",
         "title": "加州 AI 相關立法（AB 2013 等）",
         "summary": "加州已有逾 38 項 AI 法律，AB 2013 要求 AI 開發者自 2026 年 1 月起公開訓練資料說明；SB 1047 大型模型安全法案遭州長否決。",
@@ -272,6 +355,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "cn-algo-recommendation",
+        "force": "binding",
         "category": "cn",
         "title": "中國《互聯網信息服務算法推薦管理規定》（2022）",
         "summary": "全球首部針對算法推薦服務的部門規章，要求具輿論屬性的服務者完成算法備案、提供用戶關閉個性化推薦選項，並保護未成年人。",
@@ -291,6 +375,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "cn-deep-synthesis",
+        "force": "binding",
         "category": "cn",
         "title": "中國《互聯網信息服務深度合成管理規定》（2023）",
         "summary": "規範深偽（Deepfake）技術服務，要求服務使用者實名認證、合成內容顯著標識，並禁止製作散布政治謠言；2023 年 1 月 10 日生效。",
@@ -314,6 +399,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "cn-generative-ai",
+        "force": "binding",
         "category": "cn",
         "title": "中國《生成式人工智能服務管理暫行辦法》（2023）",
         "summary": "全球首部生成式 AI 專屬法規，要求服務提供者確保內容符合社會主義核心價值觀、訓練資料合規、用戶實名，並完成算法備案；2023 年 8 月 15 日生效。",
@@ -337,6 +423,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "cn-ai-content-labeling",
+        "force": "binding",
         "category": "cn",
         "title": "中國《人工智能生成合成內容標識辦法》（2025）",
         "summary": "要求 AI 生成內容同時具備使用者可感知的「顯式標識」與技術浮水印等「隱式標識」，配套強制性國家標準（GB），2025 年 9 月 1 日生效。",
@@ -360,6 +447,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "uk-pro-innovation",
+        "force": "soft",
         "category": "uk",
         "title": "英國親創新 AI 監管方針與 AISI（2023–2025）",
         "summary": "不設新的 AI 專屬立法，由 FCA、ICO、CMA 等現有機構在各自領域執行五大跨部門原則；AI Security Institute（AISI）負責前沿模型安全評估。",
@@ -387,6 +475,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "kr-ai-basic-act",
+        "force": "binding",
         "category": "apac",
         "title": "南韓《人工智能基本法》（AI Basic Act，2024）",
         "summary": "南韓國會 2024 年 12 月通過、2026 年 1 月 22 日正式生效，使南韓成為繼歐盟後全球第二個通過全面 AI 法律的主要法域。",
@@ -410,6 +499,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "jp-ai-promotion-act",
+        "force": "binding",
         "category": "apac",
         "title": "日本《人工智能相關技術研究開發及利用推進法》（AI 推進法，2025）",
         "summary": "日本國會 2025 年 5 月通過、無明文罰則的促進型立法，強調業界自律，定位 AI 為國家戰略資產，並主導 G7 廣島 AI 進程國際軟法協調。",
@@ -433,6 +523,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "ca-aida",
+        "force": "pending",
         "category": "intl",
         "title": "加拿大《人工智能與資料法》（AIDA，Bill C-27）",
         "summary": "2022 年提出的聯邦 AI 立法，因 2025 年 1 月國會選舉解散而廢止；加拿大目前無聯邦層級 AI 專屬法律，聯邦立法重啟時程不明。",
@@ -452,6 +543,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "br-ai-bill",
+        "force": "pending",
         "category": "intl",
         "title": "巴西 AI 法案（Bill 2338/2023）",
         "summary": "2024 年 12 月巴西參議院通過，移交衆議院審查；截至 2026 年 6 月仍在委員會審議中，尚未簽署成法。",
@@ -471,6 +563,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "sg-ai-governance",
+        "force": "soft",
         "category": "apac",
         "title": "新加坡 AI 治理框架（Model AI Governance Framework 2.0）",
         "summary": "原則導向、非強制性框架，以 AI Verify 可信賴驗證工具為核心，2024 年更新，是亞太地區 AI 治理的重要參考標準。",
@@ -494,6 +587,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "intl-soft-law",
+        "force": "soft",
         "category": "intl",
         "title": "國際 AI 治理軟法：OECD 原則、G7 廣島進程、GPAI",
         "summary": "目前全球 AI 多邊協調以軟法為主，OECD AI 原則（2019）、G7 廣島 AI 進程（2023）、GPAI 組織尚未形成具法律效力的國際條約。",
@@ -519,7 +613,11 @@ window.SITE_PAGES = [
           }
         ]
       }
-    ]
+    ],
+    "volume": {
+      "no": "第一編",
+      "name": "規範與標準"
+    }
   },
   {
     "slug": "standards",
@@ -557,6 +655,7 @@ window.SITE_PAGES = [
     "items": [
       {
         "slug": "oecd-ai-principles",
+        "force": "soft",
         "category": "principle",
         "title": "OECD AI 原則（OECD Principles on Artificial Intelligence）",
         "summary": "全球首個政府間 AI 標準，五大價值原則涵蓋人本、透明、問責，2024 年更新納入生成式 AI 挑戰。",
@@ -584,6 +683,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "unesco-ai-ethics",
+        "force": "soft",
         "category": "principle",
         "title": "UNESCO AI 倫理建議書（UNESCO Recommendation on the Ethics of Artificial Intelligence）",
         "summary": "全球首個 AI 倫理全球標準文件，193 國鼓掌通過，涵蓋十大原則與十一大政策行動領域。",
@@ -611,6 +711,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "g7-hiroshima-ai-process",
+        "force": "soft",
         "category": "principle",
         "title": "G7 廣島 AI 進程（G7 Hiroshima AI Process, HAIP）",
         "summary": "G7 針對生成式 AI 與基礎模型制定的自願性國際框架，包含 11 項企業行為準則，建立在 OECD 原則之上。",
@@ -638,6 +739,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "unga-ai-resolution",
+        "force": "soft",
         "category": "un",
         "title": "聯合國大會 AI 決議（UNGA Resolutions on AI）",
         "summary": "2024 年聯合國大會史上首個 AI 決議，193 國一致通過，確立「安全可信 AI 服務永續發展」核心框架。",
@@ -661,6 +763,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "un-governing-ai-humanity",
+        "force": "soft",
         "category": "un",
         "title": "聯合國《為人類治理 AI》報告（Governing AI for Humanity）",
         "summary": "聯合國 AI 高階諮詢機構最終報告，提出七大全球治理建議，包括建立 AI 科學委員會與聯合國 AI 辦公室。",
@@ -684,6 +787,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "global-digital-compact",
+        "force": "soft",
         "category": "un",
         "title": "全球數位契約（Global Digital Compact, GDC）",
         "summary": "2024 年聯合國未來峰會通過，首個 AI 治理普世性政府間協議，確立獨立 AI 科學委員會與全球 AI 治理對話機制。",
@@ -707,6 +811,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "coe-ai-framework-convention",
+        "force": "binding",
         "category": "treaty",
         "title": "歐洲委員會 AI 框架公約（Council of Europe Framework Convention on AI）",
         "summary": "全球首個具法律約束力的 AI 國際條約，要求締約方確保 AI 生命週期符合人權、民主與法治，2024 年開放簽署。",
@@ -734,6 +839,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "iso-iec-42001",
+        "force": "soft",
         "category": "iso",
         "title": "ISO/IEC 42001 AI 管理系統標準（AI Management System）",
         "summary": "全球首個可供第三方認證的 AI 管理系統國際標準，規定組織建立 AIMS 的要求，2023 年 12 月發布。",
@@ -757,6 +863,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "iso-iec-23894",
+        "force": "soft",
         "category": "iso",
         "title": "ISO/IEC 23894 AI 風險管理指南（AI Risk Management Guidance）",
         "summary": "延伸 ISO 31000 通用風險管理至 AI 特有風險的國際標準，涵蓋偏見、穩健性、人機互動等風險類別。",
@@ -780,6 +887,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "iso-iec-tr-24028",
+        "force": "soft",
         "category": "iso",
         "title": "ISO/IEC TR 24028 AI 可信賴性概述（Overview of Trustworthiness in AI）",
         "summary": "定義 AI 可信賴性維度的技術報告，奠定後續 ISO AI 標準系列的概念基礎，2020 年發布。",
@@ -799,6 +907,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "iso-iec-22989",
+        "force": "soft",
         "category": "iso",
         "title": "ISO/IEC 22989 AI 概念與術語（AI Concepts and Terminology）",
         "summary": "為全球 AI 標準體系提供統一術語定義，已被 EU AI Act 等重要法規文本直接引用，2022 年發布。",
@@ -818,6 +927,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "bletchley-declaration",
+        "force": "soft",
         "category": "summit",
         "title": "布萊切利宣言（Bletchley Declaration）",
         "summary": "2023 年首屆 AI 安全峰會 28 國簽署，確立前沿 AI 安全的國際共識，並啟動各國 AI 安全研究所成立浪潮。",
@@ -841,6 +951,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "seoul-ai-summit-2024",
+        "force": "soft",
         "category": "summit",
         "title": "首爾 AI 峰會（AI Seoul Summit）與前沿 AI 安全承諾",
         "summary": "2024 年第二屆 AI 安全峰會，20 家頂尖 AI 企業簽署自願安全承諾，並確立首爾宣言與國際研究所合作架構。",
@@ -864,6 +975,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "international-aisi-network",
+        "force": "soft",
         "category": "summit",
         "title": "國際 AI 安全研究所網絡（International Network of AI Safety Institutes）",
         "summary": "首爾峰會後由 10 國及歐盟共同成立的政府間 AI 安全研究合作網絡，負責前沿 AI 風險評估與多邊安全測試。",
@@ -887,6 +999,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "paris-ai-action-summit-2025",
+        "force": "soft",
         "category": "summit",
         "title": "巴黎 AI 行動峰會（AI Action Summit, Paris 2025）",
         "summary": "2025 年第三屆 AI 峰會，58 國簽署永續 AI 宣言，峰會重心從安全轉向創新應用，但美國缺席主要宣言。",
@@ -910,6 +1023,7 @@ window.SITE_PAGES = [
       },
       {
         "slug": "new-delhi-ai-impact-summit-2026",
+        "force": "soft",
         "category": "summit",
         "title": "新德里 AI 影響峰會（AI Impact Summit, New Delhi 2026）",
         "summary": "2026 年第四屆 AI 峰會，92 國背書宣言，聚焦包容性與全球南方 AI 發展，宣告逾 2,000 億美元投資承諾。",
@@ -935,7 +1049,11 @@ window.SITE_PAGES = [
           }
         ]
       }
-    ]
+    ],
+    "volume": {
+      "no": "第一編",
+      "name": "規範與標準"
+    }
   },
   {
     "slug": "ethics",
@@ -1449,7 +1567,11 @@ window.SITE_PAGES = [
           }
         ]
       }
-    ]
+    ],
+    "volume": {
+      "no": "第二編",
+      "name": "原則與實務"
+    }
   },
   {
     "slug": "corporate",
@@ -1915,7 +2037,11 @@ window.SITE_PAGES = [
           }
         ]
       }
-    ]
+    ],
+    "volume": {
+      "no": "第二編",
+      "name": "原則與實務"
+    }
   },
   {
     "slug": "ip",
@@ -2520,7 +2646,11 @@ window.SITE_PAGES = [
           }
         ]
       }
-    ]
+    ],
+    "volume": {
+      "no": "第二編",
+      "name": "原則與實務"
+    }
   },
   {
     "slug": "taiwan",
@@ -2906,15 +3036,15 @@ window.SITE_PAGES = [
                 "url": "https://digi.nstc.gov.tw/File/7C71629D702E2D89"
               },
               {
-                "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧(AI)指引」",
+                "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧（AI）指引」",
                 "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202406200001&dtable=News"
               },
               {
-                "title": "FSC：金融業運用人工智慧(AI)指引全文",
+                "title": "FSC：金融業運用人工智慧（AI）指引全文",
                 "url": "https://www.fsc.gov.tw/websitedowndoc?file=chfsc%2F202408231741530.pdf"
               },
               {
-                "title": "FSC：金融業運用人工智慧(AI)之核心原則與相關推動政策公布",
+                "title": "FSC：金融業運用人工智慧（AI）之核心原則與相關推動政策公布",
                 "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202310170002&dtable=News"
               },
               {
@@ -3005,7 +3135,11 @@ window.SITE_PAGES = [
           }
         ]
       }
-    ]
+    ],
+    "volume": {
+      "no": "第三編",
+      "name": "在地與地緣"
+    }
   },
   {
     "slug": "geopolitics",
@@ -3480,7 +3614,11 @@ window.SITE_PAGES = [
           }
         ]
       }
-    ]
+    ],
+    "volume": {
+      "no": "第三編",
+      "name": "在地與地緣"
+    }
   },
   {
     "slug": "cases",
@@ -3810,7 +3948,11 @@ window.SITE_PAGES = [
           }
         ]
       }
-    ]
+    ],
+    "volume": {
+      "no": "第四編",
+      "name": "判例與紀事"
+    }
   },
   {
     "slug": "timeline",
@@ -3818,434 +3960,539 @@ window.SITE_PAGES = [
     "icon": "timeline",
     "title": "大事紀",
     "subtitle": "AI 治理重要里程碑（2016–2027），含法規、標準、峰會、產業與訴訟。",
+    "categories": [
+      {
+        "key": "law",
+        "zh": "法律・命令"
+      },
+      {
+        "key": "soft",
+        "zh": "標準・政策"
+      },
+      {
+        "key": "forum",
+        "zh": "峰會・機構"
+      },
+      {
+        "key": "court",
+        "zh": "訴訟・執法"
+      },
+      {
+        "key": "industry",
+        "zh": "產業・研究"
+      }
+    ],
     "events": [
       {
         "date": "2016-05-23",
         "title": "ProPublica《Machine Bias》報導",
+        "cat": "industry",
         "body": "揭露 COMPAS 演算法對非裔美國人存在系統性偏差，引爆全球 AI 偏見研究熱潮，開啟演算法問責議題。",
         "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
       },
       {
         "date": "2016-09-28",
         "title": "Partnership on AI 成立",
+        "cat": "industry",
         "body": "Amazon、Apple、DeepMind、Facebook、Google、IBM、Microsoft 聯合創立，後擴及學術界與公民社會，推動 AI 責任研究。",
         "url": "https://partnershiponai.org"
       },
       {
         "date": "2017-07-08",
         "title": "中國《新一代人工智慧發展規劃》",
+        "cat": "soft",
         "body": "國務院發布 AI 強國戰略，以 2030 年成為全球 AI 領先者為目標，確立中國 AI 國家戰略方向。",
         "url": "https://www.gov.cn/zhengce/content/2017-07/20/content_5211996.htm"
       },
       {
         "date": "2018-01-18",
         "title": "Gender Shades 研究發表",
+        "cat": "industry",
         "body": "Buolamwini 與 Gebru 在 FAccT 會議揭示商業人臉辨識對深膚色女性誤差率高達 34.7%，成為 AI 偏見研究標誌性成果。",
         "url": "https://proceedings.mlr.press/v81/buolamwini18a.html"
       },
       {
         "date": "2018-05-25",
         "title": "GDPR 正式生效",
+        "cat": "law",
+        "milestone": true,
         "body": "歐盟《通用資料保護規則》（GDPR）正式適用，要求資料主體同意與透明度，對 AI 資料治理產生深遠影響。",
         "url": "https://gdpr.eu"
       },
       {
         "date": "2019-05-22",
         "title": "OECD AI 原則採納",
+        "cat": "soft",
         "body": "OECD 42 個成員國採納首個政府間 AI 標準，涵蓋包容性成長、以人為本、透明、穩健安全、問責等五大原則。",
         "url": "https://oecd.ai/en/ai-principles"
       },
       {
         "date": "2019-06-01",
         "title": "歐盟高階專家組《可信 AI 倫理指引》",
+        "cat": "soft",
         "body": "七大要求（human agency、robustness、privacy、transparency、diversity、societal wellbeing、accountability）發布，成為 EU AI Act 框架的理念基礎。",
         "url": "https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai"
       },
       {
         "date": "2019-06-28",
         "title": "G20 人類中心 AI 原則採納",
+        "cat": "soft",
         "body": "G20 大阪峰會採納以人為中心的 AI 原則，參照 OECD 原則，擴大政府間 AI 倫理共識範圍至新興經濟體。",
         "url": "https://www.g20.org/osaka-summit"
       },
       {
         "date": "2020-01-01",
         "title": "加州《消費者隱私法》（CCPA）生效",
+        "cat": "law",
         "body": "加州消費者隱私法（CCPA）生效，成為美國州層級資料隱私立法先驅，為後續 AI 資料使用規範奠基。",
         "url": "https://oag.ca.gov/privacy/ccpa"
       },
       {
         "date": "2020-10-17",
         "title": "中國《出口管制法》施行",
+        "cat": "law",
         "body": "中國建立首個系統性出口管制法律框架，涵蓋軍民兩用商品，與美國半導體管制形成對峙態勢。",
         "url": "https://www.mofcom.gov.cn"
       },
       {
         "date": "2020-12-18",
         "title": "中芯國際（SMIC）列入美國實體清單",
+        "cat": "law",
         "body": "美國商務部 BIS 以軍民兩用疑慮將 SMIC 列入 Entity List，為美中晶片科技脫鉤的早期重要節點。",
         "url": "https://www.bis.doc.gov"
       },
       {
         "date": "2021-04-21",
         "title": "歐盟《AI 法》草案發布",
+        "cat": "law",
         "body": "歐盟委員會發布首部全面性《人工智慧法》（EU AI Act）草案，創立不可接受／高／有限／最小風險四層分級監管框架。",
         "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52021PC0206"
       },
       {
         "date": "2021-11-23",
         "title": "UNESCO AI 倫理建議書通過",
+        "cat": "soft",
         "body": "193 個會員國一致通過全球首個 AI 倫理全球標準，涵蓋隱私、透明、公平與環境影響等核心原則。",
         "url": "https://www.unesco.org/en/articles/recommendation-ethics-artificial-intelligence"
       },
       {
         "date": "2021-12-31",
         "title": "中國《算法推薦管理規定》頒布",
+        "cat": "law",
         "body": "全球首部針對算法推薦服務的部門規章，要求算法備案、用戶選擇退出及保護未成年人，2022-03-01 生效。",
         "url": "https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm"
       },
       {
         "date": "2022-08-09",
         "title": "美國《CHIPS 與科學法》簽署",
+        "cat": "law",
         "body": "拜登簽署法案，提供 390 億美元補貼振興本土晶片製造，並設 25% 製造投資稅收抵免，強化半導體供應鏈自主。",
         "url": "https://www.congress.gov/bill/117th-congress/house-bill/4346"
       },
       {
         "date": "2022-08-27",
         "title": "台灣數位發展部（MODA）成立",
+        "cat": "forum",
         "body": "行政院設立數位發展部（MODA），統籌數位政策、資安與 AI 產業推動，為台灣數位治理建立專責機構。",
         "url": "https://moda.gov.tw/"
       },
       {
         "date": "2022-10-07",
         "title": "美國第一波先進晶片出口管制",
+        "cat": "law",
         "body": "BIS 禁止向中國出口 NVIDIA A100、H100 等高端 GPU 及先進晶片製造設備，實施史上最嚴半導體出口管制。",
         "url": "https://www.bis.doc.gov/index.php/all-articles/17-regulations/1519-october-7-2022-final-rules"
       },
       {
         "date": "2022-11-30",
         "title": "ChatGPT 發布",
+        "cat": "industry",
+        "milestone": true,
         "body": "OpenAI 發布 ChatGPT，5 天突破百萬用戶、2 個月達 1 億用戶，成為史上增長最快的消費應用，觸發全球 AI 治理議程急速升溫。",
         "url": "https://openai.com/blog/chatgpt"
       },
       {
         "date": "2022-12-11",
         "title": "中國《深度合成管理規定》頒布",
+        "cat": "law",
         "body": "規範深偽（Deepfake）技術，要求實名制與標識義務，2023-01-10 生效，首開深度合成內容專項監管先例。",
         "url": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm"
       },
       {
         "date": "2023-01-26",
         "title": "NIST AI 風險管理框架（AI RMF 1.0）發布",
+        "cat": "soft",
         "body": "NIST 發布自願性 AI 風險管理框架，提供 GOVERN／MAP／MEASURE／MANAGE 四功能架構，廣受業界與監管機構採用。",
         "url": "https://www.nist.gov/itl/ai-risk-management-framework"
       },
       {
         "date": "2023-02-21",
         "title": "美著作權局 Zarya of the Dawn 裁定",
+        "cat": "court",
         "body": "著作權局裁定 AI 生成插圖不受著作權保護、人類撰寫文字可受保護，為 AI 生成物著作權規範立下首例。",
         "url": "https://www.copyright.gov/ai/"
       },
       {
         "date": "2023-03-14",
         "title": "GPT-4 發布",
+        "cat": "industry",
         "body": "OpenAI 發布多模態 GPT-4，律師資格考試成績排名前 10%，引爆新一波 AI 軍備競賽並加速各國立法時程。",
         "url": "https://openai.com/research/gpt-4"
       },
       {
         "date": "2023-03-30",
         "title": "義大利緊急封鎖 ChatGPT",
+        "cat": "court",
         "body": "義大利資料保護局（Garante）依 GDPR 發出緊急令，暫停 ChatGPT 資料處理，成為全球首個基於 GDPR 封鎖 LLM 服務的案例。",
         "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9870847"
       },
       {
         "date": "2023-05-19",
         "title": "G7 廣島峰會啟動廣島 AI 進程（HAIP）",
+        "cat": "forum",
         "body": "G7 廣島峰會正式啟動廣島 AI 進程（Hiroshima AI Process），指示制定先進 AI 系統國際規範，10 月發布 11 條行為準則。",
         "url": "https://www.japan.go.jp/kizuna/2024/02/hiroshima_ai_process.html"
       },
       {
         "date": "2023-06-14",
         "title": "歐洲議會通過 EU AI Act 談判草案",
+        "cat": "law",
         "body": "歐洲議會以 499:28 票通過談判立場，加入生成式 AI 附加條款，為三方協商定調。",
         "url": "https://www.europarl.europa.eu/news/en/press-room/20230609IPR96212"
       },
       {
         "date": "2023-07-10",
         "title": "中國《生成式 AI 服務管理暫行辦法》頒布",
+        "cat": "law",
         "body": "七部門聯合頒布全球首部生成式 AI 專屬法規，規範內容安全、備案與標識義務，2023-08-15 生效。",
         "url": "https://www.cac.gov.cn/2023-07/13/c_1690898326795531.htm"
       },
       {
         "date": "2023-07-21",
         "title": "白宮取得七大 AI 公司自願承諾",
+        "cat": "soft",
         "body": "Amazon、Anthropic、Google、Inflection、Meta、Microsoft、OpenAI 向白宮承諾 AI 安全測試、浮水印標記與共享安全資訊。",
         "url": "https://www.whitehouse.gov/briefing-room/statements-releases/2023/07/21/fact-sheet-biden-harris-administration-secures-voluntary-commitments-from-leading-artificial-intelligence-companies-to-manage-the-risks-posed-by-ai/"
       },
       {
         "date": "2023-09-19",
         "title": "Anthropic 發布首版負責任擴展政策（RSP v1）",
+        "cat": "industry",
         "body": "Anthropic 發布 RSP v1，建立 AI 安全等級（ASL）框架；OpenAI 與 Google 數月後跟進發布類似負責任擴展政策。",
         "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy"
       },
       {
         "date": "2023-10-26",
         "title": "聯合國 AI 高階諮詢機構（HLAB-AI）成立",
+        "cat": "forum",
         "body": "聯合國秘書長成立 AI 高階諮詢機構，39 位多元領域專家，負責提出全球 AI 治理建議，2024 年發布最終報告。",
         "url": "https://www.un.org/en/ai-advisory-body"
       },
       {
         "date": "2023-10-30",
         "title": "拜登簽署 AI 行政命令（EO 14110）",
+        "cat": "law",
+        "milestone": true,
         "body": "史上最全面的 AI 行政命令，設定 10²⁶ FLOP 安全報告門檻、要求 NIST 制定評估標準，並成立 AI 安全研究所（AISI）。",
         "url": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/"
       },
       {
         "date": "2023-10-30",
         "title": "G7 廣島 AI 進程行為準則與國際指導原則發布",
+        "cat": "soft",
         "body": "G7 及歐盟通過《先進 AI 系統國際行為準則》11 條自願性原則，涵蓋安全測試、偏見評估與透明度。",
         "url": "https://digital-strategy.ec.europa.eu/en/library/hiroshima-process-international-code-conduct-advanced-ai-systems"
       },
       {
         "date": "2023-11-01",
         "title": "布萊切利 AI 安全峰會暨《布萊切利宣言》簽署",
+        "cat": "forum",
+        "milestone": true,
         "body": "英國主辦首屆全球 AI 安全峰會，28 國（含美中）簽署《布萊切利宣言》，確立前沿 AI 安全全球共識；英美 AI 安全研究所同步啟動。",
         "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration"
       },
       {
         "date": "2023-12-01",
         "title": "ISO/IEC 42001（AI 管理系統標準）發布",
+        "cat": "soft",
         "body": "全球首個可供第三方認證的 AI 管理系統標準（AIMS）正式發布，成為企業 AI 治理認證的核心參考框架。",
         "url": "https://www.iso.org/standard/42001"
       },
       {
         "date": "2023-12-27",
         "title": "《紐約時報》對 OpenAI 與 Microsoft 提起著作權訴訟",
+        "cat": "court",
+        "milestone": true,
         "body": "《紐約時報》（NYT）主張數十億美元損害賠償，成為 AI 訓練版權最具影響力的進行中訴訟。",
         "url": "https://harvardlawreview.org/blog/2024/04/nyt-v-openai-the-timess-about-face/"
       },
       {
         "date": "2024-01-24",
         "title": "歐盟 AI Office 設立",
+        "cat": "forum",
         "body": "歐盟執委會決定在 DG CNECT 設置 AI Office，負責監管通用人工智慧（GPAI）模型義務並協調跨境執法。",
         "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office"
       },
       {
         "date": "2024-02-14",
         "title": "Air Canada 聊天機器人責任裁決",
+        "cat": "court",
         "body": "英屬哥倫比亞法庭認定 Air Canada 須為 AI 聊天機器人幻覺（hallucination）負責，首開 AI 誤導具體判賠先例。",
         "url": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
       },
       {
         "date": "2024-03-21",
         "title": "聯合國大會通過首個 AI 決議",
+        "cat": "forum",
         "body": "193 個成員國一致通過決議（A/RES/78/265），呼籲推動對人類與永續發展安全、可靠、可信的 AI。",
         "url": "https://news.un.org/en/story/2024/03/1147831"
       },
       {
         "date": "2024-05-01",
         "title": "OECD AI 原則 2024 年版更新",
+        "cat": "soft",
         "body": "更新生成式 AI 語境、資訊完整性、環境永續與偏見文件化等內容，47 個司法管轄區採用，鞏固 OECD 原則的全球規範地位。",
         "url": "https://oecd.ai/en/wonk/evolving-with-innovation-the-2024-oecd-ai-principles-update"
       },
       {
         "date": "2024-05-17",
         "title": "歐洲委員會《AI 框架公約》通過",
+        "cat": "law",
+        "milestone": true,
         "body": "歐洲委員會（Council of Europe）通過首個具法律約束力的國際 AI 條約，9 月 5 日開放簽署，17 個初始簽署方涵蓋英美歐盟。",
         "url": "https://www.coe.int/en/web/portal/-/council-of-europe-adopts-first-international-treaty-on-artificial-intelligence"
       },
       {
         "date": "2024-05-21",
         "title": "EU AI Act 歐洲議會正式通過",
+        "cat": "law",
         "body": "歐洲議會以 523:46 票通過全球首個全面性 AI 監管框架（EU AI Act），採不可接受／高／有限／最小四層風險分級管制。",
         "url": "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015"
       },
       {
         "date": "2024-05-21",
         "title": "首爾 AI 安全峰會",
+        "cat": "forum",
         "body": "20 家 AI 公司簽署前沿 AI 安全承諾，10 國及歐盟宣布深化合作，並啟動 AI 安全研究所國際網絡。",
         "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024"
       },
       {
         "date": "2024-07",
         "title": "NIST AI 600-1（生成式 AI 側寫）發布",
+        "cat": "soft",
         "body": "NIST 發布生成式 AI 風險側寫（AI 600-1），識別幻覺、資料隱私、智慧財產等 12 大特定風險類別。",
         "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
       },
       {
         "date": "2024-08-01",
         "title": "EU AI Act 正式生效",
+        "cat": "law",
+        "milestone": true,
         "body": "EU AI Act 生效，開啟分階段遞移：2025-02-02 禁止用途生效、2025-08-02 GPAI 義務生效、2026-08-02 高風險系統全面合規。",
         "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
       },
       {
         "date": "2024-09-22",
         "title": "聯合國《全球數位契約》採用",
+        "cat": "forum",
         "body": "未來峰會通過《全球數位契約》（Global Digital Compact），首個 AI 治理普世性政府間協議，設立 AI 科學委員會及全球對話機制。",
         "url": "https://www.un.org/digital-emerging-technologies/global-digital-compact"
       },
       {
         "date": "2024-09-24",
         "title": "聯合國 HLAB-AI 最終報告《為人類治理 AI》",
+        "cat": "forum",
         "body": "《Governing AI for Humanity》提出七大建議，包括建立國際 AI 科學委員會、標準交流等跨國治理機制。",
         "url": "https://www.un.org/en/ai-advisory-body"
       },
       {
         "date": "2024-10-28",
         "title": "OSI 開源 AI 定義（OSAID 1.0）發布",
+        "cat": "soft",
         "body": "OSI 發布首份開源 AI 定義（Open Source AI Definition），Llama 等主流模型因訓練資料不開放而不符合標準。",
         "url": "https://opensource.org/ai/open-source-ai-definition"
       },
       {
         "date": "2024-11-21",
         "title": "國際 AI 安全研究所網絡（AISN）成立",
+        "cat": "forum",
         "body": "10 國及歐盟在舊金山首次聚會成立國際 AISI 網絡，美國 AISI 任首任主席，推動跨國 AI 安全評估協作。",
         "url": "https://www.nist.gov/news-events/news/2024/11/fact-sheet-us-department-commerce-us-department-state-launch-international"
       },
       {
         "date": "2024-12-01",
         "title": "中國對美全面禁止鎵鍺等戰略材料出口",
+        "cat": "law",
         "body": "商務部宣布對美禁止出口鎵、鍺、銻及超硬材料，直接回應美國擴大半導體管制，中美科技脫鉤態勢加劇。",
         "url": "https://www.mofcom.gov.cn"
       },
       {
         "date": "2024-12-02",
         "title": "美國第三波晶片管制（BIS 擴大實體清單）",
+        "cat": "law",
         "body": "BIS 將 140 家中國 AI 相關企業列入實體清單，同時大幅擴大半導體製造設備出口管制範圍。",
         "url": "https://www.bis.doc.gov"
       },
       {
         "date": "2024-12-26",
         "title": "南韓《AI 基本法》通過",
+        "cat": "law",
         "body": "南韓國會通過全球繼 EU AI Act 後第二部全面 AI 法，2026-01-22 生效，涵蓋高影響力 AI 風險管理義務。",
         "url": "https://www.trade.gov/market-intelligence/south-korea-ai-basic-act"
       },
       {
         "date": "2025-01-13",
         "title": "拜登政府發布《AI 擴散規則》（AI Diffusion Rule）",
+        "cat": "law",
         "body": "BIS 頒布首個 AI 模型權重出口管制規則，以三層國家分組架構管制先進算力與 AI 模型向海外擴散。",
         "url": "https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion"
       },
       {
         "date": "2025-01-20",
         "title": "DeepSeek R1 發布衝擊全球",
+        "cat": "industry",
         "body": "中國 DeepSeek 發布 R1 模型，聲稱以極低成本達到 OpenAI o1 水準，NVIDIA 市值單日蒸發逾 6,000 億美元，引發 AI 研發成本與出口管制有效性大辯論。",
         "url": "https://www.bruegel.org/first-glance/geopolitics-artificial-intelligence-after-deepseek"
       },
       {
         "date": "2025-01-20",
         "title": "川普廢止 EO 14110，簽署 EO 14179",
+        "cat": "law",
         "body": "就職首日廢除拜登 AI 行政命令，終止安全報告義務；簽署《消除美國 AI 領導障礙》（EO 14179），全面轉向鬆綁政策。",
         "url": "https://www.whitehouse.gov/presidential-actions/2025/01/removing-barriers-to-american-leadership-in-artificial-intelligence/"
       },
       {
         "date": "2025-02-02",
         "title": "EU AI Act 第一波義務生效",
+        "cat": "law",
         "body": "禁止不可接受風險 AI（如社會評分、即時生物辨識）正式適用；AI 識讀（AI literacy）義務同步生效。",
         "url": "https://artificialintelligenceact.eu/implementation-timeline/"
       },
       {
         "date": "2025-02-11",
         "title": "巴黎 AI 行動峰會",
+        "cat": "forum",
         "body": "第三屆全球 AI 峰會改名「AI 行動峰會」（AI Action Summit），58 國簽署宣言，美國缺席，峰會重心由安全轉向創新應用。",
         "url": "https://en.wikipedia.org/wiki/AI_Action_Summit_2025"
       },
       {
         "date": "2025-02-11",
         "title": "Thomson Reuters v. Ross Intelligence 判決",
+        "cat": "court",
         "body": "美國聯邦法院首件拒絕 AI 訓練合理使用（fair use）抗辯的判決，確立 LLM 訓練資料版權責任。",
         "url": "https://www.dwt.com/blogs/artificial-intelligence-law-advisor/2025/02/reuters-ross-court-ruling-ai-copyright-fair-use"
       },
       {
         "date": "2025-03-14",
         "title": "中國《AI 生成合成內容標識辦法》頒布",
+        "cat": "law",
         "body": "四部門聯合頒布，強制要求顯式與隱式雙重標識 AI 生成合成內容，2025-09-01 生效。",
         "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm"
       },
       {
         "date": "2025-05-01",
         "title": "Anthropic RSP v3 發布暨 ASL-3 啟動",
+        "cat": "industry",
         "body": "Anthropic 發布負責任擴展政策第三版（RSP v3）；Claude 4 系列啟動 ASL-3 防護措施；同步發布首份 AI 安全保障報告。",
         "url": "https://www.anthropic.com/news/responsible-scaling-policy-v3"
       },
       {
         "date": "2025-05-13",
         "title": "川普廢除《AI 擴散規則》",
+        "cat": "law",
         "body": "商務部宣布廢除拜登政府 AI 模型擴散框架，承諾另訂「更具競爭力」替代規則，進一步鬆綁 AI 出口管制。",
         "url": "https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens"
       },
       {
         "date": "2025-05-28",
         "title": "日本《AI 推進法》通過",
+        "cat": "law",
         "body": "日本國會通過《AI 推進法》，無明文罰則，定位 AI 為國家戰略資產，體現促進創新優先的立法風格。",
         "url": "https://fpf.org/blog/understanding-japans-ai-promotion-act-an-innovation-first-blueprint-for-ai-regulation/"
       },
       {
         "date": "2025-07-23",
         "title": "美國 AI Action Plan《Winning the Race》發布",
+        "cat": "soft",
         "body": "白宮發布 90 點 AI 政策藍圖，三大支柱為創新、基礎設施與國際領導，確立川普政府 AI 競爭戰略框架。",
         "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf"
       },
       {
         "date": "2025-08-02",
         "title": "EU AI Act GPAI 義務生效",
+        "cat": "law",
         "body": "通用人工智慧（GPAI）模型透明度、著作權合規及系統性風險評估義務正式適用；EU AI Office 取得監管職能。",
         "url": "https://www.mayerbrown.com/en/insights/publications/2025/08/eu-ai-act-news-rules-on-general-purpose-ai-start-applying-guidelines-and-template-for-summary-of-training-data-finalized"
       },
       {
         "date": "2025-08-26",
         "title": "聯合國大會通過 AI 科學委員會職權範圍",
+        "cat": "forum",
         "body": "A/RES/79/325 確立獨立國際 AI 科學委員會及全球 AI 治理對話機制（Global Dialogue on AI Governance）。",
         "url": "https://dig.watch/updates/un-general-assembly-adopts-terms-of-reference-for-ai-scientific-panel-and-global-dialogue-on-ai-governance"
       },
       {
         "date": "2025-12-11",
         "title": "川普簽署《消除州法阻礙 AI 聯邦政策》行政命令",
+        "cat": "law",
         "body": "建立 AI 訴訟特別工作組，試圖以聯邦框架壓制各州 AI 立法，引發州主權與聯邦優先適用爭議。",
         "url": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/"
       },
       {
         "date": "2025-12-23",
         "title": "台灣《人工智慧基本法》立法院三讀通過",
+        "cat": "law",
         "body": "立法院三讀通過《人工智慧基本法》，國科會為主管機關，確立 AI 治理基本原則與主管機關職責。",
         "url": "https://moda.gov.tw/press/press-releases/18316"
       },
       {
         "date": "2026-01-14",
         "title": "台灣《人工智慧基本法》正式施行",
+        "cat": "law",
+        "milestone": true,
         "body": "總統公布《人工智慧基本法》即日起施行，台灣成為繼南韓後亞洲第二個完成全面性 AI 立法的國家。",
         "url": "https://www.leeandli.com/TW/NewslettersDetail/7566.htm"
       },
       {
         "date": "2026-01-22",
         "title": "南韓《AI 基本法》正式生效",
+        "cat": "law",
         "body": "高影響力 AI 提供者正式承擔通知、風險評估等法定義務，南韓成為亞洲 AI 法制化先行國。",
         "url": "https://www.trade.gov/market-intelligence/south-korea-artificial-intelligence-ai-basic-act"
       },
       {
         "date": "2026-02-28",
         "title": "新德里 AI 影響峰會",
+        "cat": "forum",
         "body": "印度主辦，92 國背書宣言，推動全球南方（Global South）在 AI 治理的聲音，匯集 2,000 億美元 AI 投資承諾。",
         "url": "https://www.orfonline.org/expert-speak/from-dialogue-to-deployment-strategic-outcomes-of-the-india-ai-impact-summit-2026"
       },
       {
         "date": "2026-06-30",
         "title": "美國科羅拉多《AI 法》生效",
+        "cat": "law",
         "body": "全美首部全面性州 AI 立法正式生效，高風險 AI 開發者與部署者須完成合規，涵蓋八大高風險應用領域。",
         "url": "https://www.nortonrosefulbright.com/en-us/knowledge/publications/18733d31/colorado-enacts-revised-ai-law"
       },
       {
         "date": "2026-08-02",
         "title": "EU AI Act 高風險系統義務全面生效",
+        "cat": "law",
         "body": "大部分高風險 AI 系統義務與 Article 50（AI 生成內容機器可讀標示）正式適用；EU AI Office 取得完整執法權。",
         "url": "https://artificialintelligenceact.eu/implementation-timeline/"
       },
       {
         "date": "2027-08-02",
         "title": "EU AI Act 第四波義務生效",
+        "cat": "law",
         "body": "Article 6(1) 高風險義務完全適用；既有 GPAI 模型須達到全面合規，EU AI Act 法律框架完整落地。",
         "url": "https://artificialintelligenceact.eu/implementation-timeline/"
       }
-    ]
+    ],
+    "volume": {
+      "no": "第四編",
+      "name": "判例與紀事"
+    }
   },
   {
     "slug": "glossary",
@@ -5166,7 +5413,11 @@ window.SITE_PAGES = [
         "def": "企業或政府在無法律強制下自願採納的 AI 安全實踐（如 2023 年白宮七大 AI 公司承諾），批評者認為缺乏執行力。",
         "cat": "concept"
       }
-    ]
+    ],
+    "volume": {
+      "no": "附錄",
+      "name": "工具與出處"
+    }
   },
   {
     "slug": "learn",
@@ -5431,7 +5682,11 @@ window.SITE_PAGES = [
         "front": "SynthID — Google DeepMind",
         "back": "Google DeepMind 開發的 AI 生成內容不可見浮水印（Invisible Watermark）技術，在不影響內容品質的情況下嵌入可機器讀取的標記，支援圖像、音訊、影片、文字四種模態，用於識別 AI 生成內容。"
       }
-    ]
+    ],
+    "volume": {
+      "no": "附錄",
+      "name": "工具與出處"
+    }
   },
   {
     "slug": "sources",
@@ -6444,17 +6699,17 @@ window.SITE_PAGES = [
         "url": "https://digi.nstc.gov.tw/File/7C71629D702E2D89"
       },
       {
-        "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧(AI)指引」",
+        "title": "FSC 新聞稿：金管會發布「金融業運用人工智慧（AI）指引」",
         "topic": "台灣治理",
         "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202406200001&dtable=News"
       },
       {
-        "title": "FSC：金融業運用人工智慧(AI)指引全文",
+        "title": "FSC：金融業運用人工智慧（AI）指引全文",
         "topic": "台灣治理",
         "url": "https://www.fsc.gov.tw/websitedowndoc?file=chfsc%2F202408231741530.pdf"
       },
       {
-        "title": "FSC：金融業運用人工智慧(AI)之核心原則與相關推動政策公布",
+        "title": "FSC：金融業運用人工智慧（AI）之核心原則與相關推動政策公布",
         "topic": "台灣治理",
         "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202310170002&dtable=News"
       },
@@ -6793,6 +7048,10 @@ window.SITE_PAGES = [
         "topic": "地緣政治與案例",
         "url": "https://harvardlawreview.org/print/vol-137/voluntary-commitments-from-leading-artificial-intelligence-companies-on-july-21-2023"
       }
-    ]
+    ],
+    "volume": {
+      "no": "附錄",
+      "name": "工具與出處"
+    }
   }
 ];
