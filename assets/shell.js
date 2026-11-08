@@ -35,9 +35,12 @@
      Single-language site (Traditional Chinese). Lang is hard-pinned to "zh"
      and NOT read from localStorage — github.io is a shared origin, so a sibling
      site's lang="en" must never leak in and blank out this zh-only content. */
+  var mqDark = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function systemTheme() { return mqDark && mqDark.matches ? "dark" : "light"; }
+  var saved = lsGet("theme");
   var state = {
     lang:  "zh",
-    theme: lsGet("theme") || "light"
+    theme: saved === "dark" || saved === "light" ? saved : systemTheme()
   };
 
   /* ---------- helpers shared with app.js ---------- */
@@ -90,7 +93,7 @@
             'target="_blank" rel="noopener" data-repo="tingwei161803/ai-governance" ' +
             'title="在 GitHub 上給星" aria-label="在 GitHub 上給此專案 Star">' +
             '<span class="material-symbols-rounded">star</span>' +
-            '<span class="gh-star__count" id="ghStarCount">—</span>' +
+            '<span class="gh-star__count" id="ghStarCount" hidden></span>' +
           '</a>' +
           '<button class="icon-btn" id="themeToggle" type="button" title="切換深淺色主題" aria-label="切換深淺色主題 / Toggle theme">' +
             '<span class="material-symbols-rounded" id="themeIcon">dark_mode</span>' +
@@ -188,14 +191,23 @@
     document.documentElement.setAttribute("data-theme", state.theme);
     var icon = document.getElementById("themeIcon");
     if (icon) icon.textContent = state.theme === "dark" ? "light_mode" : "dark_mode";
-    lsSet("theme", state.theme);
   }
 
   function wire() {
     document.getElementById("themeToggle").addEventListener("click", function () {
       state.theme = state.theme === "dark" ? "light" : "dark";
+      lsSet("theme", state.theme);          /* only an explicit choice is remembered */
       applyTheme();
     });
+    /* no saved choice: keep following the OS setting live */
+    if (mqDark && mqDark.addEventListener) {
+      mqDark.addEventListener("change", function () {
+        var v = lsGet("theme");
+        if (v === "dark" || v === "light") return;
+        state.theme = systemTheme();
+        applyTheme();
+      });
+    }
   }
 
   /* =======================================================================
@@ -216,20 +228,35 @@
      INIT
      ===================================================================== */
   /* ---------- live GitHub star count (public API, no auth) ---------- */
+  /* Cached per tab session (sessionStorage) so each page view doesn't spend the
+     unauthenticated 60 req/h budget; a failure is cached too. The count stays
+     hidden unless we have a real, positive number — never a "–" or "0". */
+  function ssGet(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+  function ssSet(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { /* ignore */ } }
   function fetchStars() {
     var el = document.getElementById("ghStar");
     var countEl = document.getElementById("ghStarCount");
     if (!el || !countEl) return;
     var repo = el.getAttribute("data-repo");
     if (!repo) return;
+    var key = "gh-stars:" + repo;
+    function show(n) {
+      if (typeof n !== "number" || !(n > 0)) { countEl.hidden = true; return; }
+      countEl.textContent = n >= 1000 ? (n / 1000).toFixed(1) + "k" : String(n);
+      countEl.hidden = false;
+      el.classList.add("gh-star--counted");
+    }
+    var cached = ssGet(key);
+    if (cached !== null) { show(cached === "x" ? null : Number(cached)); return; }
+    if (!window.fetch) return;
     fetch("https://api.github.com/repos/" + repo)
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) {
-        if (!j || typeof j.stargazers_count !== "number") return;
-        var n = j.stargazers_count;
-        countEl.textContent = n >= 1000 ? (n / 1000).toFixed(1) + "k" : String(n);
+        var n = j && typeof j.stargazers_count === "number" ? j.stargazers_count : null;
+        ssSet(key, n > 0 ? String(n) : "x");
+        show(n);
       })
-      .catch(function () { /* offline / rate-limited: leave the placeholder */ });
+      .catch(function () { ssSet(key, "x"); show(null); });
   }
 
   function init() {
