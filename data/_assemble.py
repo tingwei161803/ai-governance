@@ -77,6 +77,48 @@ GLOSSARY_CATS = [
     {"key": "ipbiz", "zh": "智財商業", "en": "IP & Business"},
 ]
 
+# --- timeline event categories (seal red = binding, treaty blue = soft) ---- #
+TIMELINE_CATS = [
+    {"key": "law", "zh": "法律・命令"},
+    {"key": "soft", "zh": "標準・政策"},
+    {"key": "forum", "zh": "峰會・機構"},
+    {"key": "court", "zh": "訴訟・執法"},
+    {"key": "industry", "zh": "產業・研究"},
+]
+
+# --- the site is organised like a code of law: 編 (volumes) group the pages - #
+VOLUMES = [
+    {"no": "第一編", "name": "規範與標準", "pages": ["regulation", "standards"]},
+    {"no": "第二編", "name": "原則與實務", "pages": ["ethics", "corporate", "ip"]},
+    {"no": "第三編", "name": "在地與地緣", "pages": ["taiwan", "geopolitics"]},
+    {"no": "第四編", "name": "判例與紀事", "pages": ["cases", "timeline"]},
+    {"no": "附錄", "name": "工具與出處", "pages": ["glossary", "learn", "sources"]},
+]
+
+# --- home: the four regulatory approaches, from binding to soft law ------- #
+APPROACHES = [
+    {
+        "region": "歐盟", "approach": "立法導向", "force": "binding",
+        "body": "《AI 法》依風險分四級，違反禁止規定最高罰全球年營收 7%；2024 年生效，2026 年高風險義務全面適用。",
+        "href": "regulation.html#eu-ai-act-risk-tiers",
+    },
+    {
+        "region": "中國", "approach": "分類規範", "force": "binding",
+        "body": "演算法推薦、深度合成、生成式 AI、內容標識各訂專門規章，搭配演算法備案與標識義務。",
+        "href": "regulation.html#cn-generative-ai",
+    },
+    {
+        "region": "美國", "approach": "行政命令", "force": "mixed",
+        "body": "聯邦層級靠總統行政命令與 NIST 自願框架，政權更替即翻轉；科羅拉多、加州等州法補位。",
+        "href": "regulation.html#us-eo-14179",
+    },
+    {
+        "region": "台灣・日本・英國", "approach": "原則導向", "force": "soft",
+        "body": "以基本法或白皮書宣示原則、不直接設罰則，細則交由各目的事業主管機關訂定。",
+        "href": "taiwan.html#ai-basic-act",
+    },
+]
+
 # --- map research file -> a topic label for the sources table ------------- #
 FILE_TOPIC = {
     "01-global-regulation.md": "全球法規",
@@ -153,9 +195,10 @@ def main() -> None:
     pages = [
         {
             "slug": "home", "layout": "hub", "icon": "travel_explore",
-            "title": "總覽",
-            "subtitle": "選一個面向開始探索。AI 治理橫跨法律、倫理、技術、商業與地緣政治——本站把它整理成一張可瀏覽、可搜尋的地圖。",
-            "stats": stats,
+            "title": "首頁",
+            "subtitle": "全球人工智慧治理的法規、標準、判例與台灣在地發展，彙編成一部可查閱的中文百科。",
+            "dateline": "內容截至 2026 年 6 月",
+            "stats": stats, "approaches": APPROACHES, "volumes": VOLUMES,
         },
         {
             "slug": "regulation", "layout": "gallery", "icon": "account_balance",
@@ -204,7 +247,7 @@ def main() -> None:
             "slug": "timeline", "layout": "timeline", "icon": "timeline",
             "title": "大事紀",
             "subtitle": "AI 治理重要里程碑（2016–2027），含法規、標準、峰會、產業與訴訟。",
-            "events": timeline,
+            "categories": TIMELINE_CATS, "events": timeline,
         },
         {
             "slug": "glossary", "layout": "glossary", "icon": "menu_book",
@@ -225,6 +268,12 @@ def main() -> None:
             "columns": sources["columns"], "rows": sources["rows"],
         },
     ]
+
+    # ---- tag every content page with the 編 (volume) it belongs to ----
+    for vol in VOLUMES:
+        for p in pages:
+            if p["slug"] in vol["pages"]:
+                p["volume"] = {"no": vol["no"], "name": vol["name"]}
 
     def dump(obj):
         return json.dumps(obj, ensure_ascii=False, indent=2)
